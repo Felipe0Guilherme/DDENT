@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DDent Clínica — Seu Sorriso Merece o Melhor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="paciente.css"/>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/logo-ddent-clinica.svg" alt="DDent Clínica" class="logo-img-real"/>
+      </a>
+
+      <!-- Nav desktop -->
+      <nav class="nav" id="nav">
+
+        <!-- Especialidades com dropdown -->
+        <div class="nav-dropdown">
+          <button class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">
+            Especialidades
+            <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" width="14" height="14">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="nav-drop-menu" role="menu">
+            <a href="especialidades.html#implantes" class="drop-item" role="menuitem">
+              <span class="drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 2C12 2 7 8 7 13C7 15.76 9.24 18 12 18C14.76 18 17 15.76 17 13C17 8 12 2 12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Implantes Dentários</span>
+            </a>
+            <a href="especialidades.html#proteses" class="drop-item" role="menuitem">
+              <span class="drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M9 3H15M12 3V8M8 8C8 8 6 11 6 14C6 17.31 8.69 20 12 20C15.31 20 18 17.31 18 14C18 11 16 8 16 8H8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Próteses Dentárias</span>
+            </a>
+            <a href="especialidades.html#ortodontia" class="drop-item" role="menuitem">
+              <span class="drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Ortodontia e Ortopedia</span>
+            </a>
+            <a href="especialidades.html#facetas" class="drop-item" role="menuitem">
+              <span class="drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Facetas e Lentes</span>
+            </a>
+            <a href="especialidades.html#endodontia" class="drop-item" role="menuitem">
+              <span class="drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M12 8V12L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+              <span>Endodontia</span>
+            </a>
+            <a href="especialidades.html#periodontia" class="drop-item" role="menuitem">
+              <span class="drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 22C12 22 4 17 4 10C4 6.13 7.58 3 12 3C16.42 3 20 6.13 20 10C20 17 12 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>Periodontia</span>
+            </a>
+            <div class="drop-footer">
+              <a href="especialidades.html">Ver todas as especialidades →</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="quem-somos.html" class="nav-link">Quem Somos</a>
+        <a href="#diferenciais" class="nav-link">Por que nós?</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <!-- CTA -->
+      <a class="cta-nav" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+        Agendar consulta
+      </a>
+
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile overlay nav -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <details class="mob-details">
+        <summary>Especialidades</summary>
+        <div class="mob-submenu">
+          <a href="especialidades.html#implantes">Implantes Dentários</a>
+          <a href="especialidades.html#proteses">Próteses Dentárias</a>
+          <a href="especialidades.html#ortodontia">Ortodontia e Ortopedia</a>
+          <a href="especialidades.html#facetas">Facetas e Lentes</a>
+          <a href="especialidades.html#endodontia">Endodontia</a>
+          <a href="especialidades.html#periodontia">Periodontia</a>
+        </div>
+      </details>
+     <a href="quem-somos.html">Quem Somos</a>
+      <a href="#diferenciais">Por que nós?</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+      <a class="mob-cta" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">Agendar consulta</a>
+    </nav>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <!-- Foto de fundo com opacidade baixa -->
+    <div class="hero-bg" id="heroBg">
+      <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/Frame-376.png"
+           alt="" class="hero-photo" id="heroBgImg"/>
+      <div class="hero-overlay"></div>
+      <canvas class="hero-particles" id="particleCanvas"></canvas>
+    </div>
+
+    <div class="hero-content">
+
+      <div class="hero-eyebrow">
+        <span class="badge-dot"></span>
+        Clínica Odontológica · São Paulo · Há mais de 30 anos cuidando do seu sorriso
+      </div>
+
+      <h1 class="hero-h1">
+        <span class="h1-line">Seu sorriso</span>
+        <span class="h1-line italic">merece o melhor</span>
+        <span class="h1-line">atendimento</span>
+      </h1>
+
+      <p class="hero-p">
+        Na DDent, cada tratamento é pensado para você. Tecnologia avançada, equipe especializada e um ambiente acolhedor para transformar o seu sorriso com confiança e cuidado.
+      </p>
+
+      <div class="hero-btns">
+        <a class="btn-hero-primary" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+          Agendar minha consulta
+        </a>
+        <a class="btn-hero-sec" href="#especialidades">
+          Ver especialidades
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="hstat">
+          <div class="hstat-row">
+            <span class="hstat-pre">+de</span>
+            <span class="hstat-n" data-target="1347">0</span>
+          </div>
+          <p>pacientes atendidos e acompanhados</p>
+        </div>
+        <div class="hstat-div"></div>
+        <div class="hstat">
+          <div class="hstat-row">
+            <span class="hstat-pre">+de</span>
+            <span class="hstat-n" data-target="103">0</span>
+          </div>
+          <p>pacientes de protocolo no último ano</p>
+        </div>
+        <div class="hstat-div"></div>
+        <div class="hstat">
+          <div class="hstat-row">
+            <span class="hstat-pre">+de</span>
+            <span class="hstat-n" data-target="352">0</span>
+          </div>
+          <p>próteses entregues em 2024</p>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="#especialidades" class="hero-scroll">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 5V19M5 12L12 19L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ═══ ESPECIALIDADES ═══ -->
+  <section class="section esp-section" id="especialidades">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-label">especialidades</p>
+        <h2 class="sec-title">Conheça nossas<br/><em>especialidades</em></h2>
+        <p class="sec-desc">Tratamentos completos para cuidar do seu sorriso com a mais alta tecnologia e profissionais especializados.</p>
+      </div>
+
+      <div class="esp-list">
+
+        <a class="esp-item" href="#" data-i="0">
+          <div class="esp-item-left">
+            <span class="esp-item-num">01</span>
+            <div class="esp-item-icon">
+              <svg viewBox="0 0 48 48" fill="none" width="22" height="22"><path fill-rule="evenodd" clip-rule="evenodd" d="M34.46 19.06L26.46 12.84C25.01 11.71 22.99 11.71 21.54 12.84L13.54 19.06C12.57 19.82 12 20.99 12 22.22V32C12 34.21 13.79 36 16 36H32C34.21 36 36 34.21 36 32V22.22C36 20.99 35.43 19.82 34.46 19.06Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29 24.67C29 24.11 28.55 23.67 28 23.67H26V21.67C26 21.11 25.55 20.67 25 20.67H23C22.45 20.67 22 21.11 22 21.67V23.67H20C19.45 23.67 19 24.11 19 24.67V26.67C19 27.22 19.45 27.67 20 27.67H22V29.67C22 30.22 22.45 30.67 23 30.67H25C25.55 30.67 26 30.22 26 29.67V27.67H28C28.55 27.67 29 27.22 29 26.67V24.67Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="esp-item-body">
+            <h3>Implantes Dentários</h3>
+            <p>Reposição de dentes com tecnologia avançada para resultados naturais e duradouros.</p>
+          </div>
+          <div class="esp-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+
+        <a class="esp-item" href="#" data-i="1">
+          <div class="esp-item-left">
+            <span class="esp-item-num">02</span>
+            <div class="esp-item-icon">
+              <svg viewBox="0 0 48 48" fill="none" width="22" height="22"><path fill-rule="evenodd" clip-rule="evenodd" d="M33.71 16.55C32.18 13.99 29.11 12.77 26.23 13.58L24.96 13.93C24.33 14.11 23.67 14.11 23.04 13.93L21.77 13.58C18.89 12.77 15.83 13.99 14.29 16.55C13.67 17.58 13.34 18.77 13.34 19.97V20.1C13.33 24.2 14.16 28.26 15.76 32.03L16.2 33.06C16.62 34.03 17.58 34.67 18.64 34.67C19.73 34.67 20.71 34.01 21.11 33L22.37 29.81C22.64 29.14 23.28 28.7 24 28.7C24.72 28.7 25.36 29.14 25.63 29.81L26.89 33C27.29 34.01 28.27 34.67 29.36 34.67C30.42 34.67 31.38 34.03 31.8 33.06L32.24 32.03C33.84 28.26 34.67 24.2 34.66 20.1V19.97C34.66 18.77 34.33 17.58 33.71 16.55Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="esp-item-body">
+            <h3>Próteses Dentárias</h3>
+            <p>Soluções personalizadas para reabilitação oral com materiais de última geração.</p>
+          </div>
+          <div class="esp-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+
+        <a class="esp-item" href="#" data-i="2">
+          <div class="esp-item-left">
+            <span class="esp-item-num">03</span>
+            <div class="esp-item-icon">
+              <svg viewBox="0 0 48 48" fill="none" width="22" height="22"><path d="M24 14C24 14 16 20 16 28C16 32.42 19.58 36 24 36C28.42 36 32 32.42 32 28C32 20 24 14 24 14Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="esp-item-body">
+            <h3>Ortodontia e Ortopedia</h3>
+            <p>Alinhamento dental com as técnicas mais modernas, incluindo aparelhos estéticos e invisíveis.</p>
+          </div>
+          <div class="esp-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+
+        <a class="esp-item esp-item-highlight" href="#" data-i="3">
+          <div class="esp-item-left">
+            <span class="esp-item-num">04</span>
+            <div class="esp-item-icon">
+              <svg viewBox="0 0 48 48" fill="none" width="22" height="22"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.01 35.32C13.1 34.41 13.1 32.94 14.01 32.04L32.02 14.01C32.94 13.1 34.41 13.1 35.32 14.01C36.23 14.92 36.23 16.39 35.32 17.3L17.31 35.32C16.4 36.23 14.92 36.23 14.01 35.32Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="esp-item-body">
+            <h3>Facetas e Lentes de Contato</h3>
+            <p>Transforme seu sorriso com facetas de porcelana e lentes de contato dental. Resultado natural e imediato.</p>
+          </div>
+          <div class="esp-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+
+        <a class="esp-item" href="#" data-i="4">
+          <div class="esp-item-left">
+            <span class="esp-item-num">05</span>
+            <div class="esp-item-icon">
+              <svg viewBox="0 0 48 48" fill="none" width="22" height="22"><circle cx="24" cy="24" r="11" stroke="currentColor" stroke-width="1.5"/><path d="M24 18V24L28 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <div class="esp-item-body">
+            <h3>Periodontia</h3>
+            <p>Tratamento especializado para gengivas e tecidos de suporte, prevenindo a perda dentária.</p>
+          </div>
+          <div class="esp-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+
+        <a class="esp-item" href="#" data-i="5">
+          <div class="esp-item-left">
+            <span class="esp-item-num">06</span>
+            <div class="esp-item-icon">
+              <svg viewBox="0 0 48 48" fill="none" width="22" height="22"><path d="M19 14C19 14 17 18 17 22C17 26 20.13 29 24 29C27.87 29 31 26 31 22C31 18 29 14 24 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M24 29V36M20 36H28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+          <div class="esp-item-body">
+            <h3>Endodontia</h3>
+            <p>Tratamento de canal com precisão e conforto máximo para preservar seus dentes naturais.</p>
+          </div>
+          <div class="esp-item-arrow">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SOBRE ═══ -->
+  <section class="section sobre-section" id="sobre">
+    <div class="container sobre-grid">
+      <div class="sobre-left reveal">
+        <p class="sec-label">quem somos</p>
+        <h2 class="sec-title">Seu espaço odontológico com os melhores <em>tratamentos</em> do mercado</h2>
+        <p class="sobre-text">A Clínica DDent é especialista em cuidar do sorriso e resgatar a autoestima dos pacientes. Aqui, a prioridade é a excelência no cuidado, com infraestrutura completa e atendimento de qualidade.</p>
+        <p class="sobre-text">O Dr. José Edvanilson, responsável pela clínica, atua há mais de 30 anos na área e investe em tecnologia de ponta para oferecer a melhor experiência e resultado possível.</p>
+        <div class="sobre-pills">
+          <span>+30 anos de experiência</span>
+          <span>Tecnologia de ponta</span>
+          <span>Equipe especializada</span>
+        </div>
+        <a class="btn-outline" href="#contato">Falar com a clínica</a>
+      </div>
+      <div class="sobre-right reveal">
+        <div class="sobre-mosaic">
+          <!-- FOTO PRINCIPAL (ex: foto com todos os dentistas) — span total -->
+          <div class="sm sm-main">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/Frame-377.png" alt="Equipe DDent" onerror="this.parentElement.classList.add('ph')"/>
+          </div>
+          <!-- 3 fotos menores embaixo -->
+          <div class="sm sm-sub">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/Frame-375.png" alt="DDent Clínica" onerror="this.parentElement.classList.add('ph')"/>
+          </div>
+          <div class="sm sm-sub">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/Frame-374.png" alt="DDent Clínica" onerror="this.parentElement.classList.add('ph')"/>
+          </div>
+          <div class="sm sm-sub">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/Frame-376.png" alt="DDent Clínica" onerror="this.parentElement.classList.add('ph')"/>
+          </div>
+          <div class="sm-badge">
+            <strong>Dr. José Edvanilson</strong>
+            <span>CRO/SP 107.004</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DIFERENCIAIS ═══ -->
+  <section class="section dif-section" id="diferenciais">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-label">por que nos escolher</p>
+        <h2 class="sec-title">Cuidado completo em<br/><em>cada etapa</em> do tratamento</h2>
+      </div>
+      <div class="dif-grid">
+        <div class="dif-card reveal">
+          <div class="dif-num">—</div>
+          <div class="dif-icon">
+            <svg viewBox="0 0 48 48" fill="none" width="24" height="24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M34.46 19.06L26.46 12.84C25.01 11.71 22.99 11.71 21.54 12.84L13.54 19.06C12.57 19.82 12 20.99 12 22.22V32C12 34.21 13.79 36 16 36H32C34.21 36 36 34.21 36 32V22.22C36 20.99 35.43 19.82 34.46 19.06Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M29 24.67C29 24.11 28.55 23.67 28 23.67H26V21.67C26 21.11 25.55 20.67 25 20.67H23C22.45 20.67 22 21.11 22 21.67V23.67H20C19.45 23.67 19 24.11 19 24.67V26.67C19 27.22 19.45 27.67 20 27.67H22V29.67C22 30.22 22.45 30.67 23 30.67H25C25.55 30.67 26 30.22 26 29.67V27.67H28C28.55 27.67 29 27.22 29 26.67V24.67Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Atendimento emergencial</h3>
+          <p>Equipe preparada para dor de dente, fratura dentária ou prótese quebrada. Atendemos você quando mais precisa.</p>
+        </div>
+        <div class="dif-card reveal">
+          <div class="dif-num">—</div>
+          <div class="dif-icon">
+            <svg viewBox="0 0 48 48" fill="none" width="24" height="24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M33.71 16.55C32.18 13.99 29.11 12.77 26.23 13.58L24.96 13.93C24.33 14.11 23.67 14.11 23.04 13.93L21.77 13.58C18.89 12.77 15.83 13.99 14.29 16.55C13.67 17.58 13.34 18.77 13.34 19.97V20.1C13.33 24.2 14.16 28.26 15.76 32.03L16.2 33.06C16.62 34.03 17.58 34.67 18.64 34.67C19.73 34.67 20.71 34.01 21.11 33L22.37 29.81C22.64 29.14 23.28 28.7 24 28.7C24.72 28.7 25.36 29.14 25.63 29.81L26.89 33C27.29 34.01 28.27 34.67 29.36 34.67C30.42 34.67 31.38 34.03 31.8 33.06L32.24 32.03C33.84 28.26 34.67 24.2 34.66 20.1V19.97C34.66 18.77 34.33 17.58 33.71 16.55Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Cuidados preventivos</h3>
+          <p>Parceiros no cuidado do seu sorriso com orientações preventivas e manutenção contínua dos tratamentos.</p>
+        </div>
+        <div class="dif-card reveal">
+          <div class="dif-num">—</div>
+          <div class="dif-icon">
+            <svg viewBox="0 0 48 48" fill="none" width="24" height="24">
+              <rect x="12" y="14" width="24" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M17 24H31M17 19H26M17 29H23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Simulação de sorriso</h3>
+          <p>Programas de simulação digital permitem visualizar o resultado antes de iniciar o tratamento, com total segurança.</p>
+        </div>
+        <div class="dif-card reveal">
+          <div class="dif-num">—</div>
+          <div class="dif-icon">
+            <svg viewBox="0 0 48 48" fill="none" width="24" height="24">
+              <path d="M24 12L26.47 19.11H34L28.27 23.28L30.73 30.39L24 26.22L17.27 30.39L19.73 23.28L14 19.11H21.53L24 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Odontologia estética</h3>
+          <p>Lentes de contato, facetas e clareamento com técnicas de última geração para o sorriso dos seus sonhos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA STRIP ═══ -->
+  <section class="cta-strip">
+    <div class="cta-strip-inner">
+      <div class="cta-strip-text">
+        <h2>Agende sua avaliação completa!</h2>
+        <p>Dê o primeiro passo para um sorriso mais saudável e bonito.</p>
+      </div>
+      <a class="btn-main btn-main-light" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">
+        Falar no WhatsApp
+        <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ DEPOIMENTOS ═══ -->
+  <section class="section dep-section" id="depoimentos">
+    <div class="container">
+      <div class="sec-head">
+        <p class="sec-label">depoimentos</p>
+        <h2 class="sec-title">O que nossos pacientes<br/><em>têm a dizer</em></h2>
+      </div>
+
+      <div class="dep-track-wrap">
+        <div class="dep-track" id="depTrack">
+
+          <div class="dep-card">
+            <div class="dep-video-wrap">
+            <video src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/Paciente-Fabio-Roberto-Maduereira-Alves.mp4"
+              controls preload="metadata" controlsList="nodownload" playsinline></video>
+          </div>
+            <div class="dep-info">
+              <span class="dep-name">Fábio Roberto</span>
+              <div class="dep-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+          </div>
+
+          <div class="dep-card">
+            <div class="dep-video-wrap">
+            <video src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/WhatsApp-Video-Maria-Ivone-1.mp4"
+              controls preload="metadata" controlsList="nodownload" playsinline></video>
+          </div>
+            <div class="dep-info">
+              <span class="dep-name">Maria Ivone</span>
+              <div class="dep-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+          </div>
+
+          <div class="dep-card">
+            <div class="dep-video-wrap">
+            <video src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/Paciente-Lindinalva-Ferreira-de-Moura.mp4"
+              controls preload="metadata" controlsList="nodownload" playsinline></video>
+          </div>
+            <div class="dep-info">
+              <span class="dep-name">Lindinalva Moura</span>
+              <div class="dep-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+          </div>
+
+          <div class="dep-card">
+            <div class="dep-video-wrap">
+            <video src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/WhatsApp-Video-Iraci-e-Antonia.mp4"
+              controls preload="metadata" controlsList="nodownload" playsinline></video>
+          </div>
+            <div class="dep-info">
+              <span class="dep-name">Iraci e Antônia</span>
+              <div class="dep-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="dep-controls">
+          <button class="dep-btn" id="depPrev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M19 12H5M11 6L5 12L11 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="dep-dots" id="depDots"></div>
+          <button class="dep-btn" id="depNext" aria-label="Próximo">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTATO ═══ -->
+  <section class="section contato-section" id="contato">
+    <div class="container contato-grid">
+      <div class="contato-left reveal">
+        <p class="sec-label">contato</p>
+        <h2 class="sec-title">Venha nos<br/><em>visitar</em></h2>
+        <div class="contato-infos">
+          <div class="cinfo">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>(11) 2615-0550 / (11) 2768-0550</strong>
+              <span>(11) 98784-7955</span>
+            </div>
+          </div>
+          <div class="cinfo">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M17.6569 16.6569C16.7202 17.5935 14.7616 19.5521 13.4138 20.8999C12.6327 21.681 11.3677 21.6814 10.5866 20.9003C9.26234 19.576 7.34159 17.6553 6.34315 16.6569C3.21895 13.5327 3.21895 8.46734 6.34315 5.34315C9.46734 2.21895 14.5327 2.21895 17.6569 5.34315C20.781 8.46734 20.781 13.5327 17.6569 16.6569Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11C15 12.6569 13.6569 14 12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>R. Embiruçú, 678</strong>
+              <span>Vila Beatriz, São Paulo – SP</span>
+            </div>
+          </div>
+          <div class="cinfo">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M3 8L10.8906 13.2604C11.5624 13.7083 12.4376 13.7083 13.1094 13.2604L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <strong>contato@ddent.com.br</strong>
+            </div>
+          </div>
+          <div class="cinfo">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M16 8C16 10.2091 14.2091 12 12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8Z" stroke="currentColor" stroke-width="1.5"/><path d="M5 20C5 17.2386 8.13401 15 12 15C15.866 15 19 17.2386 19 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div>
+              <strong>Dr. José Edvanilson da Silva</strong>
+              <span>CRO/SP 107.004</span>
+            </div>
+          </div>
+        </div>
+        <a class="btn-main" style="margin-top:8px" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">
+          Agendar pelo WhatsApp
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="contato-map reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.6!2d-46.59!3d-23.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzI1LjkiUyA0NsKwMzUnMjIuOSJX!5e0!3m2!1spt-BR!2sbr!4v1"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização DDent"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/logo-ddent-clinica.svg" alt="DDent Clínica" class="logo-img-real"/>
+          <p>Cuidando do seu sorriso com excelência há mais de 30 anos.</p>
+          <a href="https://www.instagram.com/clinica_ddent/" target="_blank" class="footer-ig">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @clinica_ddent
+          </a>
+        </div>
+        <div class="footer-nav">
+          <h4>Menu</h4>
+          <a href="#especialidades">Especialidades</a>
+          <a href="#sobre">Quem Somos</a>
+          <a href="#diferenciais">Por que nós?</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer-nav">
+          <h4>Especialidades</h4>
+          <a href="#">Implantes Dentários</a>
+          <a href="#">Próteses</a>
+          <a href="#">Ortodontia</a>
+          <a href="#">Facetas e Lentes</a>
+          <a href="#">Periodontia</a>
+          <a href="#">Endodontia</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 DDent Odontologia. Todos os direitos reservados.</p>
+        <a href="index.html" class="back-link">← Voltar à seleção inicial</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a class="wa-float" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <script src="paciente.js"></script>
+</body>
+</html>

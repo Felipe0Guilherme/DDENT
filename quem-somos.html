@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quem Somos — DDent Clínica Odontológica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="quem-somos.css"/>
+</head>
+<body>
+
+  <!-- ═══ HEADER (idêntico ao paciente.html) ═══ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <a href="paciente.html" class="logo">
+        <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/logo-ddent-clinica.svg"
+             alt="DDent Clínica" class="logo-img-real"
+             onerror="this.style.display='none';document.getElementById('logo-txt').style.display='flex'"/>
+        <span class="logo-text" id="logo-txt" style="display:none">
+          <em>D</em>Dent <span class="logo-sub">Clínica</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <div class="nav-dropdown" id="espDropdown">
+          <button class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">
+            Especialidades
+            <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" width="14" height="14">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="nav-drop-menu" role="menu">
+            <a href="especialidades.html#implantes"  class="drop-item" role="menuitem">
+              <span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 2C12 2 7 8 7 13C7 15.76 9.24 18 12 18C14.76 18 17 15.76 17 13C17 8 12 2 12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span>Implantes Dentários</span>
+            </a>
+            <a href="especialidades.html#proteses"   class="drop-item" role="menuitem">
+              <span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M9 3H15M12 3V8M8 8C8 8 6 11 6 14C6 17.31 8.69 20 12 20C15.31 20 18 17.31 18 14C18 11 16 8 16 8H8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span>Próteses Dentárias</span>
+            </a>
+            <a href="especialidades.html#ortodontia" class="drop-item" role="menuitem">
+              <span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span>Ortodontia e Ortopedia</span>
+            </a>
+            <a href="especialidades.html#facetas"    class="drop-item" role="menuitem">
+              <span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span>Facetas e Lentes</span>
+            </a>
+            <a href="especialidades.html#endodontia" class="drop-item" role="menuitem">
+              <span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M12 8V12L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <span>Endodontia</span>
+            </a>
+            <a href="especialidades.html#periodontia" class="drop-item" role="menuitem">
+              <span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 22C12 22 4 17 4 10C4 6.13 7.58 3 12 3C16.42 3 20 6.13 20 10C20 17 12 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span>Periodontia</span>
+            </a>
+            <div class="drop-footer"><a href="especialidades.html">Ver todas as especialidades →</a></div>
+          </div>
+        </div>
+
+        <a href="quem-somos.html" class="nav-link nav-link--active">Quem Somos</a>
+        <a href="paciente.html#diferenciais" class="nav-link">Por que nós?</a>
+        <a href="paciente.html#depoimentos"  class="nav-link">Depoimentos</a>
+        <a href="paciente.html#contato"      class="nav-link">Contato</a>
+      </nav>
+
+      <a class="cta-nav" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+        Agendar consulta
+      </a>
+
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <details class="mob-details">
+        <summary>Especialidades</summary>
+        <div class="mob-submenu">
+          <a href="especialidades.html#implantes">Implantes Dentários</a>
+          <a href="especialidades.html#proteses">Próteses Dentárias</a>
+          <a href="especialidades.html#ortodontia">Ortodontia e Ortopedia</a>
+          <a href="especialidades.html#facetas">Facetas e Lentes</a>
+          <a href="especialidades.html#endodontia">Endodontia</a>
+          <a href="especialidades.html#periodontia">Periodontia</a>
+        </div>
+      </details>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="paciente.html#diferenciais">Por que nós?</a>
+      <a href="paciente.html#depoimentos">Depoimentos</a>
+      <a href="paciente.html#contato">Contato</a>
+      <a class="mob-cta" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">Agendar consulta</a>
+    </nav>
+  </div>
+
+
+  <!-- ═══ HERO INTERNO ═══ -->
+  <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+    </div>
+    <div class="page-hero__inner">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Navegação estrutural">
+        <a href="index.html">Início</a>
+        <span aria-hidden="true">›</span>
+        <a href="paciente.html">Clínica</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Quem Somos</span>
+      </nav>
+
+      <p class="page-hero__eyebrow">
+        <span class="eyebrow-dot"></span>
+        Nossa história
+      </p>
+      <h1 class="page-hero__title">
+        Quem <em>Somos</em>
+      </h1>
+      <p class="page-hero__sub">
+        Excelência, tecnologia e cuidado genuíno — há mais de 30 anos transformando sorrisos em São Paulo.
+      </p>
+
+      <!-- Stats rápidos -->
+      <div class="hero-stats-row">
+        <div class="hsr-item">
+          <span class="hsr-n">+<span data-count="1300">0</span></span>
+          <span class="hsr-l">Pacientes atendidos</span>
+        </div>
+        <div class="hsr-sep" aria-hidden="true"></div>
+        <div class="hsr-item">
+          <span class="hsr-n">+<span data-count="200">0</span></span>
+          <span class="hsr-l">Protocolos em 2024</span>
+        </div>
+        <div class="hsr-sep" aria-hidden="true"></div>
+        <div class="hsr-item">
+          <span class="hsr-n"><span data-count="30">0</span>+</span>
+          <span class="hsr-l">Anos de experiência</span>
+        </div>
+        <div class="hsr-sep" aria-hidden="true"></div>
+        <div class="hsr-item">
+          <span class="hsr-n">+<span data-count="1500">0</span></span>
+          <span class="hsr-l">Próteses entregues</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-hint__line"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SOBRE A CLÍNICA ═══ -->
+  <section class="section clinic-section" id="clinica">
+    <div class="container">
+      <div class="clinic-grid">
+
+        <!-- Texto -->
+        <div class="clinic-text reveal">
+          <p class="sec-label">a clínica</p>
+          <h2 class="sec-title">Guiada pela<br/><em>excelência</em></h2>
+          <p class="clinic-lead">
+            A Clínica DDent é especialista em cuidar do sorriso e resgatar a autoestima dos pacientes através de diferentes tipos de tratamento. Aqui, a prioridade é a excelência no cuidado, utilizando conhecimentos técnicos, infraestrutura completa e atendimento de qualidade.
+          </p>
+          <p class="clinic-body">
+            Nossa missão vai além de simplesmente fornecer tratamentos odontológicos. É sobre criar um ambiente onde os pacientes se sintam em casa, onde possam confiar plenamente em nossa equipe. Com mais de 1.300 pacientes atendidos ao longo dos anos, desenvolvemos um vínculo único, baseado em respeito, transparência e compromisso inabalável com a qualidade.
+          </p>
+
+          <!-- Pilares -->
+          <div class="pillars">
+            <div class="pillar">
+              <div class="pillar__icon">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+                  <path d="M12 22C12 22 4 17 4 10C4 6.13 7.58 3 12 3C16.42 3 20 6.13 20 10C20 17 12 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 10L11 12L15 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Cuidado humano</strong>
+                <span>Atendimento personalizado onde cada paciente é único</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar__icon">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+                  <rect x="2" y="3" width="20" height="14" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 21H16M12 17V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Tecnologia de ponta</strong>
+                <span>Equipamentos modernos para resultados precisos e seguros</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar__icon">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+                  <path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Excelência em resultados</strong>
+                <span>Próteses e tratamentos que superam expectativas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mosaico de fotos -->
+        <div class="clinic-mosaic reveal" style="transition-delay:.18s">
+          <div class="cm-img cm-img--1">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/Frame-377.png" alt="Clínica DDent" loading="lazy"/>
+          </div>
+          <div class="cm-img cm-img--2">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/Frame-375.png" alt="Equipe DDent" loading="lazy"/>
+          </div>
+          <div class="cm-img cm-img--3">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/Frame-374.png" alt="Atendimento DDent" loading="lazy"/>
+          </div>
+          <div class="cm-img cm-img--4">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/Frame-376.png" alt="Estrutura DDent" loading="lazy"/>
+          </div>
+          <!-- Badge flutuante -->
+          <div class="cm-badge">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" fill="currentColor"/></svg>
+            <div>
+              <strong>Referência</strong>
+              <span>em São Paulo</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ EQUIPE — DENTISTAS ═══ -->
+  <section class="section team-section" id="equipe">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="sec-label">nossa equipe</p>
+        <h2 class="sec-title">Os profissionais<br/><em>por trás do seu sorriso</em></h2>
+        <p class="sec-desc">Cada membro da nossa equipe foi formado com rigor técnico e tem o compromisso genuíno com a saúde e bem-estar dos pacientes.</p>
+      </div>
+
+      <!-- Dr. José -->
+      <div class="doctor-card reveal" id="dr-jose">
+        <div class="doctor-card__media">
+          <div class="doctor-card__img-wrap">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-25-at-16.13.16-2.jpeg"
+                 alt="Dr. José Edvanilson da Silva" loading="lazy"/>
+          </div>
+          <div class="doctor-card__badge">
+            <span class="badge-role">Responsável Técnico</span>
+            <span class="badge-cro">CRO/SP 107.004</span>
+          </div>
+        </div>
+
+        <div class="doctor-card__body">
+          <p class="doctor-card__eyebrow">Fundador da Clínica DDent</p>
+          <h3 class="doctor-card__name">Dr. José Edvanilson<br/><em>da Silva</em></h3>
+
+          <p class="doctor-card__bio">
+            Reconhecido por sua dedicação e ética impecáveis na área odontológica, acumulando mais de <strong>30 anos de experiência</strong> como técnico em prótese desde o início de sua carreira. Em 2007 fundou seu próprio laboratório, e em 2013 expandiu as operações ao estabelecer o consultório.
+          </p>
+          <p class="doctor-card__bio">
+            Sua conduta profissional é pautada pela integridade, optando sempre pelo que é melhor para a saúde dos dentes de cada paciente. O comprometimento com serviços de qualidade é evidenciado pela constante atualização tecnológica e pela transparência em todas as interações.
+          </p>
+
+          <div class="doctor-tags">
+            <span class="dtag">+30 anos de experiência</span>
+            <span class="dtag">Técnico em Prótese</span>
+            <span class="dtag">Fundador DDent</span>
+          </div>
+
+          <div class="doctor-timeline">
+            <div class="dtl-item">
+              <span class="dtl-year">2007</span>
+              <div>
+                <strong>Fundação do Laboratório DDent</strong>
+                <span>Início das operações laboratoriais com foco em próteses de alta qualidade</span>
+              </div>
+            </div>
+            <div class="dtl-item">
+              <span class="dtl-year">2013</span>
+              <div>
+                <strong>Abertura da Clínica</strong>
+                <span>Expansão com atendimento clínico direto ao paciente</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dra. Neide -->
+      <div class="doctor-card doctor-card--alt reveal" id="dra-neide">
+        <div class="doctor-card__body">
+          <p class="doctor-card__eyebrow">Especialista em Ortodontia e Endodontia</p>
+          <h3 class="doctor-card__name">Dra. Neide<br/><em>Silva</em></h3>
+
+          <p class="doctor-card__bio">
+            Cirurgiã-Dentista altamente qualificada com registro <strong>CRO/SP 138.265</strong>. Formada em Odontologia pela Uninove e pela Universidade Cidade de São Paulo, possui especialização em Ortodontia pela Universidade Municipal de São Caetano do Sul e especialização em andamento em Endodontia pela APCD.
+          </p>
+          <p class="doctor-card__bio">
+            Aprimorou suas habilidades em Ortopedia Funcional dos Maxilares (OFM) e Invisalign. Iniciou sua trajetória no laboratório de prótese da DDent, influenciada pelo irmão Dr. José Edvanilson. Com o tempo desenvolveu uma paixão profunda pela Odontologia.
+          </p>
+
+          <div class="doctor-tags">
+            <span class="dtag">Ortodontia</span>
+            <span class="dtag">Endodontia</span>
+            <span class="dtag">Invisalign</span>
+            <span class="dtag">OFM</span>
+          </div>
+
+          <div class="spec-chips">
+            <div class="spec-chip">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Uninove · Uni. Cidade São Paulo
+            </div>
+            <div class="spec-chip">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Especialização · Ortodontia (UMSC)
+            </div>
+            <div class="spec-chip">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Em curso · Endodontia (APCD)
+            </div>
+          </div>
+        </div>
+
+        <div class="doctor-card__media">
+          <div class="doctor-card__img-wrap">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/IMG_2692-scaled.jpg"
+                 alt="Dra. Neide Silva" loading="lazy"/>
+          </div>
+          <div class="doctor-card__badge">
+            <span class="badge-role">Cirurgiã-Dentista</span>
+            <span class="badge-cro">CRO/SP 138.265</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dr. Roberto -->
+      <div class="doctor-card reveal" id="dr-roberto">
+        <div class="doctor-card__media">
+          <div class="doctor-card__img-wrap">
+            <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-25-at-16.13.16-1.jpeg"
+                 alt="Dr. Roberto Aquino da Silva" loading="lazy"/>
+          </div>
+          <div class="doctor-card__badge">
+            <span class="badge-role">Cirurgião-Dentista</span>
+            <span class="badge-cro">CRO/SP 142.870</span>
+          </div>
+        </div>
+
+        <div class="doctor-card__body">
+          <p class="doctor-card__eyebrow">Especialista em Implantes e Periodontia</p>
+          <h3 class="doctor-card__name">Dr. Roberto<br/><em>Aquino da Silva</em></h3>
+
+          <p class="doctor-card__bio">
+            Cirurgião-Dentista com registro <strong>CRO/SP 142.870</strong>, formado pela Universidade Cruzeiro do Sul com especialização em Implantodontia. Possui ainda especialização em Odontologia Hospitalar pelo Albert Einstein e em Periodontia (Cirurgia Plástica Periodontal e Peri-implantar) pela São Leopoldo Mandic.
+          </p>
+          <p class="doctor-card__bio">
+            Também se especializou em Prótese Dentária com ênfase em Reabilitação Oral e em Cirurgia Oral Menor pelo Instituto Orofacial das Américas (IOA). Iniciou sua trajetória trabalhando no laboratório da DDent, onde descobriu a paixão pela odontologia.
+          </p>
+
+          <div class="doctor-tags">
+            <span class="dtag">Implantodontia</span>
+            <span class="dtag">Periodontia</span>
+            <span class="dtag">Reabilitação Oral</span>
+            <span class="dtag">Cirurgia Oral</span>
+          </div>
+
+          <div class="spec-chips">
+            <div class="spec-chip">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Implantodontia · Cruzeiro do Sul
+            </div>
+            <div class="spec-chip">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Odontologia Hospitalar · Albert Einstein
+            </div>
+            <div class="spec-chip">
+              <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Periodontia · São Leopoldo Mandic
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ GALERIA EQUIPE ═══ -->
+  <section class="section gallery-section" id="galeria">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="sec-label">nossa equipe</p>
+        <h2 class="sec-title">Profissionais unidos<br/><em>pelo mesmo propósito</em></h2>
+        <p class="sec-desc">Cada sorriso transformado é o resultado do esforço coletivo de uma equipe apaixonada pelo que faz.</p>
+      </div>
+
+      <div class="gallery-grid reveal" style="transition-delay:.1s">
+        <div class="gal-item gal-item--tall">
+          <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/foto-quem-somos.jpg" alt="Equipe DDent" loading="lazy"/>
+          <div class="gal-overlay">
+            <span>Equipe DDent</span>
+          </div>
+        </div>
+        <div class="gal-item">
+          <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/sl-g-3.jpg" alt="Atendimento" loading="lazy"/>
+          <div class="gal-overlay"><span>Atendimento</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/sl-g-2.jpg" alt="Consultório" loading="lazy"/>
+          <div class="gal-overlay"><span>Consultório</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/sl-g-4.jpg" alt="Nossa estrutura" loading="lazy"/>
+          <div class="gal-overlay"><span>Nossa estrutura</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CTA STRIP ═══ -->
+  <section class="cta-strip" id="agendar">
+    <div class="container">
+      <div class="cta-strip-inner reveal-scale">
+        <div class="cta-strip__text">
+          <p class="sec-label" style="color:rgba(255,255,255,.5)">Próximo passo</p>
+          <h2>Os melhores profissionais<br/>para a sua <em>saúde bucal</em></h2>
+          <p>Confie na experiência e seriedade da equipe DDent — sua segurança em primeiro lugar.</p>
+        </div>
+        <div class="cta-strip__btns">
+          <a class="btn-main btn-main--white" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">
+            Agendar consulta
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn-sec btn-sec--outline-white" href="paciente.html#especialidades">
+            Ver especialidades
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/logo-ddent-clinica.svg" alt="DDent Clínica" class="logo-img-real"
+               onerror="this.style.display='none'"/>
+          <p>Cuidando do seu sorriso com excelência há mais de 30 anos.</p>
+          <a href="https://www.instagram.com/clinica_ddent/" target="_blank" class="footer-ig">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @clinica_ddent
+          </a>
+        </div>
+        <div class="footer-nav">
+          <h4>Menu</h4>
+          <a href="paciente.html">Início</a>
+          <a href="quem-somos.html">Quem Somos</a>
+          <a href="paciente.html#especialidades">Especialidades</a>
+          <a href="paciente.html#diferenciais">Por que nós?</a>
+          <a href="paciente.html#depoimentos">Depoimentos</a>
+          <a href="paciente.html#contato">Contato</a>
+        </div>
+        <div class="footer-nav">
+          <h4>Especialidades</h4>
+          <a href="especialidades.html#implantes">Implantes Dentários</a>
+          <a href="especialidades.html#proteses">Próteses</a>
+          <a href="especialidades.html#ortodontia">Ortodontia</a>
+          <a href="especialidades.html#facetas">Facetas e Lentes</a>
+          <a href="especialidades.html#periodontia">Periodontia</a>
+          <a href="especialidades.html#endodontia">Endodontia</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 DDent Odontologia. Todos os direitos reservados. · Resp. Técnico: Dr. José Edvanilson da Silva CRO/SP 107.004</p>
+        <a href="index.html" class="back-link">← Voltar à seleção inicial</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a class="wa-float" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <script src="quem-somos.js"></script>
+</body>
+</html>
