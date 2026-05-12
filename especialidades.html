@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Especialidades — DDent Clínica Odontológica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="paciente.css"/>
+  <link rel="stylesheet" href="especialidades.css"/>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="paciente.html" class="logo">
+        <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/logo-ddent-clinica.svg" alt="DDent Clínica" class="logo-img-real" style="height:36px;width:auto;display:block;"/>
+      </a>
+      <nav class="nav" id="nav">
+        <div class="nav-dropdown" id="espDropdown">
+          <button class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">
+            Especialidades
+            <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" width="14" height="14">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="nav-drop-menu" role="menu">
+            <a href="#implantes"   class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 2C12 2 7 8 7 13C7 15.76 9.24 18 12 18C14.76 18 17 15.76 17 13C17 8 12 2 12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 18V22M9 22H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Implantes Dentários</span></a>
+            <a href="#proteses"    class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M9 3H15M12 3V8M8 8C8 8 6 11 6 14C6 17.31 8.69 20 12 20C15.31 20 18 17.31 18 14C18 11 16 8 16 8H8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Próteses Dentárias</span></a>
+            <a href="#ortodontia"  class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M5 12H3M21 12H19M9 12H11M13 12H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Ortodontia e Ortopedia</span></a>
+            <a href="#facetas"     class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Facetas e Lentes</span></a>
+            <a href="#endodontia"  class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 3C12 3 8 7 8 12C8 14.76 9.79 17 12 17C14.21 17 16 14.76 16 12C16 7 12 3 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 17V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Endodontia</span></a>
+            <a href="#periodontia" class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M12 22C12 22 4 17 4 10C4 6.13 7.58 3 12 3C16.42 3 20 6.13 20 10C20 17 12 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Periodontia</span></a>
+            <div class="drop-footer"><a href="especialidades.html">Ver todas as especialidades →</a></div>
+          </div>
+        </div>
+        <a href="quem-somos.html" class="nav-link">Quem Somos</a>
+        <a href="paciente.html#diferenciais" class="nav-link">Por que nós?</a>
+        <a href="paciente.html#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+      </nav>
+      <a class="cta-nav" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+        Agendar consulta
+      </a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile overlay nav -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <details class="mob-details">
+        <summary>Especialidades</summary>
+        <div class="mob-submenu">
+          <a href="#implantes">Implantes Dentários</a>
+          <a href="#proteses">Próteses Dentárias</a>
+          <a href="#ortodontia">Ortodontia e Ortopedia</a>
+          <a href="#facetas">Facetas e Lentes</a>
+          <a href="#endodontia">Endodontia</a>
+          <a href="#periodontia">Periodontia</a>
+        </div>
+      </details>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="paciente.html#diferenciais">Por que nós?</a>
+      <a href="paciente.html#depoimentos">Depoimentos</a>
+      <a href="contato.html">Contato</a>
+      <a class="mob-cta" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">Agendar consulta</a>
+    </nav>
+  </div>
+
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="esp-hero">
+    <div class="esp-hero-grid"></div>
+    <div class="esp-hero-inner">
+      <div class="esp-hero-left">
+        <div class="esp-hero-eyebrow">Clínica DDent · São Paulo</div>
+        <h1>Nossas <em>especialidades</em><br/>odontológicas</h1>
+        <p>Tratamentos completos para cada necessidade do seu sorriso, com tecnologia de ponta e profissionais especializados há mais de 30 anos.</p>
+        <div class="esp-hero-pills">
+          <a href="#implantes"   class="esp-hero-pill"><svg viewBox="0 0 24 24" fill="none" width="13" height="13"><path d="M12 2C12 2 7 8 7 13C7 15.76 9.24 18 12 18C14.76 18 17 15.76 17 13C17 8 12 2 12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Implantes</a>
+          <a href="#proteses"    class="esp-hero-pill"><svg viewBox="0 0 24 24" fill="none" width="13" height="13"><path d="M9 3H15M12 3V8M8 8C8 8 6 11 6 14C6 17.31 8.69 20 12 20C15.31 20 18 17.31 18 14C18 11 16 8 16 8H8Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Próteses</a>
+          <a href="#ortodontia"  class="esp-hero-pill"><svg viewBox="0 0 24 24" fill="none" width="13" height="13"><circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/></svg>Ortodontia</a>
+          <a href="#facetas"     class="esp-hero-pill"><svg viewBox="0 0 24 24" fill="none" width="13" height="13"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Facetas e Lentes</a>
+          <a href="#endodontia"  class="esp-hero-pill"><svg viewBox="0 0 24 24" fill="none" width="13" height="13"><path d="M12 3C12 3 8 7 8 12C8 14.76 9.79 17 12 17C14.21 17 16 14.76 16 12C16 7 12 3 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Endodontia</a>
+          <a href="#periodontia" class="esp-hero-pill"><svg viewBox="0 0 24 24" fill="none" width="13" height="13"><path d="M12 22C12 22 4 17 4 10C4 6.13 7.58 3 12 3C16.42 3 20 6.13 20 10C20 17 12 22 12 22Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Periodontia</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STICKY TABS ═══ -->
+  <nav class="esp-nav" id="espNavTabs" aria-label="Especialidades">
+    <div class="esp-nav-inner">
+      <a href="#implantes"   class="esp-nav-tab" data-target="implantes"><svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M12 2C12 2 7 8 7 13C7 15.76 9.24 18 12 18C14.76 18 17 15.76 17 13C17 8 12 2 12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 18V22M9 22H15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Implantes</a>
+      <a href="#proteses"    class="esp-nav-tab" data-target="proteses"><svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M9 3H15M12 3V8M8 8C8 8 6 11 6 14C6 17.31 8.69 20 12 20C15.31 20 18 17.31 18 14C18 11 16 8 16 8H8Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Próteses</a>
+      <a href="#ortodontia"  class="esp-nav-tab" data-target="ortodontia"><svg viewBox="0 0 24 24" fill="none" width="15" height="15"><circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M5 12H3M21 12H19M9 12H11M13 12H15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Ortodontia</a>
+      <a href="#facetas"     class="esp-nav-tab" data-target="facetas"><svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Facetas e Lentes</a>
+      <a href="#endodontia"  class="esp-nav-tab" data-target="endodontia"><svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M12 3C12 3 8 7 8 12C8 14.76 9.79 17 12 17C14.21 17 16 14.76 16 12C16 7 12 3 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 17V21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Endodontia</a>
+      <a href="#periodontia" class="esp-nav-tab" data-target="periodontia"><svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M12 22C12 22 4 17 4 10C4 6.13 7.58 3 12 3C16.42 3 20 6.13 20 10C20 17 12 22 12 22Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Periodontia</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       1. IMPLANTES
+  ══════════════════════════════════════════ -->
+  <section class="esp-section" id="implantes">
+    <div class="esp-section-inner">
+
+      <div class="esp-sec-head reveal">
+        <div class="esp-sec-icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M24 5C24 5 14 15 14 26C14 31.52 18.48 36 24 36C29.52 36 34 31.52 34 26C34 15 24 5 24 5Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 36V44M18 44H30" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="esp-sec-title-group">
+          <div class="esp-sec-label">Especialidade 01</div>
+          <h2 class="esp-sec-title">Implantes <em>Dentários</em></h2>
+          <p class="esp-sec-desc">Reponha dentes perdidos com a solução mais avançada e duradoura da odontologia moderna. Os implantes de titânio se integram ao osso e funcionam como raízes naturais, devolvendo função, estética e autoestima com resultados que duram décadas.</p>
+        </div>
+      </div>
+
+      <div class="esp-content-grid reveal">
+
+        <div class="esp-info-block">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Indicações do tratamento
+          </h4>
+          <div class="esp-tags">
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Perda de dente único</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Perda de múltiplos dentes</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Protocolo All-on-4/All-on-6</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Substituição de prótese removível</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Reabilitação oral total</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Dificuldade para mastigar</span>
+          </div>
+        </div>
+
+        <div class="esp-info-block">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Como é o processo
+          </h4>
+          <div class="esp-steps">
+            <div class="esp-step"><div class="esp-step-num">1</div><div class="esp-step-body"><h5>Avaliação e planejamento digital</h5><p>Tomografia 3D, análise óssea e simulação do resultado final antes do início.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">2</div><div class="esp-step-body"><h5>Colocação do implante de titânio</h5><p>Procedimento cirúrgico com anestesia local, rápido e minimamente invasivo.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">3</div><div class="esp-step-body"><h5>Osseointegração</h5><p>O implante se une ao osso (3 a 6 meses). Provisórios garantem estética durante a espera.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">4</div><div class="esp-step-body"><h5>Instalação da prótese definitiva</h5><p>Coroa personalizada em cerâmica ou zircônia, idêntica ao dente natural.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="esp-benefits reveal" style="margin-top:40px;">
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 2L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Resultado Natural</h5><p>Aparência e sensação idênticos ao dente original, sem nenhuma diferença visual.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Durabilidade</h5><p>Com cuidado adequado, os implantes têm vida útil de décadas — podendo ser permanentes.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93M12 2V6M12 18V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Preserva o Osso</h5><p>Estimula o osso alveolar, evitando a reabsorção e mantendo o contorno facial jovem.</p></div>
+      </div>
+
+      <div class="esp-faq reveal">
+        <h3 class="esp-faq-title">Dúvidas sobre <em>Implantes</em></h3>
+        <div class="faq-item"><button class="faq-question"><span>Qualquer pessoa pode fazer implante?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">A maioria dos adultos com saúde geral estável pode receber implantes. Condições como diabetes descontrolada, tabagismo intenso ou ausência de osso suficiente requerem avaliação específica. Na consulta, nossos especialistas analisam sua tomografia e saúde geral para indicar o plano ideal.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>O procedimento dói?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">A cirurgia é realizada com anestesia local e é indolor durante o procedimento. No pós-operatório, pode haver leve desconforto por 2 a 3 dias, facilmente controlado com analgésicos comuns. A recuperação é rápida e a maioria dos pacientes retorna às atividades no dia seguinte.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>Quanto tempo dura o tratamento completo?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">O processo completo, desde a cirurgia até a prótese definitiva, leva de 3 a 6 meses. Durante a osseointegração o paciente usa provisórios estéticos. Em casos selecionados (carga imediata), é possível instalar a prótese no mesmo dia da cirurgia.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>O que é o Protocolo All-on-4?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">É uma técnica que reabilita uma arcada inteira com apenas 4 implantes estrategicamente posicionados, permitindo a colocação de uma prótese fixa no mesmo dia. Excelente para pacientes que perderam ou vão perder todos os dentes, com menor custo e menos cirurgias do que implantes individuais.</div></div></div>
+      </div>
+
+      <div class="esp-inline-cta reveal">
+        <div class="esp-inline-cta-text"><h4>Quero recuperar meu sorriso</h4><p>Agende sua avaliação gratuita com nosso especialista em implantes.</p></div>
+        <a href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20Implantes%20Dentários" target="_blank">Agendar avaliação <svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="esp-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       2. PRÓTESES
+  ══════════════════════════════════════════ -->
+  <section class="esp-section" id="proteses">
+    <div class="esp-section-inner">
+
+      <div class="esp-sec-head reveal">
+        <div class="esp-sec-icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M18 6H30M24 6V16M16 16C16 16 12 22 12 28C12 34.62 17.38 40 24 40C30.62 40 36 34.62 36 28C36 22 32 16 32 16H16Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="esp-sec-title-group">
+          <div class="esp-sec-label">Especialidade 02</div>
+          <h2 class="esp-sec-title">Próteses <em>Dentárias</em></h2>
+          <p class="esp-sec-desc">Da prótese parcial removível às próteses fixas sobre implantes e protocolos de reabilitação total, oferecemos soluções personalizadas confeccionadas com os materiais mais modernos, restaurando função mastigatória, estética e confiança.</p>
+        </div>
+      </div>
+
+      <div class="esp-content-grid reveal">
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Tipos de prótese</h4>
+          <div class="esp-tags">
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Prótese parcial removível</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Prótese total (dentadura)</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Coroa unitária</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Ponte fixa</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Prótese sobre implante</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Reabilitação oral total</span>
+          </div>
+        </div>
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Etapas do tratamento</h4>
+          <div class="esp-steps">
+            <div class="esp-step"><div class="esp-step-num">1</div><div class="esp-step-body"><h5>Diagnóstico e planejamento</h5><p>Avaliação clínica e radiográfica para escolher o tipo ideal de prótese para o seu caso.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">2</div><div class="esp-step-body"><h5>Moldagem e preparo</h5><p>Moldagens de alta precisão enviadas ao laboratório DDent para confecção sob medida.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">3</div><div class="esp-step-body"><h5>Prova e ajustes</h5><p>Teste da prótese para verificar estética, oclusão e conforto antes da fixação final.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">4</div><div class="esp-step-body"><h5>Instalação e acompanhamento</h5><p>Cimentação definitiva e consultas de revisão para garantir adaptação perfeita.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="esp-benefits reveal" style="margin-top:40px;">
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.55 5.45 21 6 21H9M19 10L21 12M19 10V20C19 20.55 18.55 21 18 21H15M9 21V15C9 14.45 9.45 14 10 14H14C14.55 14 15 14.45 15 15V21M9 21H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h5>Função Restaurada</h5><p>Recupere a capacidade de mastigar, falar e sorrir com conforto e segurança.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Estética Perfeita</h5><p>Materiais cerâmicos e zircônia reproduzem a translucidez e cor dos dentes naturais.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Personalizada</h5><p>Cada prótese é exclusiva — cor, forma e tamanho escolhidos junto com o paciente.</p></div>
+      </div>
+
+      <div class="esp-faq reveal">
+        <h3 class="esp-faq-title">Dúvidas sobre <em>Próteses</em></h3>
+        <div class="faq-item"><button class="faq-question"><span>Qual a diferença entre prótese e implante?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">O implante repõe a raiz do dente (parte dentro do osso), enquanto a prótese representa a coroa (parte visível). Elas se complementam: a prótese é instalada sobre o implante para reconstruir o dente completo. Também existem próteses sem implante, apoiadas nos dentes adjacentes ou na gengiva, que são indicadas em diferentes situações.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>A prótese cai ou se solta?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Próteses fixas (cimentadas ou parafusadas sobre implantes) são completamente estáveis. Próteses removíveis modernas utilizam encaixes de precisão ou implantes de retenção que as mantêm firmes durante as refeições e a fala, sem o uso de cola ou pó fixador.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>Quanto tempo dura uma prótese dentária?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Com higiene adequada e consultas de manutenção regulares, próteses fixas sobre implantes podem durar mais de 15 anos. Próteses removíveis têm vida útil média de 5 a 8 anos, dependendo do desgaste e das mudanças na estrutura óssea do paciente.</div></div></div>
+      </div>
+
+      <div class="esp-inline-cta reveal">
+        <div class="esp-inline-cta-text"><h4>Encontre a prótese ideal para você</h4><p>Converse com nosso especialista e descubra a melhor solução para o seu sorriso.</p></div>
+        <a href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20Próteses%20Dentárias" target="_blank">Falar com especialista <svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="esp-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       3. ORTODONTIA
+  ══════════════════════════════════════════ -->
+  <section class="esp-section" id="ortodontia">
+    <div class="esp-section-inner">
+
+      <div class="esp-sec-head reveal">
+        <div class="esp-sec-icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="14" cy="24" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="34" cy="24" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M10 24H6M42 24H38M18 24H20M28 24H30" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="esp-sec-title-group">
+          <div class="esp-sec-label">Especialidade 03</div>
+          <h2 class="esp-sec-title">Ortodontia e <em>Ortopedia</em></h2>
+          <p class="esp-sec-desc">Alinhamos dentes e corrigimos problemas de mordida com as técnicas mais modernas disponíveis. Além de aparelhos convencionais, trabalhamos com alinhadores estéticos invisíveis e ortopedia funcional para crianças, adolescentes e adultos.</p>
+        </div>
+      </div>
+
+      <div class="esp-content-grid reveal">
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>O que tratamos</h4>
+          <div class="esp-tags">
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Dentes tortos e apinhados</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Mordida cruzada</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Mordida aberta</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Sobressaliência (dentes protruídos)</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Bruxismo e disfunção de ATM</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Apneia do sono infantil</span>
+          </div>
+        </div>
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Opções de tratamento</h4>
+          <div class="esp-steps">
+            <div class="esp-step"><div class="esp-step-num">🔹</div><div class="esp-step-body"><h5>Aparelho metálico convencional</h5><p>Alta precisão e menor custo. Ideal para casos complexos em crianças e adultos.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">🔹</div><div class="esp-step-body"><h5>Aparelho estético (cerâmico)</h5><p>Mesma eficiência do metálico com brackets cerâmicos quase invisíveis.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">🔹</div><div class="esp-step-body"><h5>Alinhadores invisíveis</h5><p>Placas removíveis transparentes trocadas periodicamente. Conforto e discrição máximos.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">🔹</div><div class="esp-step-body"><h5>Ortopedia funcional (infantil)</h5><p>Aparelhos removíveis que guiam o desenvolvimento ósseo e previnem problemas futuros.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="esp-benefits reveal" style="margin-top:40px;">
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Sorriso Harmonioso</h5><p>Dentes alinhados realçam a estética facial e a confiança ao sorrir.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Saúde Bucal</h5><p>Dentes bem posicionados são mais fáceis de limpar, prevenindo cáries e doenças gengivais.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93M12 2V6M12 18V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Para Todas as Idades</h5><p>Do tratamento infantil preventivo à correção adulta — nunca é tarde para ter um sorriso alinhado.</p></div>
+      </div>
+
+      <div class="esp-faq reveal">
+        <h3 class="esp-faq-title">Dúvidas sobre <em>Ortodontia</em></h3>
+        <div class="faq-item"><button class="faq-question"><span>Adultos também podem fazer tratamento ortodôntico?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Sim! O tratamento ortodôntico é eficaz em qualquer idade. Cada vez mais adultos buscam correção do sorriso, especialmente com as opções de alinhadores invisíveis que permitem tratamento discreto sem interferir no cotidiano profissional e social.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>Quanto tempo dura o tratamento com aparelho?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">O tempo varia conforme a complexidade do caso. Tratamentos simples podem durar 12 a 18 meses; casos complexos, de 2 a 3 anos. Com os alinhadores modernos, muitos casos leves são resolvidos em 6 a 12 meses.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>Os alinhadores invisíveis são tão eficazes quanto o aparelho fixo?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Para a maioria dos casos, os alinhadores modernos oferecem resultados equivalentes ao aparelho fixo, com as vantagens de serem removíveis (facilitando higienização e alimentação) e praticamente invisíveis. Casos muito complexos ainda podem requerer aparelhos convencionais, mas nosso especialista avaliará a melhor opção para você.</div></div></div>
+      </div>
+
+      <div class="esp-inline-cta reveal">
+        <div class="esp-inline-cta-text"><h4>Pronto para alinhar seu sorriso?</h4><p>Conheça as opções de aparelhos e alinhadores disponíveis na DDent.</p></div>
+        <a href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20Ortodontia" target="_blank">Agendar consulta <svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="esp-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       4. FACETAS E LENTES
+  ══════════════════════════════════════════ -->
+  <section class="esp-section" id="facetas">
+    <div class="esp-section-inner">
+
+      <div class="esp-sec-head reveal">
+        <div class="esp-sec-icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M24 6L30 18L44 19.6L33 30.2L35.5 44L24 37.8L12.5 44L15 30.2L4 19.6L18 18L24 6Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="esp-sec-title-group">
+          <div class="esp-sec-label">Especialidade 04</div>
+          <h2 class="esp-sec-title">Facetas e <em>Lentes de Contato</em></h2>
+          <p class="esp-sec-desc">Transforme seu sorriso com lâminas ultrafinas de porcelana que corrigem cor, formato e alinhamento dos dentes de forma rápida, minimamente invasiva e com resultado natural impressionante — a escolha preferida de quem busca o sorriso perfeito.</p>
+        </div>
+      </div>
+
+      <div class="esp-content-grid reveal">
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>O que corrigem</h4>
+          <div class="esp-tags">
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Dentes manchados / escurecidos</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Formato irregular</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Pequenos espaços entre os dentes</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Dentes desgastados</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Desalinhamento leve</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Dentes fraturados</span>
+          </div>
+        </div>
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Faceta vs Lente de Contato</h4>
+          <div class="esp-steps">
+            <div class="esp-step"><div class="esp-step-num">✦</div><div class="esp-step-body"><h5>Faceta de porcelana</h5><p>Lâmina fina colada à face frontal do dente. Pequeno desgaste do esmalte para melhor encaixe. Ideal para correções mais expressivas de forma e cor.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">✦</div><div class="esp-step-body"><h5>Lente de contato dental</h5><p>Ultra-fina (0,3mm), geralmente sem desgaste do dente. Perfeita para correções sutis com máxima preservação da estrutura original.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">✦</div><div class="esp-step-body"><h5>Simulação digital prévia</h5><p>Você vê o resultado esperado antes de qualquer procedimento, garantindo total segurança na decisão.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="esp-benefits reveal" style="margin-top:40px;">
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Transformação Rápida</h5><p>Em apenas 2 a 3 consultas você terá o sorriso que sempre desejou.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Resultado Natural</h5><p>Porcelana translúcida que imita a luz natural dos dentes. Imperceptível para quem vê.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93M12 2V6M12 18V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Longa Durabilidade</h5><p>Com cuidado adequado, as facetas de porcelana duram de 10 a 15 anos mantendo cor e brilho.</p></div>
+      </div>
+
+      <div class="esp-faq reveal">
+        <h3 class="esp-faq-title">Dúvidas sobre <em>Facetas e Lentes</em></h3>
+        <div class="faq-item"><button class="faq-question"><span>O processo de colocação de facetas é doloroso?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Não. O procedimento é feito com anestesia local nas sessões de preparo. A colocação final das facetas é totalmente indolor. Muitos pacientes descrevem o tratamento como um dos mais tranquilos que já realizaram.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>Preciso desgastar meus dentes para colocar lentes?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">As lentes de contato dentais, por serem extremamente finas, geralmente não requerem desgaste ou requerem remoção mínima de esmalte. As facetas convencionais precisam de um leve desgaste para melhor fixação e resultado. Em ambos os casos, o objetivo é sempre a máxima preservação do dente natural.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>Posso escolher o formato e a cor das facetas?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Sim! O planejamento é feito em conjunto com o dentista usando simulação digital e mock-up (protótipo em resina colocado provisoriamente na boca). Você aprovará a aparência antes de qualquer procedimento definitivo, garantindo total satisfação com o resultado.</div></div></div>
+      </div>
+
+      <div class="esp-inline-cta reveal">
+        <div class="esp-inline-cta-text"><h4>Transforme seu sorriso em poucas consultas</h4><p>Simule digitalmente seu novo sorriso e veja o resultado antes de começar.</p></div>
+        <a href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20Facetas%20e%20Lentes%20de%20Contato" target="_blank">Simular meu sorriso <svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="esp-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       5. ENDODONTIA
+  ══════════════════════════════════════════ -->
+  <section class="esp-section" id="endodontia">
+    <div class="esp-section-inner">
+
+      <div class="esp-sec-head reveal">
+        <div class="esp-sec-icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M24 6C24 6 16 14 16 24C16 28.42 19.58 32 24 32C28.42 32 32 28.42 32 24C32 14 24 6 24 6Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 32V42" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M20 38H28" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="esp-sec-title-group">
+          <div class="esp-sec-label">Especialidade 05</div>
+          <h2 class="esp-sec-title">Endodontia — <em>Tratamento de Canal</em></h2>
+          <p class="esp-sec-desc">Salve seus dentes naturais com segurança e conforto. A endodontia moderna trata infecções e preserva dentes que seriam perdidos, utilizando instrumentos rotatórios de alta precisão, anestesia eficaz e — em muitos casos — sessão única.</p>
+        </div>
+      </div>
+
+      <div class="esp-content-grid reveal">
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Sinais de que você precisa</h4>
+          <div class="esp-tags">
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Dor intensa e persistente</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Sensibilidade ao quente e frio</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Inchaço na gengiva</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Escurecimento do dente</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Cárie profunda</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Abscesso dentário</span>
+          </div>
+        </div>
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Como funciona</h4>
+          <div class="esp-steps">
+            <div class="esp-step"><div class="esp-step-num">1</div><div class="esp-step-body"><h5>Anestesia local eficaz</h5><p>O procedimento é totalmente indolor. A anestesia moderna garante total ausência de dor durante o tratamento.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">2</div><div class="esp-step-body"><h5>Remoção da polpa infectada</h5><p>Limpeza completa do interior do dente com instrumentos rotatórios de alta precisão.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">3</div><div class="esp-step-body"><h5>Modelagem e desinfecção</h5><p>Formatação dos canais e irrigação com soluções antibacterianas para eliminação total da infecção.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">4</div><div class="esp-step-body"><h5>Obturação e restauração</h5><p>Selamento dos canais com material biocompatível e restauração da estrutura do dente.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="esp-benefits reveal" style="margin-top:40px;">
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Sem Dor</h5><p>A endodontia moderna é indolor. Você sentirá apenas o alívio após o tratamento.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Salva o Dente Natural</h5><p>Preservar o dente original é sempre preferível — implantes não substituem 100% a função natural.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93M12 2V6M12 18V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Sessão Única</h5><p>Em muitos casos, o tratamento de canal pode ser concluído em uma única consulta, com mais conforto para você.</p></div>
+      </div>
+
+      <div class="esp-faq reveal">
+        <h3 class="esp-faq-title">Dúvidas sobre <em>Endodontia</em></h3>
+        <div class="faq-item"><button class="faq-question"><span>Tratamento de canal realmente dói?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Não com as técnicas atuais. O medo do tratamento de canal é um mito criado quando os procedimentos eram mais rudimentares. Hoje, com anestesia local moderna e instrumental rotatório de alta precisão, o tratamento é indolor e mais rápido. O que dói é a infecção — o tratamento é a cura.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>Após o canal, o dente fica fraco?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">O dente tratado endodonticamente pode ficar levemente mais frágil, por isso recomendamos a proteção com uma coroa (prótese) em seguida. Com a restauração adequada, o dente funciona normalmente por muitos anos — às vezes décadas.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>Quando é melhor fazer canal do que extrair o dente?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Sempre que possível, preservar o dente natural é preferível. A extração implica custos futuros com implante ou prótese, além de perda óssea progressiva. O endodontista avaliará se o dente tem estrutura suficiente para ser salvo com qualidade e durabilidade.</div></div></div>
+      </div>
+
+      <div class="esp-inline-cta reveal">
+        <div class="esp-inline-cta-text"><h4>Está com dor? Podemos te ajudar</h4><p>Atendimento de emergência disponível. Entre em contato agora.</p></div>
+        <a href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20preciso%20de%20atendimento%20urgente%20-%20tenho%20dor%20de%20dente" target="_blank">Atendimento urgente <svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="esp-divider"></div>
+
+  <!-- ══════════════════════════════════════════
+       6. PERIODONTIA
+  ══════════════════════════════════════════ -->
+  <section class="esp-section" id="periodontia">
+    <div class="esp-section-inner">
+
+      <div class="esp-sec-head reveal">
+        <div class="esp-sec-icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M24 44C24 44 8 34 8 20C8 12.27 15.16 6 24 6C32.84 6 40 12.27 40 20C40 34 24 44 24 44Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 20C24 20 18 24 18 28C18 31.31 20.69 34 24 34C27.31 34 30 31.31 30 28C30 24 24 20 24 20Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="esp-sec-title-group">
+          <div class="esp-sec-label">Especialidade 06</div>
+          <h2 class="esp-sec-title">Periodontia — <em>Saúde das Gengivas</em></h2>
+          <p class="esp-sec-desc">A saúde começa na gengiva. A periodontia previne e trata doenças que afetam os tecidos de suporte dos dentes — gengiva e osso alveolar — evitando desde a gengivite até a perda dentária por periodontite avançada, com técnicas cirúrgicas e não-cirúrgicas.</p>
+        </div>
+      </div>
+
+      <div class="esp-content-grid reveal">
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>O que tratamos</h4>
+          <div class="esp-tags">
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Gengivite</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Periodontite</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Retração gengival</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Gengiva alta ("sorriso gengival")</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Sangramento gengival</span>
+            <span class="esp-tag"><svg viewBox="0 0 16 16" fill="none"><path d="M8 2L9.5 5.5L13.5 6L10.5 8.8L11.2 13L8 11.2L4.8 13L5.5 8.8L2.5 6L6.5 5.5L8 2Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Manutenção pós-implante</span>
+          </div>
+        </div>
+        <div class="esp-info-block">
+          <h4><svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Etapas do tratamento</h4>
+          <div class="esp-steps">
+            <div class="esp-step"><div class="esp-step-num">1</div><div class="esp-step-body"><h5>Exame periodontal completo</h5><p>Sondagem dos sulcos gengivais e radiografias para avaliar o grau de comprometimento ósseo.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">2</div><div class="esp-step-body"><h5>Raspagem e alisamento radicular</h5><p>Remoção do biofilme e tártaro subgengival — tratamento não-cirúrgico para casos iniciais e moderados.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">3</div><div class="esp-step-body"><h5>Cirurgia periodontal (se necessário)</h5><p>Procedimentos cirúrgicos para casos avançados: retalho, enxerto gengival ou regeneração óssea.</p></div></div>
+            <div class="esp-step"><div class="esp-step-num">4</div><div class="esp-step-body"><h5>Manutenção periódica</h5><p>Consultas de profilaxia regulares para prevenir recidivas e monitorar a saúde gengival.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="esp-benefits reveal" style="margin-top:40px;">
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Previne Perda Dentária</h5><p>A periodontite não tratada é a principal causa de perda de dentes em adultos — tratamento precoce é essencial.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Saúde Sistêmica</h5><p>Doenças periodontais estão associadas a risco cardiovascular e diabetes — cuidar da gengiva é cuidar do corpo.</p></div>
+        <div class="esp-benefit"><div class="esp-benefit-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93M12 2V6M12 18V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><h5>Estética Gengival</h5><p>Cirurgia plástica gengival para harmonizar o sorriso — corrigindo excesso ou assimetrias gengivais.</p></div>
+      </div>
+
+      <div class="esp-faq reveal">
+        <h3 class="esp-faq-title">Dúvidas sobre <em>Periodontia</em></h3>
+        <div class="faq-item"><button class="faq-question"><span>Minha gengiva sangra ao escovar. É sinal de doença?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Sim, sangramento gengival é sempre um sinal de inflamação — gengivite. Gengivas saudáveis não sangram. O diagnóstico precoce é fundamental: a gengivite é reversível com tratamento profissional e melhora da higiene, mas se não tratada pode evoluir para periodontite, que compromete o osso.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>A periodontite tem cura?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">A periodontite é uma doença crônica — não tem cura, mas tem controle. Com tratamento adequado e manutenção regular, a doença é estabilizada e os dentes podem ser mantidos por décadas. A chave é o acompanhamento contínuo com seu periodontista.</div></div></div>
+        <div class="faq-item"><button class="faq-question"><span>O que é cirurgia plástica gengival?</span><span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">É uma cirurgia estética que remodela a gengiva para melhorar a harmonia do sorriso. O "sorriso gengival" (excesso de gengiva à mostra) é corrigido com gengivectomia, deixando os dentes mais proporcionais e o sorriso mais bonito. O procedimento é rápido e o resultado é imediato.</div></div></div>
+      </div>
+
+      <div class="esp-inline-cta reveal">
+        <div class="esp-inline-cta-text"><h4>Cuide das suas gengivas agora</h4><p>Agende uma consulta periodontal e garanta a saúde de toda a sua boca.</p></div>
+        <a href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20tenho%20interesse%20em%20Periodontia" target="_blank">Agendar avaliação <svg viewBox="0 0 24 24" fill="none" width="15" height="15"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ CTA STRIP ═══ -->
+  <section class="cta-strip">
+    <div class="cta-strip-inner">
+      <div class="cta-strip-text">
+        <h2>Pronto para transformar seu sorriso?</h2>
+        <p>Agende sua avaliação completa com nossos especialistas.</p>
+      </div>
+      <a class="btn-main btn-main-light" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank">
+        Agendar pelo WhatsApp
+        <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/logo-ddent-clinica.svg" alt="DDent Clínica" style="height:32px;width:auto;display:block;margin-bottom:12px;filter:brightness(0) invert(1);opacity:.7;"/>
+          <p>Cuidando do seu sorriso com excelência há mais de 30 anos.</p>
+          <a href="https://www.instagram.com/clinica_ddent/" target="_blank" class="footer-ig">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @clinica_ddent
+          </a>
+        </div>
+        <div class="footer-nav">
+          <h4>Menu</h4>
+          <a href="paciente.html">Página Inicial</a>
+          <a href="quem-somos.html">Quem Somos</a>
+          <a href="paciente.html#diferenciais">Por que nós?</a>
+          <a href="paciente.html#depoimentos">Depoimentos</a>
+          <a href="contato.html">Contato</a>
+        </div>
+        <div class="footer-nav">
+          <h4>Especialidades</h4>
+          <a href="#implantes">Implantes Dentários</a>
+          <a href="#proteses">Próteses</a>
+          <a href="#ortodontia">Ortodontia</a>
+          <a href="#facetas">Facetas e Lentes</a>
+          <a href="#endodontia">Endodontia</a>
+          <a href="#periodontia">Periodontia</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 DDent Odontologia. Todos os direitos reservados. Responsável Técnico: Dr. José Edvanilson da Silva CRO/SP 107.004</p>
+        <a href="paciente.html" class="back-link">← Voltar à página principal</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a class="wa-float" href="https://api.whatsapp.com/send?phone=5511987847955&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <script src="especialidades.js"></script>
+</body>
+</html>
