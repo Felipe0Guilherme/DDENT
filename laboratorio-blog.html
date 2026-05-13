@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog e Dicas — DDent Laboratório</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="laboratorio.css"/>
+  <link rel="stylesheet" href="laboratorio-blog.css">
+
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="laboratorio.html" class="logo">
+        <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/logo-lab.png"
+             alt="DDent Lab" class="logo-img-real"
+             onerror="this.style.display='none';document.getElementById('logoTxt').style.display='flex'"/>
+        <span class="logo-text" id="logoTxt" style="display:none"><em>D</em>Dent <span class="logo-sub">Lab</span></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <div class="nav-dropdown" id="srvDropdown">
+          <button class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">
+            Serviços
+            <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" width="14"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="nav-drop-menu" role="menu">
+            <a href="laboratorio.html#protese-fixa"  class="drop-item"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><path d="M12 3C12 3 6 8 6 14C6 17.31 8.69 20 12 20C15.31 20 18 17.31 18 14C18 8 12 3 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Prótese Fixa</span></a>
+            <a href="laboratorio.html#protocolo"     class="drop-item"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Protocolo sobre Implante</span></a>
+            <a href="laboratorio.html#parcial-total" class="drop-item"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><path d="M9 3H15M12 3V8M8 8C8 8 6 11 6 14C6 17.31 8.69 20 12 20C15.31 20 18 17.31 18 14C18 11 16 8 16 8H8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Prótese Parcial e Total</span></a>
+            <a href="laboratorio.html#facetas"       class="drop-item"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5"/></svg></span><span>Facetas e Lentes</span></a>
+            <a href="laboratorio.html#metal-free"    class="drop-item"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Coroas Metal Free</span></a>
+            <a href="laboratorio.html#zirconia"      class="drop-item"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><path d="M12 2L15 8H21L16.5 12.5L18 19L12 15.5L6 19L7.5 12.5L3 8H9L12 2Z" stroke="currentColor" stroke-width="1.5"/></svg></span><span>Zircônia Dental</span></a>
+          </div>
+        </div>
+        <a href="laboratorio.html#sobre"        class="nav-link">Quem Somos</a>
+        <a href="laboratorio.html#tecnologias"  class="nav-link">Tecnologias</a>
+        <a href="laboratorio.html#portfolio"    class="nav-link">Portfólio</a>
+        <a href="laboratorio.html#contato"      class="nav-link">Contato</a>
+        <a href="laboratorio-blog.html"         class="nav-link nav-link--active">Blog e Dicas</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="paciente.html" class="nav-switch">
+          <svg viewBox="0 0 24 24" fill="none" width="13"><path d="M16 8C16 10.2091 14.2091 12 12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8Z" stroke="currentColor" stroke-width="1.5"/><path d="M5 20C5 17.2386 8.13401 15 12 15C15.866 15 19 17.2386 19 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Sou Paciente
+        </a>
+        <a class="cta-nav" href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+          Falar com técnico
+        </a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <details class="mob-details">
+        <summary>Serviços</summary>
+        <div class="mob-submenu">
+          <a href="laboratorio.html#protese-fixa">Prótese Fixa</a>
+          <a href="laboratorio.html#protocolo">Protocolo sobre Implante</a>
+          <a href="laboratorio.html#parcial-total">Prótese Parcial e Total</a>
+          <a href="laboratorio.html#facetas">Facetas e Lentes</a>
+          <a href="laboratorio.html#metal-free">Coroas Metal Free</a>
+          <a href="laboratorio.html#zirconia">Zircônia Dental</a>
+        </div>
+      </details>
+      <a href="laboratorio.html#sobre">Quem Somos</a>
+      <a href="laboratorio.html#tecnologias">Tecnologias</a>
+      <a href="laboratorio.html#portfolio">Portfólio</a>
+      <a href="laboratorio.html#contato">Contato</a>
+      <a href="laboratorio-blog.html">Blog e Dicas</a>
+      <a href="paciente.html" class="mob-switch">Sou Paciente →</a>
+      <a class="mob-cta" href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank">Falar com técnico</a>
+    </nav>
+  </div>
+
+
+  <!-- ═══ HERO ═══ -->
+  <section class="blog-hero">
+    <canvas id="blogCanvas" class="blog-canvas" aria-hidden="true"></canvas>
+    <div class="blog-hero-inner">
+      <nav class="blog-breadcrumb" aria-label="Navegação estrutural">
+        <a href="laboratorio.html">Laboratório</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Blog e Dicas</span>
+      </nav>
+      <p class="blog-hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        Conteúdo técnico · DDent Lab
+      </p>
+      <h1 class="blog-hero-title">
+        Blog e dicas para<br/><em>dentistas modernos.</em>
+      </h1>
+      <p class="blog-hero-sub">
+        Vídeos, processos de produção e dicas técnicas sobre os principais materiais e tecnologias em prótese odontológica.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══ TOPIC CARDS ═══ -->
+  <section class="blog-topics">
+    <div class="container">
+      <div class="blog-topics-header">
+        <p class="blog-topics-eyebrow">Explore os temas</p>
+        <h2 class="blog-topics-title">Conhecimento técnico<br/><em>por material.</em></h2>
+        <p class="blog-topics-sub">Selecione um tema para explorar o processo completo de produção, vídeos e dicas de cimentação e uso clínico.</p>
+      </div>
+
+      <div class="topics-grid">
+
+        <!-- Card 1 — Zircônia -->
+        <div class="topic-card reveal" onclick="openModal('zirconia')" tabindex="0" role="button" aria-label="Ver conteúdo sobre Zircônia">
+          <div class="topic-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="28" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.5 5H20l-4 4.5 1.5 6L12 14.5 6.5 17.5 8 11.5 4 7h5.5L12 2z"/></svg>
+          </div>
+          <h3 class="topic-card-title">Zircônia</h3>
+          <p class="topic-card-desc">Conheça o processo completo de produção e acabamento da zircônia dental, do escaneamento à sinterização.</p>
+          <button class="topic-card-btn">
+            Ver mais
+            <svg viewBox="0 0 24 24" fill="none" width="14" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <!-- Card 2 — Dissilicato -->
+        <div class="topic-card reveal d1" onclick="openModal('dissilicato')" tabindex="0" role="button" aria-label="Ver conteúdo sobre Dissilicato de Lítio">
+          <div class="topic-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="28" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="topic-card-title">Dissilicato de Lítio</h3>
+          <p class="topic-card-desc">Descubra a tecnologia e aplicações do dissilicato de lítio — material cerâmico de alta estética e resistência.</p>
+          <button class="topic-card-btn">
+            Ver mais
+            <svg viewBox="0 0 24 24" fill="none" width="14" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <!-- Card 3 — Escaneamento Intra Oral -->
+        <div class="topic-card reveal d2" onclick="openModal('escaneamento')" tabindex="0" role="button" aria-label="Ver conteúdo sobre Escaneamento Intra Oral">
+          <div class="topic-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="28" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="topic-card-title">Escaneamento Intra Oral</h3>
+          <p class="topic-card-desc">Tecnologia digital de ponta para precisão absoluta — como o escaneamento intraoral transforma o fluxo protético.</p>
+          <button class="topic-card-btn">
+            Ver mais
+            <svg viewBox="0 0 24 24" fill="none" width="14" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ MODAL — ZIRCÔNIA ═══ -->
+  <div class="modal-overlay" id="modal-zirconia" role="dialog" aria-modal="true" aria-labelledby="mzt">
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-head-info">
+          <p class="modal-eyebrow">Material · Prótese Digital</p>
+          <h2 class="modal-title" id="mzt">Zircônia <em>Dental</em></h2>
+          <p class="modal-desc">Material cerâmico de alta resistência, indicado para coroas posteriores, pontes e trabalhos sobre implante com exigência mecânica e estética.</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('zirconia')" aria-label="Fechar">
+          <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab active" data-modal="zirconia" data-tab="video">Processo de Produção</button>
+        <button class="modal-tab" data-modal="zirconia" data-tab="steps">Passo a Passo</button>
+        <button class="modal-tab" data-modal="zirconia" data-tab="tips">Cimentação e Dicas</button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Tab: Video -->
+        <div class="modal-panel active" id="zirconia-video">
+          <div class="modal-video-wrap">
+            <div class="modal-video-frame">
+              <iframe src="https://www.youtube-nocookie.com/embed/OYHBdU8VWUg?start=69&rel=0&modestbranding=1"
+                      title="Processo de Confecção da Zircônia — DDent Lab"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="modal-video-steps">
+              <div class="mvs-item">
+                <div class="mvs-num">1</div>
+                <div class="mvs-content">
+                  <h5>Escaneamento Digital</h5>
+                  <p>Captura das informações dentárias com scanner 3D de alta resolução.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">2</div>
+                <div class="mvs-content">
+                  <h5>Modelagem CAD</h5>
+                  <p>Criação digital da prótese com software especializado para ajuste perfeito.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">3</div>
+                <div class="mvs-content">
+                  <h5>Fresagem CAM</h5>
+                  <p>Usinagem do bloco de zircônia com equipamento de precisão micrométrica.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">4</div>
+                <div class="mvs-content">
+                  <h5>Sinterização</h5>
+                  <p>Queima em forno especial a 1500°C para cristalização e resistência máxima.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">5</div>
+                <div class="mvs-content">
+                  <h5>Acabamento e Polimento</h5>
+                  <p>Pintura com corantes e glazeamento para resultado estético definitivo.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">6</div>
+                <div class="mvs-content">
+                  <h5>Controle de Qualidade</h5>
+                  <p>Verificação de ajuste, oclusão e estética antes da entrega ao dentista.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Steps -->
+        <div class="modal-panel" id="zirconia-steps">
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Escaneamento Digital</h4>
+                <p>O modelo de gesso ou o arquivo STL do scanner intraoral é capturado por scanner 3D de alta resolução, gerando uma nuvem de pontos tridimensional que representa fielmente a anatomia dental.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>Modelagem em Software CAD</h4>
+                <p>O técnico utiliza software odontológico especializado (ex.: exocad) para modelar digitalmente a peça protética, controlando espessura, contatos proximais, curva de Wilson e plano oclusal.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>Fresagem CAM</h4>
+                <p>O arquivo CAD é enviado à fresadora de 5 eixos que usina o bloco de zircônia pré-sinterizada com precisão de ±20 µm, compensando automaticamente a expansão de sinterização (~20%).</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <h4>Aplicação de Corantes (Staining)</h4>
+                <p>Antes da sinterização final, corantes específicos são aplicados sobre a peça verde para reproduzir a caracterização cromática da dentição natural, criando gradientes de valor e croma.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">5</div>
+              <div class="step-content">
+                <h4>Sinterização a 1500°C</h4>
+                <p>O forno de sinterização eleva a temperatura até 1500°C por ciclo de 6 a 8 horas, densificando os grãos de zircônia e transformando a estrutura tetragonal em monoclínica de alta resistência (~1200 MPa).</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">6</div>
+              <div class="step-content">
+                <h4>Glazeamento e Polimento Final</h4>
+                <p>Aplicação de glaze ou polimento mecânico para obter superfície lisa, com brilho e translucidez compatíveis com o esmalte natural. Controle oclusal e de ajuste marginal antes da entrega.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Tips -->
+        <div class="modal-panel" id="zirconia-tips">
+          <div class="tips-grid">
+            <div class="tip-card tip-highlight">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2 5h5l-4 3.5 1.5 5L12 13l-4.5 2.5 1.5-5L5 7h5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h4>Cimento Recomendado para Zircônia</h4>
+              <p>Utilize cimento resinoso (ex.: Panavia V5, RelyX U200) ou ionômero de vidro modificado por resina. A zircônia monolítica pode ser cimentada com ionômero convencional em preparos com boa retenção. Para peças com retenção limitada, preferir cimento adesivo com primer de zircônia (MDP-based).</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Preparo Dental Ideal</h4>
+              <p>Redução oclusal de 1,0–1,5 mm, ângulos internos arredondados, margem em ombro ou chanfro largo. Evitar ângulos vivos que concentrem tensão na cerâmica.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Tratamento Interno da Peça</h4>
+              <p>Para cimentação adesiva: jateamento com Al₂O₃ (50 µm, 2 bar), aplicação de primer de zircônia (MDP) por 60s, secagem. Não realizar HF — zircônia não é sensível a ácido fluorídrico.</p>
+            </div>
+            <div class="tip-card tip-warning">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Atenção: Ajuste em Boca</h4>
+              <p>Se necessário ajuste pós-sinterização, utilizar pontas diamantadas com irrigação constante. Sempre repolir ou re-glazear a área desgastada para evitar desgaste antagonista.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Indicações Clínicas</h4>
+              <p>Coroas unitárias posteriores e anteriores, pontes de até 3 elementos, coroas sobre implante, protocolo all-on-x monolítico. Alta resistência à fratura (&gt;900 MPa monolítica).</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M12 3C12 3 7 8 7 13a5 5 0 0010 0c0-5-5-10-5-10z" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Isolamento e Protocolo</h4>
+              <p>Prefira isolamento absoluto para cimentação adesiva. Controle de umidade é crítico para adesão do primer de zircônia. Confira contatos e oclusão antes da cimentação definitiva.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ MODAL — DISSILICATO DE LÍTIO ═══ -->
+  <div class="modal-overlay" id="modal-dissilicato" role="dialog" aria-modal="true" aria-labelledby="mdt">
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-head-info">
+          <p class="modal-eyebrow">Material · Cerâmica Vítrea</p>
+          <h2 class="modal-title" id="mdt">Dissilicato <em>de Lítio</em></h2>
+          <p class="modal-desc">Cerâmica de alta estética com translucidez semelhante ao esmalte natural. Indicada para facetas, lentes, coroas anteriores e posteriores de alta demanda estética.</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('dissilicato')" aria-label="Fechar">
+          <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab active" data-modal="dissilicato" data-tab="video">Processo de Produção</button>
+        <button class="modal-tab" data-modal="dissilicato" data-tab="steps">Passo a Passo</button>
+        <button class="modal-tab" data-modal="dissilicato" data-tab="tips">Cimentação e Dicas</button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Tab: Video -->
+        <div class="modal-panel active" id="dissilicato-video">
+          <div class="modal-video-wrap">
+            <div class="modal-video-frame">
+              <iframe src="https://www.youtube-nocookie.com/embed/WfV9V1L43_0?rel=0&modestbranding=1"
+                      title="Processo de Confecção de Dissilicato de Lítio — DDent Lab"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="modal-video-steps">
+              <div class="mvs-item">
+                <div class="mvs-num">1</div>
+                <div class="mvs-content">
+                  <h5>Escaneamento e Modelagem</h5>
+                  <p>Captura digital e design da peça em software CAD odontológico.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">2</div>
+                <div class="mvs-content">
+                  <h5>Fresagem do Bloco</h5>
+                  <p>Usinagem do bloco de dissilicato no estado azul (intermediário) para facilitar a fresagem.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">3</div>
+                <div class="mvs-content">
+                  <h5>Cristalização em Forno</h5>
+                  <p>Ciclo de cristalização a ~840°C transforma o material em cerâmica de alta resistência e translucidez.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">4</div>
+                <div class="mvs-content">
+                  <h5>Caracterização e Glaze</h5>
+                  <p>Pintura superficial com tintas e glazeamento para personalização cromática e brilho natural.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">5</div>
+                <div class="mvs-content">
+                  <h5>Montagem e Ajuste</h5>
+                  <p>Verificação de ajuste marginal, contatos proximais e oclusão antes da entrega.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Steps -->
+        <div class="modal-panel" id="dissilicato-steps">
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Escaneamento e Planejamento Digital</h4>
+                <p>O modelo ou arquivo intraoral é escaneado e importado no software CAD. O técnico analisa a anatomia, guias oclusais e espaço interoclusal para garantir espessura mínima de 0,6 mm (facetas) ou 1,0 mm (coroas).</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>Modelagem CAD e Seleção do Bloco</h4>
+                <p>A peça é desenhada digitalmente com software especializado. O bloco de dissilicato é selecionado por cor (escala Vita ou Bleach) e grau de translucidez (HT, LT, MO) conforme indicação clínica.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>Fresagem no Estado Azul</h4>
+                <p>O bloco no estado pré-cristalizado ("azul") é usinado em fresadora de 4 ou 5 eixos. Nesse estado, o material é mais mole (~130 MPa), permitindo fresagem mais rápida com menor desgaste de fresas.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <h4>Ciclo de Cristalização (Ceramização)</h4>
+                <p>A peça é levada ao forno de cerâmica para ciclo de cristalização a 840°C (~25 min). Neste processo, os cristais de dissilicato de lítio se formam, elevando a resistência para ~400 MPa e conferindo translucidez ao material.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">5</div>
+              <div class="step-content">
+                <h4>Caracterização, Pintura e Glaze</h4>
+                <p>Após a cristalização, corantes e tintas são aplicados para simular halo incisal, mamelos, fluorescência e caracterizações individuais. Glazeamento final em 770°C para superfície polida e brilhante.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">6</div>
+              <div class="step-content">
+                <h4>Conferência Final e Entrega</h4>
+                <p>Verificação de ajuste interno, margem, contatos e oclusão em articulador. A peça é entregue em embalagem esterilizável com ficha técnica de material e protocolo de cimentação recomendado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Tips -->
+        <div class="modal-panel" id="dissilicato-tips">
+          <div class="tips-grid">
+            <div class="tip-card tip-highlight">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2 5h5l-4 3.5 1.5 5L12 13l-4.5 2.5 1.5-5L5 7h5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h4>Protocolo de Cimentação Adesiva</h4>
+              <p>O dissilicato exige cimentação adesiva com condicionamento com ácido fluorídrico (HF 9-10%, 20s), silanização (60s + jato de ar + aquecimento), primer adesivo e cimento resinoso foto ou dual-polimerizado. É este protocolo que garante união de longa duração e previne desbondagem.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Seleção de Cor do Cimento</h4>
+              <p>Para facetas e lentes ultrafinas, o cimento influencia a cor final. Realize prova com try-in paste antes de cimentar. Prefira cimentos Vita A1 ou translúcido em cerâmicas de alta translucidez.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M8 8V6a4 4 0 018 0v2" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Tratamento Interno da Peça</h4>
+              <p>1) HF 9% por 20s → lavar 30s + secar; 2) Silano MDP por 60s + jato de ar suave + aquecimento leve (&lt;80°C); 3) Primer/adesivo; 4) Cimento resinoso. Não contaminar superfície após tratamento.</p>
+            </div>
+            <div class="tip-card tip-warning">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Atenção: Próteses Provisórias</h4>
+              <p>Evite eugenol no provisório — inibe a polimerização do cimento resinoso. Use cimentos provisórios sem eugenol (ex.: Temp-Bond NE, Rely X Temp) e limpe completamente o preparo antes da cimentação definitiva.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Indicações Clínicas</h4>
+              <p>Facetas cerâmicas, lentes de contato dental, coroas anteriores e pré-molares, inlays, onlays e overlays. Resistência ~400 MPa. Evitar em coroas de molares com bruxismo severo sem protetor.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Remoção Segura da Peça</h4>
+              <p>Em caso de necessidade de remoção: usar pontas ultrassônicas com vibração para quebrar a união, instrumento de alavanca específico. Evitar pressão excessiva para não fraturar o preparo dental.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ MODAL — ESCANEAMENTO INTRA ORAL ═══ -->
+  <div class="modal-overlay" id="modal-escaneamento" role="dialog" aria-modal="true" aria-labelledby="met">
+    <div class="modal">
+      <div class="modal-head">
+        <div class="modal-head-info">
+          <p class="modal-eyebrow">Tecnologia · Odontologia Digital</p>
+          <h2 class="modal-title" id="met">Escaneamento <em>Intra Oral</em></h2>
+          <p class="modal-desc">Substituição da moldagem convencional por scanner digital de alta precisão, acelerando o fluxo laboratorial e eliminando distorções de modelos de gesso.</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('escaneamento')" aria-label="Fechar">
+          <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab active" data-modal="escaneamento" data-tab="video">Processo de Produção</button>
+        <button class="modal-tab" data-modal="escaneamento" data-tab="steps">Passo a Passo</button>
+        <button class="modal-tab" data-modal="escaneamento" data-tab="tips">Dicas de Uso</button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Tab: Video -->
+        <div class="modal-panel active" id="escaneamento-video">
+          <div class="modal-video-wrap">
+            <div class="modal-video-frame">
+              <iframe src="https://www.youtube-nocookie.com/embed/OYHBdU8VWUg?rel=0&modestbranding=1"
+                      title="Escaneamento Intraoral e Fluxo Digital — DDent Lab"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="modal-video-steps">
+              <div class="mvs-item">
+                <div class="mvs-num">1</div>
+                <div class="mvs-content">
+                  <h5>Captura Intraoral</h5>
+                  <p>Scanner captura a arcada em movimento contínuo, gerando malha STL em tempo real.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">2</div>
+                <div class="mvs-content">
+                  <h5>Verificação Digital</h5>
+                  <p>O dentista confere margens, preparo e oclusão diretamente no software antes de enviar ao laboratório.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">3</div>
+                <div class="mvs-content">
+                  <h5>Envio ao Laboratório</h5>
+                  <p>Arquivo STL enviado digitalmente ao DDent Lab em segundos, sem moldagem física ou risco de distorção.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">4</div>
+                <div class="mvs-content">
+                  <h5>Design e Produção CAD/CAM</h5>
+                  <p>Técnico modela a peça diretamente sobre o arquivo digital com alta precisão de ajuste marginal.</p>
+                </div>
+              </div>
+              <div class="mvs-item">
+                <div class="mvs-num">5</div>
+                <div class="mvs-content">
+                  <h5>Entrega Rápida</h5>
+                  <p>Fluxo digital encurta o prazo de produção — zircônia e dissilicato entregues em 24-48h.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Steps -->
+        <div class="modal-panel" id="escaneamento-steps">
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Preparação da Boca do Paciente</h4>
+                <p>Profilaxia prévia, controle de umidade (sugador, rolo de algodão) e afastamento gengival para exposição de margem subgengival quando necessário. Alguns scanners requerem spray antirreflexo em superfícies polidas.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>Captura do Preparo e Adjacentes</h4>
+                <p>Inicia-se o escaneamento pela arcada do preparo em movimento contínuo: oclusal → vestibular → lingual/palatino. Em seguida, escaneamento da arcada antagonista e depois o registro de mordida (interoclusão) com dentes em máxima intercuspidação.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>Verificação e Complementação</h4>
+                <p>O software identifica lacunas na malha 3D e solicita reescaneamento das áreas faltantes. O dentista verifica margem, preparos, tecido gengival e corrige antes de finalizar a captura.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <h4>Envio Digital ao Laboratório</h4>
+                <p>O arquivo STL ou arquivo proprietário (dependendo do scanner) é enviado ao DDent Lab via plataforma digital (Dental Wings, 3Shape Communicate, etc.) com ficha técnica incluindo cor, material escolhido e observações do caso.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">5</div>
+              <div class="step-content">
+                <h4>Recebimento e Modelagem no Lab</h4>
+                <p>O técnico abre o arquivo no software CAD, confere o preparo, cria a peça virtual com ajuste automático de oclusão e envia para fresagem. Todo o processo é rastreável e arquivado digitalmente.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">6</div>
+              <div class="step-content">
+                <h4>Devolução e Cimentação</h4>
+                <p>A peça volta ao consultório com ajuste marginal preciso (~30–50 µm), reduzindo necessidade de desgaste e re-trabalho. Protocolo de cimentação de acordo com o material escolhido (ver abas de cada material).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Tips -->
+        <div class="modal-panel" id="escaneamento-tips">
+          <div class="tips-grid">
+            <div class="tip-card tip-highlight">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>
+              </div>
+              <h4>Por que Escanear em vez de Moldar?</h4>
+              <p>A moldagem convencional gera distorções de até 0,5% no gesso. O escaneamento intraoral entrega precisão de ±10–20 µm no STL, elimina etapas de vazagem, reduz prazo de entrega e elimina o risco de modelo quebrado ou distorcido no transporte.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Margem Subgengival</h4>
+              <p>Para margens 0,5 mm ou mais subgengivais, realize afastamento com fio retrator 000 + vasoconstritor por 5 min antes de escanear. Margem precisa = ajuste preciso da peça.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Spray Antirreflexo</h4>
+              <p>Esmalte dental altamente polido pode criar reflexos que confundem o sensor. Aplique spray de dióxido de titânio em camada fina e homogênea. Remova com jato de ar após o escaneamento.</p>
+            </div>
+            <div class="tip-card tip-warning">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Compatibilidade de Arquivos</h4>
+              <p>Confirme com o laboratório o formato aceito (STL aberto, DCM, 3OXZ, etc.). Alguns scanners proprietários requerem exportação manual. Envie sempre os 3 arquivos: preparo, antagonista e mordida.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M8 8h8M8 16h5" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Ficha Técnica Completa</h4>
+              <p>Junto ao arquivo, envie: cor Vita/Bleach, material (zircônia/dissilicato/tipo), tipo de peça, observações de oclusão, contato com o dentista e prazo desejado. Quanto mais informação, melhor o resultado.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3M12 3a9 9 0 100 18A9 9 0 0012 3z" stroke-linecap="round"/></svg>
+              </div>
+              <h4>Prazo de Entrega Digital</h4>
+              <p>Com arquivo digital recebido até as 14h, o DDent Lab garante fresagem no dia. Zircônia e dissilicato: entrega em 48h para SP capital. Consulte nosso WhatsApp para prazos de urgência.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ NEWSLETTER ═══ -->
+  <section class="blog-newsletter">
+    <div class="container">
+      <div class="blog-newsletter-inner reveal-scale">
+        <div class="blog-newsletter-left">
+          <p class="sec-label">Newsletter</p>
+          <h2 class="sec-title">Conteúdo técnico<br/><em>direto na sua caixa.</em></h2>
+          <p>Receba novidades em prótese, odontologia digital e atualizações do laboratório DDent toda semana.</p>
+        </div>
+        <form class="blog-newsletter-form" id="newsletterForm" novalidate>
+          <div class="nl-field">
+            <input type="text" placeholder="Seu nome" id="nlNome" required/>
+          </div>
+          <div class="nl-field">
+            <input type="email" placeholder="Seu melhor e-mail" id="nlEmail" required/>
+          </div>
+          <button type="submit" class="btn-primary nl-btn">
+            Quero receber
+            <svg viewBox="0 0 24 24" fill="none" width="15"><path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="nl-ok" id="nlOk">✓ Inscrito com sucesso!</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/logo-lab.png"
+               alt="DDent" class="footer-logo"
+               onerror="this.style.display='none'"/>
+          <p>Laboratório de prótese dentária em São Paulo. Tecnologia digital e expertise desde 2007.</p>
+          <a href="https://www.instagram.com/clinica_ddent/" target="_blank" class="footer-ig">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @clinica_ddent
+          </a>
+        </div>
+        <div class="footer-nav">
+          <h4>Laboratório</h4>
+          <a href="laboratorio.html">Início</a>
+          <a href="laboratorio.html#sobre">Quem Somos</a>
+          <a href="laboratorio.html#servicos">Serviços</a>
+          <a href="laboratorio.html#tecnologias">Tecnologias</a>
+          <a href="laboratorio.html#portfolio">Portfólio</a>
+          <a href="laboratorio-blog.html">Blog e Dicas</a>
+        </div>
+        <div class="footer-nav">
+          <h4>Contato</h4>
+          <a href="tel:+551126827735">(11) 2682-7735</a>
+          <a href="tel:+551126820871">(11) 2682-0871</a>
+          <a href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank">(11) 94913-5700</a>
+          <a href="mailto:labddent3d@gmail.com">labddent3d@gmail.com</a>
+          <p class="footer-address">R. Embiruçú, 678 — Vila Beatriz<br/>São Paulo — SP</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 DDent Odontologia · Resp. Técnico: Dr. José Edvanilson da Silva CRO/SP 107.004</p>
+        <a href="paciente.html" class="footer-switch">Área do Paciente →</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <script src="laboratorio.js"></script>
+  <script src="laboratorio-blog.js"></script>
+
+</body>
+</html>

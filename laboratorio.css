@@ -672,7 +672,6 @@ img { max-width: 100%; display: block; }
 .test-carousel { position: relative; }
 .test-track {
   display: flex; gap: 20px;
-  overflow: hidden;
 }
 .tcard {
   background: var(--card); border: 1px solid var(--border);
@@ -1066,4 +1065,268 @@ img { max-width: 100%; display: block; }
   .port-photo-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
   .port-photo-wide { grid-column: span 1; }
   .tcard { flex: 0 0 calc(100vw - 48px); }
+}
+/* ============================================================
+   laboratorio-patch.css
+   Adicione APÓS <link rel="stylesheet" href="laboratorio.css"/>
+   Corrige: mosaico Quem Somos · portfólio slider · depoimentos
+============================================================ */
+
+/* ══════════════════════════════════════════
+   1. MOSAICO — QUEM SOMOS
+   Substitui posicionamento absoluto por grid
+══════════════════════════════════════════ */
+.about-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 260px 190px;
+  gap: 12px;
+  position: relative;
+}
+.am-main {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  height: auto !important;    /* remove height fixa herdada */
+  margin-bottom: 0 !important;
+  position: relative;
+}
+.am-sm1 {
+  grid-column: 1;
+  grid-row: 2;
+  position: static !important;  /* remove absolute herdado */
+  height: auto !important;
+  width: auto !important;
+}
+.am-sm2 {
+  grid-column: 2;
+  grid-row: 2;
+  position: static !important;
+  height: auto !important;
+  width: auto !important;
+}
+/* badge flutua sobre o canto direito do bloco principal */
+.am-badge {
+  position: absolute;
+  top: 14px; right: -14px;
+  z-index: 5;
+}
+/* todos os cards cobrem o espaço disponível */
+.am-card { height: 100%; position: relative; }
+.am-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.am-card:hover img { transform: scale(1.06); }
+
+@media (max-width: 900px) {
+  .about-mosaic {
+    grid-template-rows: 220px 160px;
+    max-width: 480px; margin: 0 auto;
+  }
+  .am-badge { right: 6px; top: 10px; }
+}
+@media (max-width: 600px) {
+  .about-mosaic { grid-template-rows: 180px 130px; }
+}
+
+/* ══════════════════════════════════════════
+   2. PORTFÓLIO — slider de fotos de trabalhos
+══════════════════════════════════════════ */
+
+/* Viewport que esconde o que não cabe */
+.port-slider-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.port-slider-track {
+  display: flex;
+  gap: 16px;
+  transition: transform .55s cubic-bezier(.16,1,.3,1);
+  will-change: transform;
+}
+.port-slide {
+  flex: 0 0 calc(25% - 12px);   /* 4 visíveis no desktop */
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  aspect-ratio: 3/4;
+}
+.port-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease);
+  display: block;
+}
+.port-slide:hover img { transform: scale(1.06); }
+
+.port-slide-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(6,10,16,.85) 0%, transparent 70%);
+  padding: 28px 16px 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.port-slide-icon {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: rgba(76,139,201,.25);
+  border: 1px solid rgba(76,139,201,.3);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue-l); flex-shrink: 0;
+}
+.port-slide-label span {
+  font-size: .78rem; font-weight: 500; color: rgba(255,255,255,.9);
+  line-height: 1.3;
+}
+
+/* Setas do slider */
+.port-slider-btns {
+  display: flex; justify-content: center; align-items: center;
+  gap: 14px; margin-top: 28px;
+}
+.port-slider-btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--card); border: 1px solid var(--border);
+  color: var(--text-2); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .25s, border-color .25s, color .25s;
+}
+.port-slider-btn:hover {
+  background: var(--blue-dim);
+  border-color: var(--blue);
+  color: var(--blue-l);
+}
+.port-slider-dots { display: flex; gap: 7px; }
+.port-sdot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--text-3); border: none; cursor: pointer;
+  transition: background .3s, width .3s; padding: 0;
+}
+.port-sdot.active { background: var(--blue-l); width: 22px; border-radius: 4px; }
+
+/* Tags row abaixo do slider */
+.port-tags-row {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 32px; justify-content: center;
+}
+.port-chip {
+  font-size: .75rem; font-weight: 500; color: var(--blue-l);
+  background: var(--blue-dim); border: 1px solid var(--border);
+  padding: 6px 14px; border-radius: 100px;
+  transition: background .2s, border-color .2s;
+}
+.port-chip:hover { background: rgba(76,139,201,.18); border-color: rgba(76,139,201,.3); }
+
+/* Responsive slider */
+@media (max-width: 1024px) {
+  .port-slide { flex: 0 0 calc(33.33% - 11px); }
+}
+@media (max-width: 768px) {
+  .port-slide { flex: 0 0 calc(80vw); aspect-ratio: 4/3; }
+}
+
+/* ══════════════════════════════════════════
+   3. DEPOIMENTOS — fix de classes e layout
+══════════════════════════════════════════ */
+
+/* Rating bar */
+.test-rating-bar {
+  display: flex; align-items: center; gap: 20px;
+  justify-content: center; margin-bottom: 40px;
+}
+.test-rating-score {
+  font-family: var(--font-serif); font-size: 3.5rem; font-weight: 400;
+  color: var(--white); line-height: 1;
+}
+.test-stars-big { color: var(--gold); font-size: 1.25rem; letter-spacing: 3px; }
+.test-rating-label { font-size: .78rem; color: var(--text-3); margin-top: 4px; }
+
+/* Carousel wrapper */
+.test-carousel { position: relative; overflow: hidden; }
+.test-track {
+  display: flex; gap: 20px;
+  will-change: transform;
+  transition: transform .55s cubic-bezier(.16,1,.3,1);
+  overflow: visible;   /* fix: old rule had overflow:hidden which clipped last cards */
+}
+
+/* Card — show 3 on desktop */
+.tcard {
+  flex: 0 0 calc(33.33% - 14px) !important;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 28px 28px 24px;
+  transition: border-color .3s;
+}
+.tcard:hover { border-color: rgba(76,139,201,.25); }
+
+/* Top row: avatar + name + google icon */
+.tcard-top {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 18px;
+}
+.tcard-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-d), var(--blue));
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .7rem; font-weight: 700; color: var(--white); flex-shrink: 0;
+}
+.tcard-head { flex: 1; min-width: 0; }
+.tcard-head strong {
+  display: block; font-size: .84rem; font-weight: 500;
+  color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.tcard-head span { font-size: .74rem; color: var(--text-3); }
+.tcard-google { flex-shrink: 0; }
+
+.tcard-stars {
+  color: var(--gold); font-size: .9rem; letter-spacing: 1px; margin-bottom: 12px;
+}
+.tcard > p {
+  font-family: var(--font-serif); font-size: .98rem; font-weight: 300;
+  color: var(--text-2); line-height: 1.75; font-style: italic;
+}
+
+/* Controls */
+.test-controls {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; margin-top: 32px;
+}
+.test-btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--card); border: 1px solid var(--border);
+  color: var(--text-2); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .25s, border-color .25s, color .25s;
+}
+.test-btn:hover { background: var(--blue-dim); border-color: var(--blue); color: var(--blue-l); }
+.test-dots { display: flex; gap: 7px; }
+.tdot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--text-3); border: none; cursor: pointer;
+  transition: background .3s, width .3s; padding: 0;
+}
+.tdot.active { background: var(--blue-l); width: 22px; border-radius: 4px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .tcard { flex: 0 0 calc(80vw) !important; }
+}
+@media (max-width: 600px) {
+  .tcard { flex: 0 0 calc(100vw - 48px) !important; }
+}
+
+.about-mosaic .am-card {
+  overflow: hidden !important;
+  position: relative !important;
+  cursor: pointer;
+}
+.about-mosaic .am-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transform: scale(1) !important;
+  transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94) !important;
+  will-change: transform;
+}
+.about-mosaic .am-card:hover img {
+  transform: scale(1.10) !important;
 }
