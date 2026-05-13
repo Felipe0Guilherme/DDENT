@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+/* ============================================
+   DDent — contato.css
+   Design system idêntico ao quem-somos.css
+============================================ */
+
+>>>>>>> 8af6121c18301fb55a4f4d8979ca09901a0e597e
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap');
 
 :root {
@@ -379,4 +387,8 @@ img { max-width: 100%; display: block; }
   .form-row { grid-template-columns: 1fr; }
   .info-wrap { grid-template-columns: 1fr; }
   .sec-title { font-size: 2rem; }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8af6121c18301fb55a4f4d8979ca09901a0e597e

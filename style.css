@@ -233,6 +233,18 @@ a { text-decoration: none; color: inherit; }
 
   .divider              { padding: 0 8px; }
   .divider span         { font-size: 0.6rem; padding: 8px 0; }
+<<<<<<< HEAD
+=======
+}
+
+/* Telas muito pequenas (≤380px) */
+@media (max-width: 380px) {
+  .logo-img   { height: 40px; }
+  .card       { padding: 14px 11px 13px; }
+  .card-title { font-size: 1.1rem; }
+  .card-desc  { display: none; }
+  .card-cta   { padding: 7px 11px; font-size: 0.7rem; }
+>>>>>>> 8af6121c18301fb55a4f4d8979ca09901a0e597e
 }
 
 /* Telas muito pequenas (≤380px) */
