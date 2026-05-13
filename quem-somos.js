@@ -1,8 +1,3 @@
-/* ============================================
-   DDent — quem-somos.js
-   Mirrors paciente.js behavior + page extras
-============================================ */
-
 (function () {
   'use strict';
 

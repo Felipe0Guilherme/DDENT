@@ -1,66 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DDent</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- Ambient Background -->
   <div class="bg-wrap">
-    <div class="orb orb-blue"></div>
     <div class="orb orb-teal"></div>
+    <div class="orb orb-blue"></div>
     <div class="orb orb-mid"></div>
     <div class="grid-overlay"></div>
   </div>
 
   <main class="hero">
 
-    <!-- Logo -->
-    <div class="logo-wrap" id="logo-wrap">
-    
-      <img src="logo.png" alt="DDent" class="logo-img"
-           onerror="this.style.display='none';document.getElementById('logo-placeholder').style.display='flex';" />
-      <div class="logo-placeholder" id="logo-placeholder">
-        <span class="logo-d">D</span><span class="logo-dent">Dent</span>
-      </div>
+    <!-- Logo apenas — sem texto abaixo -->
+    <div class="logo-wrap">
+      <img src="https://ddent.com.br/clinica/wp-content/uploads/2024/06/logo-ddent-clinica.svg" alt="DDent Clínica" class="logo-img-real"/>
     </div>
 
-    <!-- Texto principal -->
-    <div class="headline-wrap" id="headline-wrap">
-      <p class="eyebrow" id="eyebrow">
-        <span class="dot"></span>
-        Bem-vindo à DDent
-      </p>
-      <h1 class="headline">
-        <span class="word w1">Como</span>
-        <span class="word w2">podemos</span>
-        <span class="word w3">te</span>
-        <span class="word w4">ajudar?</span>
-      </h1>
-      <p class="sub" id="sub">Selecione para conhecer o universo certo para você</p>
-    </div>
-
-    <!-- Cards -->
+    <!-- Cards de escolha -->
     <div class="cards-wrap" id="cards">
 
-      <!-- Dentista -->
-      <a href="dentista.html" class="card card-dentista">
+      <a href="laboratorio.html" class="card card-dentista">
         <div class="card-bg"></div>
         <div class="card-glow"></div>
-
         <div class="card-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 60 60" fill="none">
             <rect width="60" height="60" rx="6.01429" fill="#4C8BC9"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.46568 15.7231C9.85349 17.6381 16.3486 20.591 20.8302 21.7989C26.4402 23.3113 34.1657 23.3024 39.8227 21.7776C44.0559 20.6367 52.0674 17.2609 51.6095 16.811C51.4673 16.6712 49.6479 17.1258 47.5667 17.8209C35.2211 21.947 22.4117 21.4275 10.2189 16.306C6.56734 14.7724 6.17713 14.6898 7.46568 15.7231ZM6.8296 17.4635C16.6008 29.0873 23.1784 33.6882 30.0225 33.6882C35.4236 33.6882 39.4965 31.3826 48.2642 23.3616C53.3084 18.7472 53.2714 18.2599 48.1378 21.6857C33.5259 31.4366 24.5436 30.7763 9.65151 18.8584C6.6604 16.4645 5.51249 15.8971 6.8296 17.4635ZM7.42708 22.399C13.1608 32.7951 19.3513 40.6534 24.1777 43.6625C26.1066 44.8652 27.1027 45.1239 29.7295 45.1063C33.6571 45.0798 35.3475 44.248 39.4431 40.3282C42.4903 37.4116 53.4168 22.9808 54.1068 20.9615C54.3003 20.3947 53.1968 21.3339 51.6545 23.0484C43.6509 31.9457 36.7497 37.354 32.1676 38.3192C25.4129 39.7427 17.9565 34.7366 9.25707 22.9372C7.73693 20.8757 6.30032 19.1805 6.06503 19.1707C5.82921 19.1603 6.44203 20.6134 7.42708 22.399Z" fill="white"/>
           </svg>
         </div>
-
         <div class="card-body">
           <h2 class="card-title">Dentista</h2>
           <p class="card-desc">Portal do laboratório — pedidos, casos e próteses sob medida.</p>
@@ -71,27 +47,20 @@
             </svg>
           </div>
         </div>
-
         <div class="card-tag">Profissional</div>
       </a>
 
-      <!-- Divider -->
-      <div class="divider">
-        <span>ou</span>
-      </div>
+      <div class="divider"><span>ou</span></div>
 
-      <!-- Paciente -->
       <a href="paciente.html" class="card card-paciente">
         <div class="card-bg"></div>
         <div class="card-glow"></div>
-
         <div class="card-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 60 60" fill="none">
             <rect width="60" height="60" rx="6.01429" fill="#179E96"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.46568 15.7231C9.85349 17.6381 16.3486 20.591 20.8302 21.7989C26.4402 23.3113 34.1657 23.3024 39.8227 21.7776C44.0559 20.6367 52.0674 17.2609 51.6095 16.811C51.4673 16.6712 49.6479 17.1258 47.5667 17.8209C35.2211 21.947 22.4117 21.4275 10.2189 16.306C6.56734 14.7724 6.17713 14.6898 7.46568 15.7231ZM6.8296 17.4635C16.6008 29.0873 23.1784 33.6882 30.0225 33.6882C35.4236 33.6882 39.4965 31.3826 48.2642 23.3616C53.3084 18.7472 53.2714 18.2599 48.1378 21.6857C33.5259 31.4366 24.5436 30.7763 9.65151 18.8584C6.6604 16.4645 5.51249 15.8971 6.8296 17.4635ZM7.42708 22.399C13.1608 32.7951 19.3513 40.6534 24.1777 43.6625C26.1066 44.8652 27.1027 45.1239 29.7295 45.1063C33.6571 45.0798 35.3475 44.248 39.4431 40.3282C42.4903 37.4116 53.4168 22.9808 54.1068 20.9615C54.3003 20.3947 53.1968 21.3339 51.6545 23.0484C43.6509 31.9457 36.7497 37.354 32.1676 38.3192C25.4129 39.7427 17.9565 34.7366 9.25707 22.9372C7.73693 20.8757 6.30032 19.1805 6.06503 19.1707C5.82921 19.1603 6.44203 20.6134 7.42708 22.399Z" fill="white"/>
           </svg>
         </div>
-
         <div class="card-body">
           <h2 class="card-title">Paciente</h2>
           <p class="card-desc">Conheça a clínica, os tratamentos e encontre seu dentista.</p>
@@ -102,16 +71,11 @@
             </svg>
           </div>
         </div>
-
         <div class="card-tag">Você</div>
       </a>
 
     </div>
-
   </main>
-
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursor-follower"></div>
 
   <script src="main.js"></script>
 </body>

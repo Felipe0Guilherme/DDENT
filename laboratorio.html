@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DDent Laboratório — O parceiro ideal para dentistas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="laboratorio.css"/>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="laboratorio.html" class="logo">
+        <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/logo-lab.png" alt="DDent Lab" class="logo-img-real"/>
+      </a>
+
+      <nav class="nav" id="nav">
+        <div class="nav-dropdown" id="srvDropdown">
+          <button class="nav-drop-trigger" aria-expanded="false" aria-haspopup="true">
+            Serviços
+            <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" width="14" height="14">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="nav-drop-menu" role="menu">
+            <a href="#protese-fixa"  class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><path d="M12 3C12 3 6 8 6 14C6 17.31 8.69 20 12 20C15.31 20 18 17.31 18 14C18 8 12 3 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Prótese Fixa</span></a>
+            <a href="#protocolo"     class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Protocolo sobre Implante</span></a>
+            <a href="#parcial-total" class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><path d="M9 3H15M12 3V8M8 8C8 8 6 11 6 14C6 17.31 8.69 20 12 20C15.31 20 18 17.31 18 14C18 11 16 8 16 8H8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Prótese Parcial e Total</span></a>
+            <a href="#facetas"       class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><path d="M12 3L14.5 8.5L21 9.3L16.5 13.7L17.6 20L12 17.1L6.4 20L7.5 13.7L3 9.3L9.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.5"/></svg></span><span>Facetas e Lentes</span></a>
+            <a href="#metal-free"    class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Coroas Metal Free</span></a>
+            <a href="#zirconia"      class="drop-item" role="menuitem"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" width="15"><path d="M12 2L15 8H21L16.5 12.5L18 19L12 15.5L6 19L7.5 12.5L3 8H9L12 2Z" stroke="currentColor" stroke-width="1.5"/></svg></span><span>Zircônia Dental</span></a>
+          </div>
+        </div>
+        <a href="#sobre"       class="nav-link">Quem Somos</a>
+        <a href="#tecnologias" class="nav-link">Tecnologias</a>
+        <a href="#portfolio"   class="nav-link">Portfólio</a>
+        <a href="#contato"     class="nav-link">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="paciente.html" class="nav-switch">
+          <svg viewBox="0 0 24 24" fill="none" width="13"><path d="M16 8C16 10.2091 14.2091 12 12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8Z" stroke="currentColor" stroke-width="1.5"/><path d="M5 20C5 17.2386 8.13401 15 12 15C15.866 15 19 17.2386 19 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Sou Paciente
+        </a>
+        <a class="cta-nav" href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20o%20laboratório" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+          Falar com técnico
+        </a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <details class="mob-details">
+        <summary>Serviços</summary>
+        <div class="mob-submenu">
+          <a href="#protese-fixa">Prótese Fixa</a>
+          <a href="#protocolo">Protocolo sobre Implante</a>
+          <a href="#parcial-total">Prótese Parcial e Total</a>
+          <a href="#facetas">Facetas e Lentes</a>
+          <a href="#metal-free">Coroas Metal Free</a>
+          <a href="#zirconia">Zircônia Dental</a>
+        </div>
+      </details>
+      <a href="#sobre">Quem Somos</a>
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+      <a href="paciente.html" class="mob-switch">Sou Paciente →</a>
+      <a class="mob-cta" href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank">Falar com técnico</a>
+    </nav>
+  </div>
+
+
+  <!-- ═══ HERO — redesenhado ═══ -->
+  <section class="hero" id="home">
+
+    <!-- Layers de fundo -->
+    <div class="hero-bg" aria-hidden="true">
+      <!-- Foto do laboratório em baixa opacidade, como na página paciente -->
+      <img
+        src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-cs-3-1.jpg"
+        alt=""
+        class="hero-photo"
+        id="heroBgImg"
+      />
+      <!-- Canvas de partículas subindo -->
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+      <!-- Gradiente de fundo -->
+      <div class="hero-gradient"></div>
+    </div>
+
+    <div class="hero-inner container">
+
+      <!-- Coluna esquerda -->
+      <div class="hero-text">
+
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Laboratório DDent · São Paulo · Desde 2007
+        </div>
+
+        <h1 class="hero-h1">
+          Próteses de<br/>
+          <em>alta precisão,</em><br/>
+          entregues no prazo.
+        </h1>
+
+        <p class="hero-sub">
+          Fluxo digital completo, equipe técnica consultora e materiais importados de alto padrão — o parceiro que eleva o resultado de cada caso.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank" class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+            Solicitar orçamento
+          </a>
+          <a href="#servicos" class="btn-outline-hero">
+            Ver serviços
+            <svg viewBox="0 0 24 24" fill="none" width="15"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="hero-stats">
+          <div class="hstat">
+            <div class="hstat-val">+<span data-count="5000">0</span></div>
+            <div class="hstat-label">Elementos em cerâmica</div>
+          </div>
+          <div class="hstat-rule"></div>
+          <div class="hstat">
+            <div class="hstat-val">+<span data-count="800">0</span></div>
+            <div class="hstat-label">Protocolos entregues</div>
+          </div>
+          <div class="hstat-rule"></div>
+          <div class="hstat">
+            <div class="hstat-val"><span data-count="17">0</span>+</div>
+            <div class="hstat-label">Anos de mercado</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Painel direito — workflow digital -->
+      <div class="hero-panel" aria-hidden="true">
+        <div class="panel-card panel-main">
+          <div class="panel-card-label">Fluxo Digital</div>
+          <div class="panel-steps">
+            <div class="panel-step ps-done">
+              <span class="ps-check"><svg viewBox="0 0 16 16" fill="none" width="10"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              Escaneamento
+            </div>
+            <div class="panel-step ps-done">
+              <span class="ps-check"><svg viewBox="0 0 16 16" fill="none" width="10"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              Design CAD
+            </div>
+            <div class="panel-step ps-active">
+              <span class="ps-dot"></span>
+              Fresagem CNC
+            </div>
+            <div class="panel-step">
+              <span class="ps-empty"></span>
+              Caracterização
+            </div>
+            <div class="panel-step">
+              <span class="ps-empty"></span>
+              Entrega
+            </div>
+          </div>
+          <div class="panel-progress">
+            <div class="panel-progress-bar"></div>
+          </div>
+          <div class="panel-progress-label">Em produção <strong>60%</strong></div>
+        </div>
+
+        <div class="panel-row">
+          <div class="panel-card panel-sm">
+            <div class="panel-sm-icon">
+              <svg viewBox="0 0 24 24" fill="none" width="18"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="panel-sm-text">
+              <strong>Qualidade</strong>
+              <span>100% verificada</span>
+            </div>
+          </div>
+          <div class="panel-card panel-sm">
+            <div class="panel-sm-icon ps-icon-blue">
+              <svg viewBox="0 0 24 24" fill="none" width="18"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="panel-sm-text">
+              <strong>Prazo</strong>
+              <span>Entrega em 5 dias</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-tag pt-1"><span class="pt-dot" style="background:#4C8BC9"></span>CAD/CAM Digital</div>
+        <div class="panel-tag pt-2"><span class="pt-dot" style="background:#c9a84c"></span>Zircônia Premium</div>
+        <div class="panel-tag pt-3"><span class="pt-dot" style="background:#5ec9a0"></span>Retirada em SP</div>
+      </div>
+    </div>
+
+    <a href="#servicos" class="hero-scroll-hint" aria-label="Rolar para baixo">
+      <svg viewBox="0 0 24 24" fill="none" width="18"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+
+  <!-- ═══ SERVIÇOS ═══ -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-label">Especialidades</span>
+        <h2 class="sec-title">Todas as soluções<br/><em>para o seu consultório</em></h2>
+        <p class="sec-desc">Do analógico ao digital — trabalhamos com as melhores técnicas e materiais disponíveis.</p>
+      </div>
+
+      <div class="srv-list">
+        <a class="srv-item reveal" id="protese-fixa" href="#protese-fixa">
+          <div class="srv-item-num">01</div>
+          <div class="srv-item-ico"><svg viewBox="0 0 40 40" fill="none" width="22"><path d="M8 8C8 8 5 14 5 22C5 28 10 33 20 33C30 33 35 28 35 22C35 14 32 8 32 8L20 6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="7" x2="20" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="26" y1="7" x2="20" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="srv-item-body"><h3>Prótese Fixa</h3><p>Coroas e pontes com estética e função restauradas. Cerâmica de alta resistência e acabamento natural.</p></div>
+          <div class="srv-item-arrow"><svg viewBox="0 0 24 24" fill="none" width="16"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </a>
+
+        <a class="srv-item reveal" id="protocolo" href="#protocolo">
+          <div class="srv-item-num">02</div>
+          <div class="srv-item-ico"><svg viewBox="0 0 40 40" fill="none" width="22"><rect x="5" y="15" width="30" height="17" rx="3" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="15" x2="10" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="17" y1="15" x2="17" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="23" y1="15" x2="23" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="30" y1="15" x2="30" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="srv-item-body"><h3>Protocolo sobre Implante</h3><p>Reabilitação total com precisão milimétrica. Desenvolvido em parceria com o cirurgião para resultado previsível.</p></div>
+          <div class="srv-item-arrow"><svg viewBox="0 0 24 24" fill="none" width="16"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </a>
+
+        <a class="srv-item reveal srv-item--highlight" id="parcial-total" href="#parcial-total">
+          <div class="srv-item-num">03</div>
+          <div class="srv-item-ico"><svg viewBox="0 0 40 40" fill="none" width="22"><path d="M8 32C8 32 5 28 5 21C5 14 10 10 15 10L25 10C30 10 35 14 35 21C35 28 32 32 32 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="15" y1="10" x2="15" y2="30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="25" y1="10" x2="25" y2="30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="srv-item-body"><h3>Prótese Parcial e Total</h3><p>Reabilitação removível com conforto, estética refinada e adaptação perfeita ao paciente.</p></div>
+          <div class="srv-item-arrow"><svg viewBox="0 0 24 24" fill="none" width="16"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </a>
+
+        <a class="srv-item reveal" id="facetas" href="#facetas">
+          <div class="srv-item-num">04</div>
+          <div class="srv-item-ico"><svg viewBox="0 0 40 40" fill="none" width="22"><path d="M20 5L35 14V26L20 35L5 26V14Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <div class="srv-item-body"><h3>Facetas e Lentes</h3><p>Laminados ultrafinos em porcelana para resultados estéticos que transformam sorrisos com naturalidade.</p></div>
+          <div class="srv-item-arrow"><svg viewBox="0 0 24 24" fill="none" width="16"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </a>
+
+        <a class="srv-item reveal" id="metal-free" href="#metal-free">
+          <div class="srv-item-num">05</div>
+          <div class="srv-item-ico"><svg viewBox="0 0 40 40" fill="none" width="22"><circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M9 35C9 29 14 26 20 26C26 26 31 29 31 35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M15 15l2.5 2.5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="srv-item-body"><h3>Coroas Metal Free</h3><p>Zircônia e dissilicato de lítio para estética superior sem metal — alta resistência e biocompatibilidade.</p></div>
+          <div class="srv-item-arrow"><svg viewBox="0 0 24 24" fill="none" width="16"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </a>
+
+        <a class="srv-item reveal" id="zirconia" href="#zirconia">
+          <div class="srv-item-num">06</div>
+          <div class="srv-item-ico"><svg viewBox="0 0 40 40" fill="none" width="22"><path d="M20 4L24 14H35L26 21L29 31L20 24L11 31L14 21L5 14H16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="srv-item-body"><h3>Zircônia Dental</h3><p>Material de última geração: translucidez natural, biocompatível e com resistência mecânica excepcional.</p></div>
+          <div class="srv-item-arrow"><svg viewBox="0 0 24 24" fill="none" width="16"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </a>
+      </div>
+
+      <div class="sec-cta reveal">
+        <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank" class="btn-primary">
+          Solicitar orçamento
+          <svg viewBox="0 0 24 24" fill="none" width="15"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SOBRE ═══ -->
+  <section class="section section--alt" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-left reveal">
+          <span class="sec-label">Quem Somos</span>
+          <h2 class="sec-title">Seu laboratório<br/><em>parceiro</em> desde 2007</h2>
+          <p class="about-lead">Fundado pelo Dr. José Edvanilson da Silva, o Laboratório DDent une mais de 17 anos de experiência em prótese com tecnologia digital de ponta.</p>
+          <p class="about-body">Nossa equipe não é apenas executora — é consultora. Estamos presentes em cada etapa do caso, orientando e garantindo que o resultado final supere as expectativas do dentista e do paciente.</p>
+
+          <div class="about-checks">
+            <div class="about-check"><svg viewBox="0 0 20 20" fill="none" width="14"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Fluxo analógico e digital completo</div>
+            <div class="about-check"><svg viewBox="0 0 20 20" fill="none" width="14"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Consultoria técnica inclusa em cada caso</div>
+            <div class="about-check"><svg viewBox="0 0 20 20" fill="none" width="14"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Retirada e entrega em São Paulo</div>
+            <div class="about-check"><svg viewBox="0 0 20 20" fill="none" width="14"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Materiais importados de alto padrão</div>
+          </div>
+
+          <a href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank" class="btn-outline">Fale com a equipe</a>
+        </div>
+
+        <div class="about-right reveal">
+          <div class="about-mosaic">
+            <div class="am-card am-main">
+              <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/IMG_2795-1.png" alt="Equipe DDent Laboratório" loading="lazy"/>
+              <div class="am-overlay"></div>
+            </div>
+            <div class="am-card am-sm1">
+              <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/IMG_2803-1.png" alt="Laboratório DDent" loading="lazy"/>
+              <div class="am-overlay"></div>
+            </div>
+            <div class="am-card am-sm2">
+              <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-cs-3-1.jpg" alt="Tecnologia DDent" loading="lazy"/>
+              <div class="am-overlay"></div>
+            </div>
+            <div class="am-badge">
+              <span class="am-badge-n">17+</span>
+              <span class="am-badge-l">anos no<br/>mercado</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TECNOLOGIAS ═══ -->
+  <section class="section" id="tecnologias">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-label">Tecnologias</span>
+        <h2 class="sec-title">Equipamentos<br/><em>de ponta</em></h2>
+        <p class="sec-desc">Investimos continuamente na melhor tecnologia para máxima precisão e agilidade.</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card reveal">
+          <div class="tech-card-img"><img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-capa-3d.jpg" alt="Scanner de Bancada" loading="lazy"/><div class="tech-num">01</div></div>
+          <div class="tech-card-body"><h3>Scanner de Bancada</h3><p>Digitalização milimétrica de modelos. Precisão, reprodutibilidade e eliminação de erros no fluxo protético.</p></div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-card-img"><img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-capa-cad.jpg" alt="Software CAD/CAM" loading="lazy"/><div class="tech-num">02</div></div>
+          <div class="tech-card-body"><h3>Software CAD/CAM</h3><p>Design e manufatura computadorizados para resultados previsíveis e comunicação facilitada com o dentista.</p></div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-card-img"><img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-capa-impressora.jpg" alt="Impressoras 3D" loading="lazy"/><div class="tech-num">03</div></div>
+          <div class="tech-card-body"><h3>Impressoras 3D</h3><p>Guias cirúrgicos, modelos e provisórios com fidelidade dimensional e agilidade incomparáveis.</p></div>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-card-img"><img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/08/fresadora-home.png" alt="Fresadora CNC" loading="lazy"/><div class="tech-num">04</div></div>
+          <div class="tech-card-body"><h3>Fresadora CNC 5 Eixos</h3><p>Processa PMMA, zircônia, dissilicato e cerâmica vítria. Até 8 blocos simultâneos com qualidade superior.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ PORTFÓLIO — com fotos reais ═══ -->
+  <section class="section section--alt" id="portfolio">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-label">Portfólio</span>
+        <h2 class="sec-title">Trabalhos<br/><em>realizados</em></h2>
+        <p class="sec-desc">Casos reais produzidos pelo nosso laboratório, com precisão e excelência em cada detalhe.</p>
+      </div>
+
+      <!-- Grid de fotos dos trabalhos -->
+      <div class="port-photo-grid reveal">
+
+        <div class="port-photo-item port-photo-wide">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/IMG_2795-1.png" alt="Equipe e bancada de trabalho DDent" loading="lazy"/>
+          <div class="port-photo-overlay">
+            <span class="port-photo-tag">Bancada / Equipe</span>
+            <p>Ambiente de trabalho DDent com equipe especializada</p>
+          </div>
+        </div>
+
+        <div class="port-photo-item">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-capa-3d.jpg" alt="Scanner 3D de bancada DDent" loading="lazy"/>
+          <div class="port-photo-overlay">
+            <span class="port-photo-tag">Scanner 3D</span>
+            <p>Digitalização de alta precisão</p>
+          </div>
+        </div>
+
+        <div class="port-photo-item">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-cs-3-1.jpg" alt="Fluxo digital no laboratório" loading="lazy"/>
+          <div class="port-photo-overlay">
+            <span class="port-photo-tag">Fluxo Digital</span>
+            <p>CAD/CAM em produção</p>
+          </div>
+        </div>
+
+        <div class="port-photo-item">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-capa-cad.jpg" alt="Software CAD DDent" loading="lazy"/>
+          <div class="port-photo-overlay">
+            <span class="port-photo-tag">Design CAD</span>
+            <p>Modelagem digital do caso</p>
+          </div>
+        </div>
+
+        <div class="port-photo-item">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-capa-impressora.jpg" alt="Impressora 3D DDent" loading="lazy"/>
+          <div class="port-photo-overlay">
+            <span class="port-photo-tag">Impressão 3D</span>
+            <p>Modelos e guias cirúrgicos</p>
+          </div>
+        </div>
+
+        <div class="port-photo-item port-photo-wide">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/08/fresadora-home.png" alt="Fresadora CNC DDent" loading="lazy"/>
+          <div class="port-photo-overlay">
+            <span class="port-photo-tag">Fresadora CNC 5 Eixos</span>
+            <p>Zircônia e dissilicato de lítio com acabamento anatômico premium</p>
+          </div>
+        </div>
+
+        <div class="port-photo-item">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/IMG_2803-1.png" alt="Laboratório DDent" loading="lazy"/>
+          <div class="port-photo-overlay">
+            <span class="port-photo-tag">Laboratório</span>
+            <p>Espaço equipado para todos os fluxos</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chips de serviços realizados -->
+      <div class="port-tags-row reveal">
+        <span class="port-chip">Coroas em Dissilicato</span>
+        <span class="port-chip">Protocolo em Cerâmica</span>
+        <span class="port-chip">Protocolo de Resina</span>
+        <span class="port-chip">Enceramento de Diagnóstico</span>
+        <span class="port-chip">Facetas de Porcelana</span>
+        <span class="port-chip">Zircônia Premium</span>
+        <span class="port-chip">Prótese Total Acrílica</span>
+        <span class="port-chip">Coroas Metal Free</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ DIFERENCIAIS ═══ -->
+  <section class="section diff-section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-label">Por que DDent</span>
+        <h2 class="sec-title">Mais do que um<br/><em>laboratório</em></h2>
+      </div>
+
+      <div class="diff-grid">
+        <div class="diff-card reveal">
+          <div class="diff-icon"><svg viewBox="0 0 32 32" fill="none" width="20"><path d="M16 4L28 11V21L16 28L4 21V11Z" stroke="currentColor" stroke-width="1.5"/><path d="M11 16l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Qualidade Garantida</h3>
+          <p>Cada trabalho passa por controle rigoroso antes da entrega. Zero tolerância com imprecisões.</p>
+        </div>
+        <div class="diff-card reveal">
+          <div class="diff-icon"><svg viewBox="0 0 32 32" fill="none" width="20"><circle cx="16" cy="10" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M6 28C6 22.48 10.48 18 16 18C21.52 18 26 22.48 26 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="22" y1="6" x2="26" y2="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3>Suporte Técnico</h3>
+          <p>Nossa equipe atende o dentista durante todo o caso, orientando cada etapa como parceiros.</p>
+        </div>
+        <div class="diff-card reveal">
+          <div class="diff-icon"><svg viewBox="0 0 32 32" fill="none" width="20"><rect x="5" y="8" width="22" height="17" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M5 14H27" stroke="currentColor" stroke-width="1.5"/><line x1="11" y1="6" x2="11" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="21" y1="6" x2="21" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3>Prazo Cumprido</h3>
+          <p>Planejamento rigoroso de produção para garantir entregas dentro do prazo acordado com você.</p>
+        </div>
+        <div class="diff-card reveal">
+          <div class="diff-icon"><svg viewBox="0 0 32 32" fill="none" width="20"><path d="M16 4C10 4 5 8 5 13C5 18 9 21 13 22L16 28L19 22C23 21 27 18 27 13C27 8 22 4 16 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Retirada em SP</h3>
+          <p>Serviço de retirada e entrega em São Paulo. Logística simplificada para o seu consultório.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ DEPOIMENTOS — todos os reais ═══ -->
+  <section class="section section--alt" id="depoimentos">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-label">Depoimentos</span>
+        <h2 class="sec-title">O que dizem<br/><em>nossos parceiros</em></h2>
+        <p class="sec-desc">Avaliações reais de cirurgiões-dentistas parceiros do Laboratório DDent no Google.</p>
+      </div>
+
+      <!-- Rating geral -->
+      <div class="test-rating-bar reveal">
+        <div class="test-rating-score">5.0</div>
+        <div class="test-rating-right">
+          <div class="test-stars-big">★★★★★</div>
+          <div class="test-rating-label">Avaliação média · Google Reviews</div>
+        </div>
+      </div>
+
+      <!-- Carrossel -->
+      <div class="test-carousel">
+        <div class="test-track" id="testTrack">
+
+          <!-- Depoimento 1 — Dr. Raphael Esteves -->
+          <div class="tcard">
+            <div class="tcard-top">
+              <div class="tcard-avatar">RE</div>
+              <div class="tcard-head">
+                <strong>Dr. Raphael Esteves</strong>
+                <span>Cirurgião-Dentista</span>
+              </div>
+              <div class="tcard-google"><svg viewBox="0 0 24 24" width="18" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+            </div>
+            <div class="tcard-stars">★★★★★</div>
+            <p>Fui indicado e indico tbm… Profissionais capacitados, trabalhos excelentes, tempo de entrega antes do prazo, laboratório com impressoras e scanners 3D agilizando e fazendo com que seus trabalhos tenham uma cópia perfeita dos preparos. Gostei da parceria!</p>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="tcard">
+            <div class="tcard-top">
+              <div class="tcard-avatar" style="background:linear-gradient(135deg,#2a5a96,#4C8BC9)">CD</div>
+              <div class="tcard-head">
+                <strong>Cirurgião-Dentista</strong>
+                <span>Parceiro DDent</span>
+              </div>
+              <div class="tcard-google"><svg viewBox="0 0 24 24" width="18" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+            </div>
+            <div class="tcard-stars">★★★★★</div>
+            <p>Sempre cumpre os prazos, atendimento excelente, ótimo trabalho e o protético sempre à disposição para conversarmos e ajustarmos o que é melhor para o paciente. Organizado e correto nas cobranças! Indico sem dúvidas.</p>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="tcard">
+            <div class="tcard-top">
+              <div class="tcard-avatar" style="background:linear-gradient(135deg,#0d6e68,#179E96)">DR</div>
+              <div class="tcard-head">
+                <strong>Dentista Parceiro</strong>
+                <span>Clínica Odontológica</span>
+              </div>
+              <div class="tcard-google"><svg viewBox="0 0 24 24" width="18" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+            </div>
+            <div class="tcard-stars">★★★★★</div>
+            <p>O laboratório DDent é o meu preferido para trabalhos. Atendimento da Karla, dos técnicos sempre muito atentos, desde a chegada do trabalho no laboratório até a devolução no consultório. O diálogo está sempre aberto, um dos pontos fortes de toda a equipe. Cumprem os prazos de entrega, facilitando o relacionamento com nossos clientes.</p>
+          </div>
+
+          <!-- Depoimento 4 -->
+          <div class="tcard">
+            <div class="tcard-top">
+              <div class="tcard-avatar" style="background:linear-gradient(135deg,#6b4226,#c9a84c)">PC</div>
+              <div class="tcard-head">
+                <strong>Profissional da Odontologia</strong>
+                <span>Parceiro DDent</span>
+              </div>
+              <div class="tcard-google"><svg viewBox="0 0 24 24" width="18" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+            </div>
+            <div class="tcard-stars">★★★★★</div>
+            <p>Recomendo! O trabalho deles é excelente, sempre entregam os trabalhos no prazo ou até com antecedência. Ótimo atendimento e serviço de qualidade.</p>
+          </div>
+
+          <!-- Depoimento 5 -->
+          <div class="tcard">
+            <div class="tcard-top">
+              <div class="tcard-avatar" style="background:linear-gradient(135deg,#1a2a2a,#2D5F96)">CO</div>
+              <div class="tcard-head">
+                <strong>Clínica Odontológica</strong>
+                <span>Parceira há anos</span>
+              </div>
+              <div class="tcard-google"><svg viewBox="0 0 24 24" width="18" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+            </div>
+            <div class="tcard-stars">★★★★★</div>
+            <p>Nossa clínica odontológica tem parceria com eles há anos, executando os trabalhos de prótese com excelência e entrega rápida. Profissionais altamente confiáveis e comprometidos com o resultado.</p>
+          </div>
+
+        </div>
+
+        <div class="test-controls">
+          <button class="test-btn" id="tPrev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" width="17"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="test-dots" id="tDots"></div>
+          <button class="test-btn" id="tNext" aria-label="Próximo">
+            <svg viewBox="0 0 24 24" fill="none" width="17"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section" id="contato">
+    <div class="container">
+      <div class="cta-box reveal-scale">
+        <div class="cta-box-noise" aria-hidden="true"></div>
+        <div class="cta-box-grid" aria-hidden="true"></div>
+        <div class="cta-content">
+          <span class="sec-label" style="color:rgba(255,255,255,.4)">Próximo passo</span>
+          <h2 class="sec-title" style="color:#fff">Pronto para elevar<br/><em>sua clínica?</em></h2>
+          <p>Solicite a retirada e confie seus trabalhos ao DDent Lab. Mais de 17 anos de expertise a seu lado.</p>
+          <div class="cta-box-btns">
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20gostaria%20de%20solicitar%20a%20retirada%20de%20um%20caso" target="_blank" class="btn-primary btn-primary--light">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+              Falar no WhatsApp
+            </a>
+            <a href="mailto:labddent3d@gmail.com" class="btn-ghost-cta">labddent3d@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/logo-lab.png" alt="DDent" class="footer-logo"/>
+          <p>Laboratório de prótese dentária em São Paulo. Tecnologia digital e expertise desde 2007.</p>
+          <a href="https://www.instagram.com/clinica_ddent/" target="_blank" class="footer-ig">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @clinica_ddent
+          </a>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Serviços</h4>
+          <a href="#protese-fixa">Prótese Fixa</a>
+          <a href="#protocolo">Protocolo sobre Implante</a>
+          <a href="#parcial-total">Prótese Parcial e Total</a>
+          <a href="#facetas">Facetas e Lentes</a>
+          <a href="#metal-free">Coroas Metal Free</a>
+          <a href="#zirconia">Zircônia Dental</a>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Contato</h4>
+          <a href="tel:+551126827735">(11) 2682-7735</a>
+          <a href="tel:+551126820871">(11) 2682-0871</a>
+          <a href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank">(11) 94913-5700</a>
+          <a href="mailto:labddent3d@gmail.com">labddent3d@gmail.com</a>
+          <p class="footer-address">R. Embiruçú, 678 — Vila Beatriz<br/>São Paulo — SP</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 DDent Odontologia · Resp. Técnico: Dr. José Edvanilson da Silva CRO/SP 107.004</p>
+        <a href="paciente.html" class="footer-switch">Área do Paciente →</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a class="wa-float" href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <script src="laboratorio.js"></script>
+</body>
+</html>
