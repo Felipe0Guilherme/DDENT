@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato — DDent Laboratório</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="laboratorio.css">
+    <link rel="stylesheet" href="laboratorio-contato.css">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="laboratorio.html" class="logo">
+        <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/logo-lab.png" alt="DDent Lab" class="logo-img-real"/>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="laboratorio-servicos.html" class="nav-link">Serviços</a>
+        <a href="quem-somos-laboratorio.html" class="nav-link">Quem Somos</a>
+        <a href="laboratorio.html#tecnologias" class="nav-link">Tecnologias</a>
+        <a href="laboratorio.html#portfolio" class="nav-link">Portfólio</a>
+        <a href="laboratorio-contato.html" class="nav-link nav-contact-active">Contato</a>
+        <a href="laboratorio-blog.html" class="nav-link nav-blog-link">
+          <svg viewBox="0 0 24 24" fill="none" width="13" style="margin-right:4px;vertical-align:-2px" stroke="currentColor" stroke-width="1.6"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Blog e Dicas
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="paciente.html" class="nav-switch">
+          <svg viewBox="0 0 24 24" fill="none" width="13"><path d="M16 8C16 10.2091 14.2091 12 12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8Z" stroke="currentColor" stroke-width="1.5"/><path d="M5 20C5 17.2386 8.13401 15 12 15C15.866 15 19 17.2386 19 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Sou Paciente
+        </a>
+        <a class="cta-nav" href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20o%20laboratório" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+          Falar com técnico
+        </a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="laboratorio-servicos.html">Serviços</a>
+      <a href="quem-somos-laboratoriohtml">Quem Somos</a>
+      <a href="laboratorio.html#tecnologias">Tecnologias</a>
+      <a href="laboratorio.html#portfolio">Portfólio</a>
+      <a href="laboratorio-contato.html">Contato</a>
+      <a href="laboratorio-blog.html">Blog e Dicas</a>
+      <a href="paciente.html" class="mob-switch">Sou Paciente →</a>
+      <a class="mob-cta" href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank">Falar com técnico</a>
+    </nav>
+  </div>
+
+
+  <!-- ═══ HERO ═══ -->
+  <section class="ct-hero" id="home">
+    <canvas class="ct-hero-canvas" id="ctCanvas"></canvas>
+    <div class="ct-hero-glow" aria-hidden="true"></div>
+    <div class="ct-hero-noise" aria-hidden="true"></div>
+
+    <div class="ct-hero-inner container">
+      <div class="ct-breadcrumb">
+        <a href="laboratorio.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" width="12"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Contato</span>
+      </div>
+      <div class="ct-hero-label">Entre em contato</div>
+      <h1 class="ct-hero">
+        Fale com nossa  <br/>
+        <em>equipe técnica</em>
+      </h1>
+      <p class="ct-hero-desc">
+        Solicite uma retirada, tire dúvidas sobre casos ou agende uma visita ao laboratório. Estamos prontos para atender.
+      </p>
+    </div>
+
+    <div class="ct-hero-line" aria-hidden="true"></div>
+  </section>
+
+
+  <!-- ═══ CONTACT BODY ═══ -->
+  <section class="ct-body">
+    <div class="container">
+      <div class="ct-grid">
+
+        <!-- ── Left: Info ── -->
+        <div class="ct-info reveal">
+          <div class="ct-info-label">Canais de atendimento</div>
+          <h2 class="ct-info-title">
+            Rápido, direto<br/>e <em>sem burocracia</em>
+          </h2>
+          <p class="ct-info-text">
+            Nossa equipe responde pelo WhatsApp em tempo real durante o horário comercial. Para casos urgentes, ligue diretamente para o laboratório.
+          </p>
+
+          <div class="ct-channels">
+            <!-- WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20equipe%20técnica" target="_blank" class="ct-channel">
+              <div class="ct-channel-icon" style="color:#25D366; background:rgba(37,211,102,0.08); border-color:rgba(37,211,102,0.18)">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+              </div>
+              <div class="ct-channel-body">
+                <div class="ct-channel-label">WhatsApp · Preferencial</div>
+                <div class="ct-channel-val">(11) 94913-5700</div>
+              </div>
+              <svg class="ct-channel-arrow" viewBox="0 0 24 24" fill="none" width="16"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <!-- Telefone 1 -->
+            <a href="tel:+551126827735" class="ct-channel">
+              <div class="ct-channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="ct-channel-body">
+                <div class="ct-channel-label">Telefone</div>
+                <div class="ct-channel-val">(11) 2682-7735</div>
+              </div>
+              <svg class="ct-channel-arrow" viewBox="0 0 24 24" fill="none" width="16"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <!-- Telefone 2 -->
+            <a href="tel:+551126820871" class="ct-channel">
+              <div class="ct-channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="ct-channel-body">
+                <div class="ct-channel-label">Telefone</div>
+                <div class="ct-channel-val">(11) 2682-0871</div>
+              </div>
+              <svg class="ct-channel-arrow" viewBox="0 0 24 24" fill="none" width="16"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <!-- E-mail -->
+            <a href="mailto:labddent3d@gmail.com" class="ct-channel">
+              <div class="ct-channel-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="18" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="ct-channel-body">
+                <div class="ct-channel-label">E-mail</div>
+                <div class="ct-channel-val">labddent3d@gmail.com</div>
+              </div>
+              <svg class="ct-channel-arrow" viewBox="0 0 24 24" fill="none" width="16"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Address card -->
+          <div class="ct-address-card reveal">
+            <div class="ct-map-placeholder">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1!2d-46.7!3d-23.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8d5a57e8d%3A0x0!2sR.%20Embiru%C3%A7%C3%BA%2C%20678%20-%20Vila%20Beatriz%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1716000000000"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="DDent Laboratório — Localização"
+              ></iframe>
+            </div>
+            <div class="ct-address-body">
+              <div class="ct-address-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="16" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="ct-address-text">
+                <strong>DDent Laboratório</strong>
+                <span>R. Embiruçú, 678 — Vila Beatriz<br/>São Paulo — SP, 05052-010</span>
+                <a href="https://goo.gl/maps/DDentLab" target="_blank" class="ct-address-link">
+                  Ver no Google Maps
+                  <svg viewBox="0 0 24 24" fill="none" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <div class="ct-hours">
+                  <div class="ct-hours-row today">
+                    <span>Segunda — Sexta</span>
+                    <span>08h às 18h</span>
+                  </div>
+                  <div class="ct-hours-row">
+                    <span>Sábado</span>
+                    <span>08h às 12h</span>
+                  </div>
+                  <div class="ct-hours-row">
+                    <span>Domingo</span>
+                    <span>Fechado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Right: Form ── -->
+        <div class="ct-form-col reveal">
+          <div class="ct-form-wrap">
+            <div class="ct-form-noise" aria-hidden="true"></div>
+            <h2 class="ct-form-title">Envie uma <em>mensagem</em></h2>
+            <p class="ct-form-sub">Responderemos em até 1 dia útil. Para urgências, use o WhatsApp.</p>
+
+            <div id="ctSuccess" class="ct-success">
+              <div class="ct-success-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="28" stroke="currentColor" stroke-width="1.6"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Mensagem enviada!</h3>
+              <p>Nossa equipe entrará em contato em breve.<br/>Obrigado pelo interesse no DDent Lab.</p>
+            </div>
+
+            <form class="ct-form" id="ctForm" novalidate>
+              <div class="ct-field-row">
+                <div class="ct-field">
+                  <label class="ct-label" for="ct-nome">Nome</label>
+                  <input class="ct-input" type="text" id="ct-nome" name="nome" placeholder="Dr. Fulano de Tal" required/>
+                </div>
+                <div class="ct-field">
+                  <label class="ct-label" for="ct-cro">CRO (opcional)</label>
+                  <input class="ct-input" type="text" id="ct-cro" name="cro" placeholder="CRO/SP 12345"/>
+                </div>
+              </div>
+              <div class="ct-field">
+                <label class="ct-label" for="ct-email">E-mail</label>
+                <input class="ct-input" type="email" id="ct-email" name="email" placeholder="doutor@clinica.com.br" required/>
+              </div>
+              <div class="ct-field">
+                <label class="ct-label" for="ct-tel">Telefone / WhatsApp</label>
+                <input class="ct-input" type="tel" id="ct-tel" name="tel" placeholder="(11) 9 0000-0000"/>
+              </div>
+              <div class="ct-field">
+                <label class="ct-label" for="ct-assunto">Assunto</label>
+                <select class="ct-select" id="ct-assunto" name="assunto">
+                  <option value="" disabled selected>Selecione um assunto…</option>
+                  <option value="orcamento">Solicitar orçamento</option>
+                  <option value="retirada">Agendar retirada de caso</option>
+                  <option value="protocolo">Protocolo sobre implante</option>
+                  <option value="zirconia">Zircônia / Metal Free</option>
+                  <option value="facetas">Facetas e Lentes</option>
+                  <option value="parceria">Parceria / Primeira vez</option>
+                  <option value="duvida">Dúvida técnica</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <div class="ct-field" style="margin-bottom:8px">
+                <label class="ct-label">Serviços de interesse</label>
+                <div class="ct-checks">
+                  <label class="ct-check"><input type="checkbox" name="srv" value="protese-fixa"/><span class="ct-check-label">Prótese Fixa</span></label>
+                  <label class="ct-check"><input type="checkbox" name="srv" value="protocolo"/><span class="ct-check-label">Protocolo s/ Implante</span></label>
+                  <label class="ct-check"><input type="checkbox" name="srv" value="parcial"/><span class="ct-check-label">Parcial / Total</span></label>
+                  <label class="ct-check"><input type="checkbox" name="srv" value="facetas"/><span class="ct-check-label">Facetas</span></label>
+                  <label class="ct-check"><input type="checkbox" name="srv" value="metal-free"/><span class="ct-check-label">Metal Free</span></label>
+                  <label class="ct-check"><input type="checkbox" name="srv" value="zirconia"/><span class="ct-check-label">Zircônia</span></label>
+                </div>
+              </div>
+
+              <div class="ct-field">
+                <label class="ct-label" for="ct-msg">Mensagem</label>
+                <textarea class="ct-textarea" id="ct-msg" name="mensagem" placeholder="Descreva seu caso ou dúvida…" rows="4"></textarea>
+              </div>
+
+              <button type="submit" class="ct-submit">
+                Enviar mensagem
+                <svg viewBox="0 0 24 24" fill="none" width="17"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+
+              <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20gostaria%20de%20falar%20com%20a%20equipe%20técnica%20do%20DDent" target="_blank" class="ct-wa-quick">
+                <div class="ct-wa-quick-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+                </div>
+                <div class="ct-wa-quick-text">
+                  <strong>Prefere o WhatsApp?</strong>
+                  <span>Clique e fale agora com nossa equipe</span>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" width="16" style="flex-shrink:0;color:var(--text-3)"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </form>
+          </div>
+        </div>
+
+      </div><!-- /ct-grid -->
+    </div>
+  </section>
+
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="ct-faq-section">
+    <div class="container">
+      <div class="ct-faq-header reveal">
+        <div class="ct-faq-label">Perguntas frequentes</div>
+        <h2 class="ct-faq-title">Dúvidas sobre <em>atendimento</em></h2>
+      </div>
+
+      <div class="ct-faq-grid">
+
+        <div class="ct-faq-item reveal">
+          <div class="ct-faq-q" onclick="toggleFaq(this)">
+            Qual o prazo de entrega dos trabalhos?
+            <svg class="ct-faq-chevron" viewBox="0 0 24 24" fill="none" width="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ct-faq-a">
+            <p>Os prazos variam de acordo com o tipo de trabalho. Próteses fixas convencionais: 5 a 7 dias úteis. Trabalhos em zircônia e metal free: 7 a 10 dias úteis. Protocolos sobre implante: sob consulta. Sempre confirmamos o prazo no momento da retirada do caso.</p>
+          </div>
+        </div>
+
+        <div class="ct-faq-item reveal">
+          <div class="ct-faq-q" onclick="toggleFaq(this)">
+            Como funciona a retirada e entrega dos casos?
+            <svg class="ct-faq-chevron" viewBox="0 0 24 24" fill="none" width="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ct-faq-a">
+            <p>Contamos com motoboy próprio para retirada e entrega na Grande São Paulo. Basta agendar pelo WhatsApp ou telefone. Para outras regiões, trabalhamos com transporte especializado de biomodelos. Entre em contato para combinarmos a logística do seu caso.</p>
+          </div>
+        </div>
+
+        <div class="ct-faq-item reveal">
+          <div class="ct-faq-q" onclick="toggleFaq(this)">
+            Vocês aceitam casos de escaneamento digital (STL)?
+            <svg class="ct-faq-chevron" viewBox="0 0 24 24" fill="none" width="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ct-faq-a">
+            <p>Sim. Recebemos arquivos STL de qualquer scanner intraoral. Trabalhamos no fluxo digital completo, desde o recebimento do arquivo até a confecção CAD/CAM da peça. Você pode enviar os arquivos diretamente para nosso e-mail ou via transfer digital.</p>
+          </div>
+        </div>
+
+        <div class="ct-faq-item reveal">
+          <div class="ct-faq-q" onclick="toggleFaq(this)">
+            É possível visitar o laboratório?
+            <svg class="ct-faq-chevron" viewBox="0 0 24 24" fill="none" width="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ct-faq-a">
+            <p>Com certeza! Visitas são muito bem-vindas e recomendadas para dentistas que ainda não nos conhecem. Entre em contato para agendar um horário conveniente. Você poderá conhecer o processo produtivo, os equipamentos e conversar com nossa equipe técnica.</p>
+          </div>
+        </div>
+
+        <div class="ct-faq-item reveal">
+          <div class="ct-faq-q" onclick="toggleFaq(this)">
+            Quais formas de pagamento são aceitas?
+            <svg class="ct-faq-chevron" viewBox="0 0 24 24" fill="none" width="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ct-faq-a">
+            <p>Aceitamos transferência bancária (PIX e TED), boleto e cartão de crédito. Para parceiros com volume regular de trabalho, oferecemos condições especiais de prazo e pagamento. Consulte nossa equipe para mais detalhes.</p>
+          </div>
+        </div>
+
+        <div class="ct-faq-item reveal">
+          <div class="ct-faq-q" onclick="toggleFaq(this)">
+            Vocês atendem clínicas de outras cidades?
+            <svg class="ct-faq-chevron" viewBox="0 0 24 24" fill="none" width="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ct-faq-a">
+            <p>Sim. Atendemos clínicas em todo o estado de São Paulo e demais estados do Brasil. Para casos fora da Grande São Paulo, utilizamos empresas especializadas no transporte de materiais odontológicos, com rastreamento e segurança garantidos.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/logo-lab.png" alt="DDent" class="footer-logo"/>
+          <p>Laboratório de prótese dentária em São Paulo. Tecnologia digital e expertise desde 2007.</p>
+          <a href="https://www.instagram.com/clinica_ddent/" target="_blank" class="footer-ig">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @clinica_ddent
+          </a>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Serviços</h4>
+          <a href="laboratorio-servicos.html#protese-fixa">Prótese Fixa</a>
+          <a href="laboratorio-servicos.html#protocolo">Protocolo sobre Implante</a>
+          <a href="laboratorio-servicos.html#parcial-total">Prótese Parcial e Total</a>
+          <a href="laboratorio-servicos.html#facetas">Facetas e Lentes</a>
+          <a href="laboratorio-servicos.html#metal-free">Coroas Metal Free</a>
+          <a href="laboratorio-servicos.html#zirconia">Zircônia Dental</a>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Contato</h4>
+          <a href="tel:+551126827735">(11) 2682-7735</a>
+          <a href="tel:+551126820871">(11) 2682-0871</a>
+          <a href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank">(11) 94913-5700</a>
+          <a href="mailto:labddent3d@gmail.com">labddent3d@gmail.com</a>
+          <p class="footer-address">R. Embiruçú, 678 — Vila Beatriz<br/>São Paulo — SP</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 DDent Odontologia · Resp. Técnico: Dr. José Edvanilson da Silva CRO/SP 107.004</p>
+        <a href="paciente.html" class="footer-switch">Área do Paciente →</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a class="wa-float" href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+    <span class="wa-pulse"></span>
+  </a>
+
+
+  <script src="laboratorio.js"></script>
+  <script src="laboratorio-contato.js">
+  </script>
+
+</body>
+</html>

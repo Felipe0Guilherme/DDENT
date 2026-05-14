@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
-/* ============================================
-   DDent — contato.js
-============================================ */
->>>>>>> 8af6121c18301fb55a4f4d8979ca09901a0e597e
+
 (function () {
   'use strict';
 
@@ -121,8 +116,5 @@
     el.addEventListener('blur',   () => el.closest('.form-field').classList.remove('focused'));
   });
 
-<<<<<<< HEAD
+
 })();
-=======
-})();
->>>>>>> 8af6121c18301fb55a4f4d8979ca09901a0e597e

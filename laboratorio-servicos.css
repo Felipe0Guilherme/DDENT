@@ -103,6 +103,7 @@
       padding: 90px 0;
       border-bottom: 1px solid var(--border);
       position: relative;
+      padding-left: 0;
     }
     .srv-item:last-child { border-bottom: none; }
     .srv-item-inner {
@@ -208,9 +209,10 @@
 
     /* ── Divider stripe ── */
     .srv-stripe {
-      position: absolute; top: 0; left: 0;
-      width: 3px; height: 100%;
-      background: linear-gradient(180deg, transparent, var(--blue-dim) 30%, var(--blue-dim) 70%, transparent);
+      position: absolute; top: 0; left: -28px;
+      width: 2px; height: 100%;
+      background: linear-gradient(180deg, transparent, rgba(76,139,201,0.25) 25%, rgba(76,139,201,0.35) 50%, rgba(76,139,201,0.25) 75%, transparent);
+      pointer-events: none;
     }
 
     /* ── CTA Section ── */
