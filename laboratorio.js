@@ -100,28 +100,50 @@
   const next   = document.getElementById('tNext');
 
   if (track) {
-    const cards   = Array.from(track.querySelectorAll('.tcard'));
-    let   current = 0;
+    const cards = Array.from(track.querySelectorAll('.tcard'));
+    let current = 0;
 
-    cards.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.className = 'tdot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', `Depoimento ${i + 1}`);
-      dot.addEventListener('click', () => goTo(i));
-      dotsEl.appendChild(dot);
-    });
+    // Quantos cards são visíveis de uma vez (depende do viewport)
+    function visibleCount() {
+      if (window.innerWidth <= 900) return 1;
+      return 3;
+    }
+
+    // Total de "páginas"
+    function totalPages() {
+      return Math.max(1, cards.length - visibleCount() + 1);
+    }
+
+    // Cria dots dinamicamente com base no total de páginas
+    function buildDots() {
+      dotsEl.innerHTML = '';
+      const total = totalPages();
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'tdot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Depoimento ${i + 1}`);
+        dot.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(dot);
+      }
+    }
 
     function getCardWidth() {
       if (!cards[0]) return 0;
-      return cards[0].getBoundingClientRect().width + 20; // gap
+      const rect = cards[0].getBoundingClientRect();
+      return rect.width + 20; // 20 = gap
     }
 
     function goTo(idx) {
-      current = (idx + cards.length) % cards.length;
+      const pages = totalPages();
+      current = ((idx % pages) + pages) % pages;
       track.style.transform = `translateX(-${current * getCardWidth()}px)`;
       track.style.transition = 'transform .55s cubic-bezier(0.16,1,0.3,1)';
-      dotsEl.querySelectorAll('.tdot').forEach((d, i) => d.classList.toggle('active', i === current));
+      dotsEl.querySelectorAll('.tdot').forEach((d, i) =>
+        d.classList.toggle('active', i === current)
+      );
     }
+
+    buildDots();
 
     prev.addEventListener('click', () => goTo(current - 1));
     next.addEventListener('click', () => goTo(current + 1));
@@ -141,7 +163,71 @@
       if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
     });
 
-    window.addEventListener('resize', () => goTo(current));
+    window.addEventListener('resize', () => {
+      buildDots();
+      goTo(0);
+    });
+  }
+
+  /* ── Portfolio slider ── */
+  const portTrack = document.getElementById('portTrack');
+  const portDots  = document.getElementById('portDots');
+  const portPrev  = document.getElementById('portPrev');
+  const portNext  = document.getElementById('portNext');
+
+  if (portTrack) {
+    const portSlides = Array.from(portTrack.querySelectorAll('.port-slide'));
+    let portCurrent  = 0;
+
+    function portVisibleCount() {
+      if (window.innerWidth <= 768) return 1;
+      if (window.innerWidth <= 1024) return 3;
+      return 4;
+    }
+
+    function portTotalPages() {
+      return Math.max(1, portSlides.length - portVisibleCount() + 1);
+    }
+
+    function buildPortDots() {
+      portDots.innerHTML = '';
+      const total = portTotalPages();
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'port-sdot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Slide ${i + 1}`);
+        dot.addEventListener('click', () => portGoTo(i));
+        portDots.appendChild(dot);
+      }
+    }
+
+    function getPortSlideWidth() {
+      if (!portSlides[0]) return 0;
+      return portSlides[0].getBoundingClientRect().width + 16; // 16 = gap
+    }
+
+    function portGoTo(idx) {
+      const pages = portTotalPages();
+      portCurrent = ((idx % pages) + pages) % pages;
+      portTrack.style.transform = `translateX(-${portCurrent * getPortSlideWidth()}px)`;
+      portTrack.style.transition = 'transform .55s cubic-bezier(0.16,1,0.3,1)';
+      portDots.querySelectorAll('.port-sdot').forEach((d, i) =>
+        d.classList.toggle('active', i === portCurrent)
+      );
+    }
+
+    buildPortDots();
+    portPrev.addEventListener('click', () => portGoTo(portCurrent - 1));
+    portNext.addEventListener('click', () => portGoTo(portCurrent + 1));
+
+    let portStartX = 0;
+    portTrack.addEventListener('touchstart', e => { portStartX = e.touches[0].clientX; }, { passive: true });
+    portTrack.addEventListener('touchend', e => {
+      const diff = portStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) portGoTo(diff > 0 ? portCurrent + 1 : portCurrent - 1);
+    });
+
+    window.addEventListener('resize', () => { buildPortDots(); portGoTo(0); });
   }
 
   /* ══════════════════════════════════════════

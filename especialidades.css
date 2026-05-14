@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .esp-hero {
   position: relative;
   padding: 160px 0 80px;
@@ -345,7 +345,7 @@
   .esp-inline-cta { padding: 28px 24px; }
   .esp-inline-cta h4 { font-size: 1.3rem; }
   .esp-content-grid { gap: 28px; }
-=======
+
 /* ============================================
    DDent — especialidades.css
    Inherits all base styles from paciente.css
@@ -700,5 +700,4 @@
   .esp-inline-cta { padding: 28px 24px; }
   .esp-inline-cta h4 { font-size: 1.3rem; }
   .esp-content-grid { gap: 28px; }
->>>>>>> 8af6121c18301fb55a4f4d8979ca09901a0e597e
-}
+}}

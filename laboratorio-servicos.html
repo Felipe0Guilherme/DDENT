@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Serviços — DDent Laboratório Odontológico</title>
+  <meta name="description" content="Próteses fixas, protocolos, coroas metal free, facetas, zircônia e muito mais. Conheça todos os serviços do Laboratório DDent."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="laboratorio.css"/>
+  <style>
+    /* ══════════════════════════════════════════
+       SERVIÇOS — estilos específicos desta página
+    ══════════════════════════════════════════ */
+
+    /* ── Page Hero ── */
+    .srv-hero {
+      position: relative;
+      min-height: 380px;
+      display: flex; align-items: flex-end;
+      padding-bottom: 80px;
+      overflow: hidden;
+    }
+    .srv-hero-canvas {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+    }
+    .srv-hero-glow {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 60% 40%, rgba(76,139,201,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .srv-hero-noise {
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 200px;
+      pointer-events: none;
+    }
+    .srv-hero-inner {
+      position: relative; z-index: 1;
+    }
+    .srv-breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: .75rem; font-weight: 500; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--text-3);
+      margin-bottom: 24px;
+    }
+    .srv-breadcrumb a { color: var(--blue-l); transition: color .2s; }
+    .srv-breadcrumb a:hover { color: var(--white); }
+    .srv-breadcrumb svg { opacity: .4; }
+    .srv-hero-label {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .7rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--blue-l);
+      margin-bottom: 20px;
+    }
+    .srv-hero-label::before {
+      content: ''; width: 28px; height: 1px; background: var(--blue);
+    }
+    .srv-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 300; line-height: 1.08;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .srv-hero h1 em { color: var(--blue-l); font-style: italic; font-weight: 300; }
+    .srv-hero-desc {
+      font-size: 1rem; color: var(--text-2); max-width: 560px; line-height: 1.75;
+    }
+    .srv-hero-line {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border) 30%, var(--border) 70%, transparent);
+    }
+
+    /* ── Quick nav pills ── */
+    .srv-quicknav {
+      background: var(--dark-2);
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+      position: sticky; top: 72px; z-index: 100;
+    }
+    .srv-quicknav-inner {
+      max-width: 1240px; margin: 0 auto; padding: 0 48px;
+      display: flex; gap: 0; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .srv-quicknav-inner::-webkit-scrollbar { display: none; }
+    .srv-qlink {
+      white-space: nowrap;
+      padding: 14px 20px;
+      font-size: .75rem; font-weight: 500; letter-spacing: .04em;
+      color: var(--text-3);
+      border-bottom: 2px solid transparent;
+      transition: color .25s, border-color .25s;
+      cursor: pointer;
+    }
+    .srv-qlink:hover { color: var(--text); border-color: var(--border); }
+    .srv-qlink.active { color: var(--blue-l); border-color: var(--blue); }
+
+    /* ── Services section ── */
+    .srv-list { padding: 0; }
+    .srv-item {
+      padding: 90px 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .srv-item:last-child { border-bottom: none; }
+    .srv-item-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .srv-item--reverse .srv-item-inner {
+      direction: rtl;
+    }
+    .srv-item--reverse .srv-item-inner > * {
+      direction: ltr;
+    }
+
+    /* Image side */
+    .srv-img-wrap {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--card);
+    }
+    .srv-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .7s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .srv-img-wrap:hover img { transform: scale(1.06); }
+    .srv-img-num {
+      position: absolute; bottom: 20px; left: 20px;
+      font-family: var(--font-serif);
+      font-size: 5rem; font-weight: 300;
+      color: rgba(255,255,255,0.08);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+    .srv-img-badge {
+      position: absolute; top: 16px; right: 16px;
+      background: rgba(6,10,16,0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: .65rem; font-weight: 600; letter-spacing: .10em;
+      text-transform: uppercase; color: var(--blue-l);
+    }
+
+    /* Text side */
+    .srv-content { }
+    .srv-num {
+      font-family: var(--font-serif);
+      font-size: .85rem; font-weight: 400; letter-spacing: .06em;
+      color: var(--blue);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .srv-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 300; line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .srv-title em { color: var(--blue-l); font-style: italic; }
+    .srv-desc {
+      font-size: .95rem; color: var(--text-2); line-height: 1.8;
+      margin-bottom: 28px;
+    }
+    .srv-desc strong { color: var(--text); font-weight: 500; }
+    .srv-features {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 36px;
+    }
+    .srv-feat {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--blue-dim);
+      border: 1px solid rgba(76,139,201,0.18);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: .75rem; font-weight: 500; color: var(--blue-l);
+    }
+    .srv-feat svg { flex-shrink: 0; }
+    .srv-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent;
+      border: 1px solid rgba(76,139,201,0.35);
+      border-radius: 100px;
+      padding: 12px 24px;
+      font-size: .82rem; font-weight: 500; color: var(--text);
+      transition: background .25s, border-color .3s, color .25s;
+      cursor: pointer;
+    }
+    .srv-cta:hover {
+      background: var(--blue-dim);
+      border-color: var(--blue);
+      color: var(--white);
+    }
+    .srv-cta svg { transition: transform .25s; }
+    .srv-cta:hover svg { transform: translateX(3px); }
+
+    /* ── Divider stripe ── */
+    .srv-stripe {
+      position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(180deg, transparent, var(--blue-dim) 30%, var(--blue-dim) 70%, transparent);
+    }
+
+    /* ── CTA Section ── */
+    .srv-cta-section {
+      padding: 100px 0 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 960px) {
+      .srv-item-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .srv-item--reverse .srv-item-inner {
+        direction: ltr;
+      }
+      .srv-img-wrap { aspect-ratio: 16/9; }
+      .srv-hero { min-height: 300px; padding-bottom: 60px; }
+    }
+    @media (max-width: 600px) {
+      .srv-item { padding: 60px 0; }
+      .srv-quicknav-inner { padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="laboratorio.html" class="logo">
+        <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/logo-lab.png" alt="DDent Lab" class="logo-img-real"/>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="laboratorio-servicos.html" class="nav-link nav-link--active">Serviços</a>
+        <a href="quem-somos.html"           class="nav-link">Quem Somos</a>
+        <a href="laboratorio.html#tecnologias" class="nav-link">Tecnologias</a>
+        <a href="laboratorio.html#portfolio"   class="nav-link">Portfólio</a>
+        <a href="laboratorio.html#contato"     class="nav-link">Contato</a>
+        <a href="laboratorio-blog.html" class="nav-link nav-blog-link">
+          <svg viewBox="0 0 24 24" fill="none" width="13" style="margin-right:4px;vertical-align:-2px" stroke="currentColor" stroke-width="1.6"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Blog e Dicas
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="paciente.html" class="nav-switch">
+          <svg viewBox="0 0 24 24" fill="none" width="13"><path d="M16 8C16 10.2091 14.2091 12 12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8Z" stroke="currentColor" stroke-width="1.5"/><path d="M5 20C5 17.2386 8.13401 15 12 15C15.866 15 19 17.2386 19 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Sou Paciente
+        </a>
+        <a class="cta-nav" href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20o%20laboratório" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+          Falar com técnico
+        </a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="laboratorio-servicos.html">Serviços</a>
+      <a href="quem-somos.html">Quem Somos</a>
+      <a href="laboratorio.html#tecnologias">Tecnologias</a>
+      <a href="laboratorio.html#portfolio">Portfólio</a>
+      <a href="laboratorio.html#contato">Contato</a>
+      <a href="laboratorio-blog.html">Blog e Dicas</a>
+      <a href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank" class="mob-cta">Falar com técnico</a>
+    </nav>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="srv-hero" style="padding-top: 140px;">
+    <canvas class="srv-hero-canvas" id="heroCanvas"></canvas>
+    <div class="srv-hero-glow"></div>
+    <div class="srv-hero-noise"></div>
+    <div class="container srv-hero-inner">
+      <div class="srv-breadcrumb">
+        <a href="laboratorio.html">Início</a>
+        <svg viewBox="0 0 24 24" fill="none" width="12"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>Serviços</span>
+      </div>
+      <div class="srv-hero-label">Especialidades</div>
+      <h1>Soluções em<br/><em>prótese dentária</em></h1>
+      <p class="srv-hero-desc">Do gesso à finalização, do analógico ao digital — produzimos cada trabalho com a precisão que o seu paciente merece e o resultado que a sua clínica exige.</p>
+    </div>
+    <div class="srv-hero-line"></div>
+  </section>
+
+  <!-- ── Quick nav ── -->
+  <nav class="srv-quicknav" aria-label="Navegação de serviços">
+    <div class="srv-quicknav-inner">
+      <a href="#protese-fixa"    class="srv-qlink active">Prótese Fixa</a>
+      <a href="#protocolo"       class="srv-qlink">Protocolo</a>
+      <a href="#parcial-total"   class="srv-qlink">Total e Parcial</a>
+      <a href="#placas"          class="srv-qlink">Placas</a>
+      <a href="#metal-free"      class="srv-qlink">Metal Free</a>
+      <a href="#facetas"         class="srv-qlink">Facetas e Lentes</a>
+      <a href="#zirconia"        class="srv-qlink">Zircônia</a>
+    </div>
+  </nav>
+
+  <!-- ═══ SERVIÇOS ═══ -->
+  <section class="srv-list">
+    <div class="container">
+
+      <!-- 01 — Prótese Fixa -->
+      <div class="srv-item reveal" id="protese-fixa">
+        <div class="srv-stripe"></div>
+        <div class="srv-item-inner">
+          <div class="srv-img-wrap">
+            <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/sv-Protese-fixa.jpg"
+                 alt="Prótese Fixa DDent" loading="lazy"/>
+            <span class="srv-img-num">01</span>
+            <span class="srv-img-badge">Unitária · Unida</span>
+          </div>
+          <div class="srv-content">
+            <span class="srv-num">— 01 / 07</span>
+            <h2 class="srv-title">Prótese<br/><em>Fixa</em></h2>
+            <p class="srv-desc">
+              Nossas próteses fixas unitárias ou unidas são confeccionadas do vazamento do gesso até a finalização com <strong>porcelana, resina, metal</strong> ou uma combinação deles. Projetadas para se parecerem e funcionarem como dentes naturais, desempenham papel fundamental na estética e função oral do seu paciente.
+            </p>
+            <div class="srv-features">
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Porcelana</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Resina</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Metal</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Estética e Função</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20tenho%20interesse%20em%20Prótese%20Fixa" target="_blank" class="srv-cta">
+              Solicitar orçamento
+              <svg viewBox="0 0 24 24" fill="none" width="14"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 — Prótese Protocolo -->
+      <div class="srv-item srv-item--reverse reveal" id="protocolo">
+        <div class="srv-stripe"></div>
+        <div class="srv-item-inner">
+          <div class="srv-img-wrap">
+            <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/sv-protese-protocolo.jpg"
+                 alt="Prótese Protocolo DDent" loading="lazy"/>
+            <span class="srv-img-num">02</span>
+            <span class="srv-img-badge">Acrílico · Porcelana</span>
+          </div>
+          <div class="srv-content">
+            <span class="srv-num">— 02 / 07</span>
+            <h2 class="srv-title">Prótese<br/><em>Protocolo</em></h2>
+            <p class="srv-desc">
+              Confeccionamos o protocolo do seu paciente em <strong>acrílico ou porcelana</strong> com caracterização de gengiva usando o sistema STG, ou confeccionando a gengiva artificial em cerâmica para resultados o mais próximo do natural possível.
+            </p>
+            <div class="srv-features">
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Acrílico</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Porcelana</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Sistema STG</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Gengiva em Cerâmica</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20tenho%20interesse%20em%20Prótese%20Protocolo" target="_blank" class="srv-cta">
+              Solicitar orçamento
+              <svg viewBox="0 0 24 24" fill="none" width="14"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 — Prótese Total e Parcial -->
+      <div class="srv-item reveal" id="parcial-total">
+        <div class="srv-stripe"></div>
+        <div class="srv-item-inner">
+          <div class="srv-img-wrap">
+            <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/sv-protese-total-e-parcial.jpg"
+                 alt="Prótese Total e Parcial DDent" loading="lazy"/>
+            <span class="srv-img-num">03</span>
+            <span class="srv-img-badge">Removível · Personalizada</span>
+          </div>
+          <div class="srv-content">
+            <span class="srv-num">— 03 / 07</span>
+            <h2 class="srv-title">Prótese Total<br/><em>e Parcial</em></h2>
+            <p class="srv-desc">
+              Confeccionamos próteses removíveis acrílicas personalizadas com gengiva caracterizada ou não, respeitando todas as etapas do processo e <strong>auxiliando nas provas com o paciente do começo ao fim</strong>.
+            </p>
+            <div class="srv-features">
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Removível</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Gengiva Caracterizada</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Suporte Completo</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Provas Guiadas</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20tenho%20interesse%20em%20Prótese%20Total%20e%20Parcial" target="_blank" class="srv-cta">
+              Solicitar orçamento
+              <svg viewBox="0 0 24 24" fill="none" width="14"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 — Placas -->
+      <div class="srv-item srv-item--reverse reveal" id="placas">
+        <div class="srv-stripe"></div>
+        <div class="srv-item-inner">
+          <div class="srv-img-wrap">
+            <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/sv-placas-dentarias.jpg"
+                 alt="Placas Dentárias DDent" loading="lazy"/>
+            <span class="srv-img-num">04</span>
+            <span class="srv-img-badge">Acrílico · Silicone · Acetato</span>
+          </div>
+          <div class="srv-content">
+            <span class="srv-num">— 04 / 07</span>
+            <h2 class="srv-title">Placas Acrílicas,<br/><em>Silicone ou Acetato</em></h2>
+            <p class="srv-desc">
+              Confeccionamos placas em <strong>acrílico, silicone ou acetato</strong> de acordo com as necessidades do seu paciente, o tipo de tratamento escolhido e as suas preferências clínicas — sempre com acabamento de alta qualidade.
+            </p>
+            <div class="srv-features">
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Acrílico</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Silicone</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Acetato</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Personalizado</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20tenho%20interesse%20em%20Placas%20Dentárias" target="_blank" class="srv-cta">
+              Solicitar orçamento
+              <svg viewBox="0 0 24 24" fill="none" width="14"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 — Coroas Metal Free -->
+      <div class="srv-item reveal" id="metal-free">
+        <div class="srv-stripe"></div>
+        <div class="srv-item-inner">
+          <div class="srv-img-wrap">
+            <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/sv-coroas-metal-free.jpg"
+                 alt="Coroas Metal Free DDent" loading="lazy"/>
+            <span class="srv-img-num">05</span>
+            <span class="srv-img-badge">Dissilicato de Lítio</span>
+          </div>
+          <div class="srv-content">
+            <span class="srv-num">— 05 / 07</span>
+            <h2 class="srv-title">Coroas<br/><em>Metal Free</em></h2>
+            <p class="srv-desc">
+              Eleve a qualidade dos seus procedimentos com nossas coroas de <strong>Dissilicato de Lítio</strong>: alta resistência, durabilidade superior e translucidez natural. Protocolo de cimentação: ácido fluorídrico 20s, silano, adesivo e cimento resinoso.
+            </p>
+            <div class="srv-features">
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Dissilicato de Lítio</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Alta Resistência</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Translucidez Natural</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Sem Metal</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20tenho%20interesse%20em%20Coroas%20Metal%20Free" target="_blank" class="srv-cta">
+              Solicitar orçamento
+              <svg viewBox="0 0 24 24" fill="none" width="14"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 — Facetas e Lentes -->
+      <div class="srv-item srv-item--reverse reveal" id="facetas">
+        <div class="srv-stripe"></div>
+        <div class="srv-item-inner">
+          <div class="srv-img-wrap">
+            <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/sv-facetas-e-lentes.jpg"
+                 alt="Facetas e Lentes DDent" loading="lazy"/>
+            <span class="srv-img-num">06</span>
+            <span class="srv-img-badge">Porcelana · Dissilicato</span>
+          </div>
+          <div class="srv-content">
+            <span class="srv-num">— 06 / 07</span>
+            <h2 class="srv-title">Facetas<br/><em>e Lentes</em></h2>
+            <p class="srv-desc">
+              Confeccionadas com extremo cuidado a partir das impressões e especificações do dentista. Utilizamos <strong>porcelana, dissilicato ou resina</strong> para alcançar resultados estéticos que superam as expectativas do paciente.
+            </p>
+            <div class="srv-features">
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Porcelana</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Dissilicato</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Resina</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Ultra Fino</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20tenho%20interesse%20em%20Facetas%20e%20Lentes" target="_blank" class="srv-cta">
+              Solicitar orçamento
+              <svg viewBox="0 0 24 24" fill="none" width="14"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07 — Zircônia Dental -->
+      <div class="srv-item reveal" id="zirconia">
+        <div class="srv-stripe"></div>
+        <div class="srv-item-inner">
+          <div class="srv-img-wrap">
+            <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/lab-zirconia-1.jpg"
+                 alt="Zircônia Dental DDent" loading="lazy"/>
+            <span class="srv-img-num">07</span>
+            <span class="srv-img-badge">Alto Desempenho</span>
+          </div>
+          <div class="srv-content">
+            <span class="srv-num">— 07 / 07</span>
+            <h2 class="srv-title">Zircônia<br/><em>Dental</em></h2>
+            <p class="srv-desc">
+              Máximo desempenho funcional e estético. Nossa zircônia dental é indicada para <strong>copings, coroas fixas e coroas sobre implantes</strong>, oferecendo durabilidade excepcional sem abrir mão da estética refinada.
+            </p>
+            <div class="srv-features">
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Copings</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Coroas Fixas</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Sobre Implantes</span>
+              <span class="srv-feat"><svg viewBox="0 0 24 24" fill="none" width="12"><path d="M5 12l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Alta Durabilidade</span>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20tenho%20interesse%20em%20Zircônia%20Dental" target="_blank" class="srv-cta">
+              Solicitar orçamento
+              <svg viewBox="0 0 24 24" fill="none" width="14"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section srv-cta-section" id="contato">
+    <div class="container">
+      <div class="cta-box reveal-scale">
+        <div class="cta-box-noise" aria-hidden="true"></div>
+        <div class="cta-box-grid" aria-hidden="true"></div>
+        <div class="cta-content">
+          <span class="sec-label" style="color:rgba(255,255,255,.4)">A solução ideal está aqui</span>
+          <h2 class="sec-title" style="color:#fff">Garanta as melhores<br/><em>tecnologias para seu paciente</em></h2>
+          <p>Solicite a retirada e confie seus trabalhos ao DDent Lab. Mais de 17 anos de expertise a seu lado.</p>
+          <div class="cta-box-btns">
+            <a href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20gostaria%20de%20solicitar%20a%20retirada%20de%20um%20caso" target="_blank" class="btn-primary btn-primary--light">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+              Falar no WhatsApp
+            </a>
+            <a href="mailto:labddent3d@gmail.com" class="btn-ghost-cta">labddent3d@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/logo-lab.png" alt="DDent" class="footer-logo"/>
+          <p>Laboratório de prótese dentária em São Paulo. Tecnologia digital e expertise desde 2007.</p>
+          <a href="https://www.instagram.com/clinica_ddent/" target="_blank" class="footer-ig">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @clinica_ddent
+          </a>
+        </div>
+        <div class="footer-nav">
+          <h4>Serviços</h4>
+          <a href="#protese-fixa">Prótese Fixa</a>
+          <a href="#protocolo">Prótese Protocolo</a>
+          <a href="#parcial-total">Prótese Total e Parcial</a>
+          <a href="#placas">Placas Dentárias</a>
+          <a href="#metal-free">Coroas Metal Free</a>
+          <a href="#facetas">Facetas e Lentes</a>
+          <a href="#zirconia">Zircônia Dental</a>
+        </div>
+        <div class="footer-nav">
+          <h4>Contato</h4>
+          <a href="tel:+551126827735">(11) 2682-7735</a>
+          <a href="tel:+551126820871">(11) 2682-0871</a>
+          <a href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank">(11) 94913-5700</a>
+          <a href="mailto:labddent3d@gmail.com">labddent3d@gmail.com</a>
+          <p class="footer-address">R. Embiruçú, 678 — Vila Beatriz<br/>São Paulo — SP</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 DDent Odontologia · Resp. Técnico: Dr. José Edvanilson da Silva CRO/SP 107.004</p>
+        <a href="paciente.html" class="footer-switch">Área do Paciente →</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a class="wa-float" href="https://api.whatsapp.com/send?phone=5511949135700&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.122 1.527 5.859L0 24l6.305-1.654A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.002-1.366l-.359-.214-3.742.981.998-3.648-.234-.374A9.818 9.818 0 1112 21.818z"/></svg>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <script src="laboratorio.js"></script>
+  <script>
+    /* ── Quick nav highlight on scroll ── */
+    const srvSections = ['protese-fixa','protocolo','parcial-total','placas','metal-free','facetas','zirconia'];
+    const qLinks = document.querySelectorAll('.srv-qlink');
+
+    const qObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          qLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.srv-qlink[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35, rootMargin: '-80px 0px -50% 0px' });
+
+    srvSections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) qObs.observe(el);
+    });
+  </script>
+  <style>
+    .nav-blog-link {
+      border: 1px solid rgba(76,139,201,.28) !important;
+      border-radius: 100px !important;
+      padding: 6px 14px !important;
+      color: var(--blue-l) !important;
+      transition: background .25s, border-color .3s !important;
+    }
+    .nav-blog-link:hover {
+      background: rgba(76,139,201,.12) !important;
+      border-color: rgba(76,139,201,.5) !important;
+    }
+    .nav-blog-link::after { display: none !important; }
+  </style>
+</body>
+</html>
