@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .blog-topics {
   padding: 100px 0 80px;
   position: relative;
@@ -480,7 +480,7 @@
   .modal-tab { margin-right: 20px; white-space: nowrap; }
   .blog-topics { padding: 80px 0 60px; }
   .blog-hero-inner { padding: 2.5rem 24px 3rem; }
-=======
+
 .blog-topics {
   padding: 100px 0 80px;
   position: relative;
@@ -962,5 +962,4 @@
   .modal-tab { margin-right: 20px; white-space: nowrap; }
   .blog-topics { padding: 80px 0 60px; }
   .blog-hero-inner { padding: 2.5rem 24px 3rem; }
->>>>>>> cc00027ea82ca558851d8d7244504294d5cd2d55
-}
+}}

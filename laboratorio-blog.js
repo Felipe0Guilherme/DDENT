@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
   /* ── Modal logic ── */
   function openModal(id) {
     const overlay = document.getElementById('modal-' + id);
@@ -132,7 +132,7 @@
       if (entry.isIntersecting) { entry.target.classList.add('in-view'); revObs.unobserve(entry.target); }
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-=======
+
   /* ── Modal logic ── */
   function openModal(id) {
     const overlay = document.getElementById('modal-' + id);
@@ -266,5 +266,4 @@
       if (entry.isIntersecting) { entry.target.classList.add('in-view'); revObs.unobserve(entry.target); }
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
->>>>>>> cc00027ea82ca558851d8d7244504294d5cd2d55
   revEls.forEach(el => revObs.observe(el));
