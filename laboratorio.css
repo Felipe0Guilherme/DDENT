@@ -309,18 +309,6 @@ img { max-width: 100%; display: block; }
 /* Hero text */
 .hero-text { display: flex; flex-direction: column; gap: 0; }
 
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: .72rem; font-weight: 500; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--text-3);
-  margin-bottom: 28px; opacity: 0; animation: fadeSlideUp .8s .1s var(--ease-expo) forwards;
-}
-.hero-badge-dot {
-  width: 6px; height: 6px; border-radius: 50%; background: var(--blue);
-  box-shadow: 0 0 10px var(--blue); flex-shrink: 0;
-  animation: pulse 2.5s ease-in-out infinite;
-}
-@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
 
 .hero-h1 {
   font-family: var(--font-serif);

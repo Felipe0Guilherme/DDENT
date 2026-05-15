@@ -1,8 +1,3 @@
-/* ============================================
-   DDent — quem-somos.js
-   Mirrors paciente.js behavior + page extras
-============================================ */
-
 (function () {
   'use strict';
 
@@ -155,3 +150,20 @@
   });
 
 })();
+/* ── Fix tech icon fallbacks ── */
+document.querySelectorAll('.qs-tech-icon-wrap img').forEach(img => {
+  img.addEventListener('error', function() {
+    this.style.display = 'none';
+    const svg = this.nextElementSibling;
+    if (svg) svg.style.display = 'block';
+  });
+});
+
+/* ── Reveal Observer (supplement to laboratorio.js) ── */
+const qsRevealEls = document.querySelectorAll('.reveal, .reveal-scale');
+const qsRevObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in-view'); qsRevObs.unobserve(e.target); }
+  });
+}, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+qsRevealEls.forEach(el => qsRevObs.observe(el));
