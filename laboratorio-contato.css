@@ -29,7 +29,13 @@
       padding-bottom: 80px;
       overflow: hidden;
       background: var(--dark);
-    }
+
+}
+.ct-hero, .ct-body, .ct-faq-section {
+  background: #0a111800 !important; 
+}
+
+    
     .ct-hero-canvas {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
