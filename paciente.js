@@ -96,15 +96,27 @@
 
   /* ─────────────────────────────────────────
      3. SMOOTH SCROLL para âncoras internas
+     — centraliza a seção na viewport quando cabe
   ───────────────────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
+      const headerH  = 80;
+      const viewH    = window.innerHeight;
+      const sectionH = target.offsetHeight;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+
+      let top;
+      if (sectionH <= viewH - headerH) {
+        // Seção cabe na viewport: centraliza verticalmente
+        top = targetTop - headerH - Math.max(0, (viewH - headerH - sectionH) / 2);
+      } else {
+        // Seção maior que a viewport: apenas desconta o header
+        top = targetTop - headerH;
+      }
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
     });
   });
 
