@@ -167,3 +167,74 @@ const qsRevObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
 qsRevealEls.forEach(el => qsRevObs.observe(el));
+
+/* ── Tech Accordion ── */
+(function () {
+  const techData = [
+    {
+      name: 'Scanner de Bancada',
+      tags: ['Alta precisão', 'Integração CAD', 'Arquivo digital'],
+      icon: `<svg viewBox="0 0 24 24" fill="none" width="40" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 8h10M7 12h6M3 18h18" stroke-linecap="round"/></svg>`
+    },
+    {
+      name: 'Software CAD/CAM',
+      tags: ['Fluxo completo', 'Multi-peças', 'Scan intraoral'],
+      icon: `<svg viewBox="0 0 24 24" fill="none" width="40" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9l6 6M15 9l-6 6" stroke-linecap="round"/></svg>`
+    },
+    {
+      name: 'Impressoras 3D',
+      tags: ['Personalização', 'Alta velocidade', 'Fidelidade'],
+      icon: `<svg viewBox="0 0 24 24" fill="none" width="40" stroke="currentColor" stroke-width="1.2"><path d="M6 9V4h12v5M6 18H4a2 2 0 01-2-2v-5h20v5a2 2 0 01-2 2h-2M9 21h6v-6H9v6z" stroke-linecap="round"/></svg>`
+    },
+    {
+      name: 'Fresadora 5 Eixos',
+      tags: ['Zircônia', 'Dissilicato', '5 eixos', '8 blocos'],
+      icon: `<svg viewBox="0 0 24 24" fill="none" width="40" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke-linecap="round"/></svg>`
+    }
+  ];
+
+  const showcaseIcon = document.getElementById('techShowcaseIcon');
+  const showcaseName = document.getElementById('techShowcaseName');
+  const showcaseTags = document.getElementById('techShowcaseTags');
+
+  function updateShowcase(index) {
+    if (!showcaseIcon) return;
+    const d = techData[index];
+    // Animate icon swap
+    showcaseIcon.classList.add('animating');
+    setTimeout(() => {
+      showcaseIcon.innerHTML = d.icon;
+      showcaseName.textContent = d.name;
+      showcaseTags.innerHTML = d.tags.map(t => `<span class="qs-tech-tag">${t}</span>`).join('');
+      showcaseIcon.classList.remove('animating');
+    }, 200);
+  }
+
+  document.querySelectorAll('.qs-acc-item').forEach((item) => {
+    const header = item.querySelector('.qs-acc-header');
+    if (!header) return;
+
+    const toggle = () => {
+      const isActive = item.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.qs-acc-item').forEach(i => {
+        i.classList.remove('active');
+        const h = i.querySelector('.qs-acc-header');
+        if (h) h.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+        const idx = parseInt(item.dataset.index, 10);
+        updateShowcase(idx);
+      }
+    };
+
+    header.addEventListener('click', toggle);
+    header.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+})();

@@ -107,15 +107,27 @@
     // Future: hook into a real lightbox library here
   });
 
-  /* ── Smooth-scroll for hash anchors ─────────── */
+  /* ── Smooth-scroll para âncoras — centraliza na viewport quando cabe ── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href').slice(1);
       const target = document.getElementById(id);
       if (target) {
         e.preventDefault();
-        const offset = header ? header.offsetHeight + 16 : 80;
-        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        const headerH  = header ? header.offsetHeight + 8 : 80;
+        const viewH    = window.innerHeight;
+        const sectionH = target.offsetHeight;
+        const targetTop = target.getBoundingClientRect().top + window.scrollY;
+
+        let top;
+        if (sectionH <= viewH - headerH) {
+          // Seção cabe na viewport: centraliza verticalmente
+          top = targetTop - headerH - Math.max(0, (viewH - headerH - sectionH) / 2);
+        } else {
+          // Seção maior que a viewport: apenas desconta o header
+          top = targetTop - headerH;
+        }
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
       }
     });
   });
