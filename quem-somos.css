@@ -434,23 +434,23 @@ section[id] { scroll-margin-top: 80px; }
 .clinic-section { background: var(--white); }
 .clinic-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 96px; align-items: center;
+  gap: 52px; align-items: center;
 }
 
 .clinic-lead {
-  font-size: 1.05rem; font-weight: 400; color: var(--ink-2);
-  line-height: 1.8; margin-bottom: 18px;
+  font-size: 0.92rem; font-weight: 400; color: var(--ink-2);
+  line-height: 1.7; margin-bottom: 10px;
 }
 .clinic-body {
-  font-size: 0.92rem; font-weight: 300; color: var(--ink-3);
-  line-height: 1.85; margin-bottom: 36px;
+  font-size: 0.84rem; font-weight: 300; color: var(--ink-3);
+  line-height: 1.75; margin-bottom: 16px;
 }
 
 /* Pillars */
 .pillars { display: flex; flex-direction: column; gap: 0; }
 .pillar {
   display: flex; align-items: flex-start; gap: 14px;
-  padding: 16px 0; border-bottom: 1px solid var(--border-2);
+  padding: 10px 0; border-bottom: 1px solid var(--border-2);
 }
 .pillar:first-child { border-top: 1px solid var(--border-2); }
 .pillar__icon {
@@ -467,7 +467,7 @@ section[id] { scroll-margin-top: 80px; }
 .clinic-mosaic {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px 200px;
+  grid-template-rows: 150px 150px;
   gap: 10px;
   position: relative;
 }
@@ -497,29 +497,64 @@ section[id] { scroll-margin-top: 80px; }
 .cm-badge span   { font-size: 0.72rem; font-weight: 300; opacity: .75; }
 
 /* ══════════════════════════════════════════
-   TEAM SECTION
+   TEAM SECTION — cada médico = 1 tela
 ══════════════════════════════════════════ */
-.team-section { background: var(--bg); }
 
-/* Doctor card */
-.doctor-card {
-  display: grid; grid-template-columns: 400px 1fr;
-  gap: 80px; align-items: start;
-  padding: 72px 0;
-  border-bottom: 1px solid var(--border-2);
+/* A section em si não precisa de altura própria — os cards fazem isso */
+.team-section {
+  background: var(--bg);
+  min-height: auto;
+  padding: 0;
+  display: block;
 }
-.doctor-card:last-child { border-bottom: none; }
-.doctor-card--alt { grid-template-columns: 1fr 400px; }
+
+/* Título da seção: compacto, separado visualmente do primeiro card */
+.team-section .sec-head {
+  text-align: center;
+  padding: 72px 0 48px;
+  border-bottom: 1px solid var(--border-2);
+  background: var(--bg);
+  margin-bottom: 0;
+}
+
+/* ── Cada doctor-card ocupa uma tela inteira ── */
+.doctor-card {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 72px;
+  align-items: center;
+  min-height: 100vh;
+  padding: 80px 48px;
+  max-width: 1260px;
+  margin: 0 auto;
+  border-bottom: none;
+}
+
+/* Linha separadora entre médicos — aplicada no wrapper direto */
+.team-section .doctor-card + .doctor-card {
+  border-top: 1px solid var(--border-2);
+}
+
+/* Fundo alternado para diferenciar cada tela */
+.team-section .doctor-wrap:nth-child(even),
+.team-section > .container > .doctor-card:nth-child(3) { background: var(--bg-2); }
+
+/* Alt: foto à direita */
+.doctor-card--alt { grid-template-columns: 1fr 360px; }
 .doctor-card--alt .doctor-card__media { grid-column: 2; grid-row: 1; }
 .doctor-card--alt .doctor-card__body  { grid-column: 1; grid-row: 1; }
 
-/* Media block */
+/* ── Foto ── */
 .doctor-card__media { position: relative; }
 .doctor-card__img-wrap {
-  border-radius: 24px; overflow: hidden;
-  aspect-ratio: 3/4; position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  max-height: calc(100vh - 160px); /* nunca ultrapassa a tela */
+  width: 100%;
+  position: relative;
   background: var(--bg-3);
-  box-shadow: 0 24px 64px rgba(0,0,0,0.1);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.12);
 }
 .doctor-card__img-wrap img {
   width: 100%; height: 100%; object-fit: cover;
@@ -527,34 +562,35 @@ section[id] { scroll-margin-top: 80px; }
 }
 .doctor-card__media:hover .doctor-card__img-wrap img { transform: scale(1.04); }
 
-/* Grad overlay on photo */
 .doctor-card__img-wrap::after {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(15,26,26,.5) 0%, transparent 50%);
   pointer-events: none;
 }
 
+/* Badge flutuante abaixo da foto */
 .doctor-card__badge {
   position: absolute; bottom: -16px; left: 24px; right: 24px;
   background: var(--white); border: 1px solid var(--border-2);
-  border-radius: 14px; padding: 14px 18px;
+  border-radius: 14px; padding: 12px 16px;
   display: flex; align-items: center; justify-content: space-between;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   gap: 10px;
 }
-.badge-role { font-size: 0.8rem; font-weight: 400; color: var(--ink-3); }
+.badge-role { font-size: 0.78rem; font-weight: 400; color: var(--ink-3); }
 .badge-cro  {
-  font-size: 0.75rem; font-weight: 600; color: var(--teal);
+  font-size: 0.72rem; font-weight: 600; color: var(--teal);
   background: var(--teal-l); padding: 4px 10px; border-radius: 100px;
   white-space: nowrap;
 }
 
-/* Body */
+/* ── Corpo de texto ── */
 .doctor-card__body { padding-top: 8px; }
+
 .doctor-card__eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 10px;
 }
 .doctor-card__eyebrow::before {
   content: ''; display: block; width: 16px; height: 1.5px;
@@ -563,34 +599,33 @@ section[id] { scroll-margin-top: 80px; }
 
 .doctor-card__name {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(1.8rem, 2.6vw, 2.6rem);
   font-weight: 600; line-height: 1.05; letter-spacing: -0.02em;
-  color: var(--ink); margin-bottom: 24px;
+  color: var(--ink); margin-bottom: 18px;
 }
 .doctor-card__name em { font-style: italic; color: var(--teal); }
 
 .doctor-card__bio {
-  font-size: 0.93rem; font-weight: 300; color: var(--ink-3);
-  line-height: 1.85; margin-bottom: 16px;
+  font-size: 0.88rem; font-weight: 300; color: var(--ink-3);
+  line-height: 1.8; margin-bottom: 12px;
+  display: block;
 }
 .doctor-card__bio strong { color: var(--ink-2); font-weight: 500; }
 
 /* Tags */
-.doctor-tags {
-  display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0;
-}
+.doctor-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
 .dtag {
-  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em;
+  font-size: 0.73rem; font-weight: 500; letter-spacing: 0.03em;
   color: var(--teal-d); background: var(--teal-l);
   border: 1px solid rgba(23,158,150,0.2);
-  padding: 5px 14px; border-radius: 100px;
+  padding: 5px 12px; border-radius: 100px;
 }
 
 /* Timeline */
-.doctor-timeline { display: flex; flex-direction: column; gap: 0; margin-top: 28px; }
+.doctor-timeline { display: flex; flex-direction: column; gap: 0; margin-top: 20px; }
 .dtl-item {
   display: flex; gap: 20px; align-items: flex-start;
-  padding: 16px 0; border-top: 1px solid var(--border-2);
+  padding: 12px 0; border-top: 1px solid var(--border-2);
   position: relative;
 }
 .dtl-item::before {
@@ -598,19 +633,19 @@ section[id] { scroll-margin-top: 80px; }
   width: 1px; background: var(--border);
 }
 .dtl-year {
-  font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600;
+  font-family: var(--font-serif); font-size: 1rem; font-weight: 600;
   color: var(--teal); min-width: 44px; padding-top: 2px;
 }
-.dtl-item div { display: flex; flex-direction: column; gap: 3px; padding-left: 16px; }
-.dtl-item strong { font-size: 0.88rem; font-weight: 500; color: var(--ink); }
-.dtl-item span   { font-size: 0.82rem; font-weight: 300; color: var(--ink-3); line-height: 1.5; }
+.dtl-item div { display: flex; flex-direction: column; gap: 2px; padding-left: 16px; }
+.dtl-item strong { font-size: 0.84rem; font-weight: 500; color: var(--ink); }
+.dtl-item span   { font-size: 0.78rem; font-weight: 300; color: var(--ink-3); line-height: 1.5; }
 
 /* Spec chips */
-.spec-chips { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+.spec-chips { display: flex; flex-direction: column; gap: 7px; margin-top: 8px; }
 .spec-chip {
   display: flex; align-items: center; gap: 8px;
-  font-size: 0.82rem; font-weight: 300; color: var(--ink-3);
-  padding: 8px 12px;
+  font-size: 0.8rem; font-weight: 300; color: var(--ink-3);
+  padding: 7px 12px;
   border-left: 2px solid var(--teal-m);
   background: var(--bg-2); border-radius: 0 8px 8px 0;
   transition: background .2s, border-color .2s;
@@ -626,7 +661,7 @@ section[id] { scroll-margin-top: 80px; }
 .gallery-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
-  grid-template-rows: 260px 260px;
+  grid-template-rows: 155px 155px;
   gap: 12px;
 }
 .gal-item {
@@ -659,7 +694,7 @@ section[id] { scroll-margin-top: 80px; }
 ══════════════════════════════════════════ */
 .cta-strip {
   background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
-  padding: 100px 0;
+  padding: 60px 0;
   position: relative; overflow: hidden;
 }
 .cta-strip::before {
@@ -776,10 +811,10 @@ section[id] { scroll-margin-top: 80px; }
    RESPONSIVE
 ══════════════════════════════════════════ */
 @media (max-width: 1100px) {
-  .clinic-grid      { gap: 56px; }
-  .doctor-card      { grid-template-columns: 320px 1fr; gap: 56px; }
-  .doctor-card--alt { grid-template-columns: 1fr 320px; }
+  .clinic-grid      { gap: 40px; }
   .gallery-grid     { grid-template-columns: 1.2fr 1fr 1fr; }
+  .team-section .container { grid-template-columns: 1fr 1fr; }
+  .team-section .sec-head   { grid-column: 1 / -1; }
 }
 
 @media (max-width: 1024px) {
@@ -790,17 +825,9 @@ section[id] { scroll-margin-top: 80px; }
   .footer-brand { grid-column: span 2; }
   .section      { padding: 64px 0; min-height: 100vh; }
 
-  .clinic-grid { grid-template-columns: 1fr; gap: 64px; }
-  .clinic-mosaic { max-width: 520px; }
+  .clinic-grid { grid-template-columns: 1fr; gap: 40px; }
+  .clinic-mosaic { max-width: 480px; grid-template-rows: 130px 130px; }
   .cm-badge { bottom: -14px; }
-
-  .doctor-card {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-  .doctor-card--alt .doctor-card__media { grid-column: 1; grid-row: 2; }
-  .doctor-card--alt .doctor-card__body  { grid-column: 1; grid-row: 1; }
-  .doctor-card__img-wrap { max-width: 360px; aspect-ratio: 4/3; }
 
   .cta-strip-inner { flex-direction: column; text-align: center; gap: 32px; }
   .cta-strip__btns { justify-content: center; }
@@ -824,54 +851,22 @@ section[id] { scroll-margin-top: 80px; }
   .container { padding: 0 24px; }
   .page-hero { padding: 130px 0 72px; }
   .page-hero__inner { padding: 0 24px; }
-  .sec-head { margin-bottom: 48px; }
+  .sec-head { margin-bottom: 36px; }
   .sec-title { font-size: 2rem; }
 
+  /* Team: coluna única em mobile */
+  .team-section .container { grid-template-columns: 1fr; gap: 16px; }
+  .team-section .sec-head  { grid-column: 1; }
+  .doctor-card__name       { font-size: 1.35rem; }
+
+  /* Gallery */
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 180px);
+    grid-template-rows: repeat(3, 140px);
   }
   .gal-item--tall { grid-row: 1; grid-column: 1 / span 2; }
   .gal-overlay { opacity: 1; }
 
   .breadcrumb { font-size: 0.72rem; }
-  .doctor-card__badge { left: 12px; right: 12px; flex-direction: column; align-items: flex-start; gap: 4px; }
-  .doctor-card { padding: 48px 0; }
-
-  /* ── Mobile: ordem fixa para TODOS os cards
-     Foto → Nome → Resumo → Histórico           */
-  .doctor-card,
-  .doctor-card--alt {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  /* Foto sempre no topo */
-  .doctor-card .doctor-card__media,
-  .doctor-card--alt .doctor-card__media {
-    grid-column: 1;
-    grid-row: 1;
-    margin-bottom: 40px;
-  }
-
-  /* Corpo (nome + bio + tags + timeline) sempre abaixo */
-  .doctor-card .doctor-card__body,
-  .doctor-card--alt .doctor-card__body {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  /* Foto ocupa largura total, proporção retrato mais suave */
-  .doctor-card__img-wrap {
-    max-width: 100%;
-    aspect-ratio: 4 / 3;
-    border-radius: 18px;
-  }
-
-  /* Badge reposicionado para não sobrepor texto */
-  .doctor-card__badge {
-    position: static;
-    margin-top: 12px;
-    border-radius: 12px;
-  }
+  .cta-strip  { padding: 48px 0; }
 }

@@ -1391,7 +1391,7 @@ img { max-width: 100%; display: block; }
 .flow-steps::before {
   content: '';
   position: absolute;
-  left: 30px;
+  left: 44px;
   top: 30px;
   bottom: 30px;
   width: 1px;
@@ -1415,9 +1415,9 @@ img { max-width: 100%; display: block; }
 
 /* Foto / placeholder */
 .flow-photo-slot {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
+  width: 88px;
+  height: 88px;
+  border-radius: 14px;
   flex-shrink: 0;
   background: var(--dark-2);
   border: 1px solid var(--border);
