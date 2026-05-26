@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="laboratorio.css"/>
+ 
 </head>
 <body>
 
@@ -117,94 +118,182 @@
         </div>
       </div>
 
-      <!-- Painel direito — fluxograma com fotos -->
+      <!-- Painel direito — fluxograma circular em roda -->
       <div class="hero-panel hero-flow" aria-label="Fluxo de trabalho DDent">
 
         <div class="flow-header">
           <span class="flow-label-badge">Fluxo Digital DDent</span>
+         
         </div>
 
-        <div class="flow-steps">
+        <div class="flow-wheel-wrap">
+          <svg class="flow-wheel-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Sombras -->
+              <filter id="fs" x="-40%" y="-40%" width="180%" height="180%">
+                <feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#0d2040" flood-opacity="0.20"/>
+              </filter>
+              <filter id="fc" x="-40%" y="-40%" width="180%" height="180%">
+                <feDropShadow dx="0" dy="5" stdDeviation="12" flood-color="#4C8BC9" flood-opacity="0.25"/>
+              </filter>
+              <filter id="fglow" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#4C8BC9" flood-opacity="0.55"/>
+              </filter>
+              <!-- Marcadores de ponta de seta -->
+              <marker id="arr1" markerWidth="9" markerHeight="7" refX="7.5" refY="3.5" orient="auto">
+                <polygon points="0 0, 9 3.5, 0 7" fill="#6AAEE0"/>
+              </marker>
+              <marker id="arr2" markerWidth="9" markerHeight="7" refX="7.5" refY="3.5" orient="auto">
+                <polygon points="0 0, 9 3.5, 0 7" fill="#22C5BB"/>
+              </marker>
+              <marker id="arr3" markerWidth="9" markerHeight="7" refX="7.5" refY="3.5" orient="auto">
+                <polygon points="0 0, 9 3.5, 0 7" fill="#4C8BC9"/>
+              </marker>
+              <marker id="arr4" markerWidth="9" markerHeight="7" refX="7.5" refY="3.5" orient="auto">
+                <polygon points="0 0, 9 3.5, 0 7" fill="#22C5BB"/>
+              </marker>
+            </defs>
 
-          <!-- Passo 1 -->
-          <div class="flow-step">
-            <div class="flow-photo-slot">
-              <!-- SUBSTITUA src="" pela foto do passo 1 -->
-              <img src="" alt="Escaneamento" class="flow-img" onerror="this.style.display='none'"/>
-              <div class="flow-photo-empty">
-                <svg viewBox="0 0 24 24" fill="none" width="20"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.4"/><path d="M9 5l1-2h4l1 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-                <span>foto</span>
-              </div>
-            </div>
-            <div class="flow-step-body">
-              <span class="flow-step-num">01</span>
-              <p class="flow-step-label">Envio do scan</p>
-              <p class="flow-step-sub">Arquivo STL ou impressão física</p>
-            </div>
-          </div>
+            <!-- ══════════════════════════════════
+                 SETAS EM ARCO (sentido horário)
+            ══════════════════════════════════ -->
+            <g class="flow-arrows">
+              <path class="flow-arrow flow-arrow-1"
+                d="M 250,78 A 130,130 0 0,1 322,150"
+                fill="none" stroke="#4C8BC9" stroke-width="3" opacity="0.92"
+                stroke-linecap="round" marker-end="url(#arr1)"/>
+              <path class="flow-arrow flow-arrow-2"
+                d="M 322,250 A 130,130 0 0,1 250,322"
+                fill="none" stroke="#22C5BB" stroke-width="3" opacity="0.92"
+                stroke-linecap="round" marker-end="url(#arr2)"/>
+              <path class="flow-arrow flow-arrow-3"
+                d="M 150,322 A 130,130 0 0,1 78,250"
+                fill="none" stroke="#4C8BC9" stroke-width="3" opacity="0.92"
+                stroke-linecap="round" marker-end="url(#arr3)"/>
+              <path class="flow-arrow flow-arrow-4"
+                d="M 78,150 A 130,130 0 0,1 150,78"
+                fill="none" stroke="#22C5BB" stroke-width="3" opacity="0.92"
+                stroke-linecap="round" marker-end="url(#arr4)"/>
+            </g>
 
-          <div class="flow-connector"><span class="flow-line-dot"></span></div>
+            <!-- ══ CENTRO ══ -->
+            <g class="flow-center">
+              <circle cx="200" cy="200" r="58" fill="rgba(15,24,40,0.88)"
+                stroke="rgba(76,139,201,0.18)" stroke-width="1.5" filter="url(#fc)"/>
+              <circle cx="200" cy="200" r="58" fill="none"
+                stroke="rgba(76,139,201,0.25)" stroke-width="1"/>
+              <image href="https://ddent.com.br/laboratorio/wp-content/uploads/2024/06/logo-lab.png"
+                x="152" y="180" width="96" height="40"
+                preserveAspectRatio="xMidYMid meet"/>
+            </g>
 
-          <!-- Passo 2 -->
-          <div class="flow-step">
-            <div class="flow-photo-slot">
-              <!-- SUBSTITUA src="" pela foto do passo 2 -->
-              <img src="" alt="Design CAD" class="flow-img" onerror="this.style.display='none'"/>
-              <div class="flow-photo-empty">
-                <svg viewBox="0 0 24 24" fill="none" width="20"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.4"/><path d="M9 5l1-2h4l1 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-                <span>foto</span>
-              </div>
-            </div>
-            <div class="flow-step-body">
-              <span class="flow-step-num">02</span>
-              <p class="flow-step-label">Design CAD/CAM</p>
-              <p class="flow-step-sub">Modelagem digital em até 24h</p>
-            </div>
-          </div>
+            <!-- ══ NÓ 01 — TOPO ══ -->
+            <g class="flow-node flow-node-1">
+              <g filter="url(#fs)">
+                <circle cx="200" cy="62" r="44" fill="rgba(15,24,40,0.88)"
+                  stroke="rgba(76,139,201,0.20)" stroke-width="1.5"/>
+                <circle cx="200" cy="62" r="44" fill="none"
+                  stroke="rgba(76,139,201,0.40)" stroke-width="2"/>
+                <g transform="translate(200,62)" fill="none" stroke="#4C8BC9" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M0,-16 L9,-7 L5,-7 L5,7 L-5,7 L-5,-7 L-9,-7 Z"/>
+                  <path d="M-13,12 L-13,16 L13,16 L13,12"/>
+                </g>
+              </g>
+              <text x="200" y="125" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="7" font-weight="700"
+                fill="#6a85a8" letter-spacing="2.5">01</text>
+              <text x="200" y="140" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="12" font-weight="600"
+                fill="#dce6f4">Envio do scan</text>
+              <text x="200" y="154" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="9" font-weight="300"
+                fill="#8aa0c0">STL ou impressão</text>
+            </g>
 
-          <div class="flow-connector"><span class="flow-line-dot"></span></div>
+            <!-- ══ NÓ 02 — DIREITA ══ -->
+            <g class="flow-node flow-node-2">
+              <g filter="url(#fs)">
+                <circle cx="338" cy="200" r="44" fill="rgba(15,24,40,0.88)"
+                  stroke="rgba(23,158,150,0.20)" stroke-width="1.5"/>
+                <circle cx="338" cy="200" r="44" fill="none"
+                  stroke="rgba(23,158,150,0.40)" stroke-width="2"/>
+                <g transform="translate(338,200)" fill="none" stroke="#179E96" stroke-width="1.8"
+                  stroke-linecap="round">
+                  <rect x="-13" y="-13" width="26" height="26" rx="4"/>
+                  <path d="M-8,3 L-4,3 L-2,-5 L2,9 L4,0 L7,0"/>
+                </g>
+              </g>
+              <text x="338" y="263" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="7" font-weight="700"
+                fill="#6a85a8" letter-spacing="2.5">02</text>
+              <text x="338" y="278" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="12" font-weight="600"
+                fill="#dce6f4">Design CAD/CAM</text>
+              <text x="338" y="292" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="9" font-weight="300"
+                fill="#8aa0c0">Modelagem em 24h</text>
+            </g>
 
-          <!-- Passo 3 -->
-          <div class="flow-step">
-            <div class="flow-photo-slot">
-              <!-- SUBSTITUA src="" pela foto do passo 3 -->
-              <img src="" alt="Produção CNC" class="flow-img" onerror="this.style.display='none'"/>
-              <div class="flow-photo-empty">
-                <svg viewBox="0 0 24 24" fill="none" width="20"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.4"/><path d="M9 5l1-2h4l1 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-                <span>foto</span>
-              </div>
-            </div>
-            <div class="flow-step-body">
-              <span class="flow-step-num">03</span>
-              <p class="flow-step-label">Fresagem CNC</p>
-              <p class="flow-step-sub">Zircônia, cerâmica ou metal-free</p>
-            </div>
-          </div>
+            <!-- ══ NÓ 03 — BASE ══ -->
+            <g class="flow-node flow-node-3">
+              <g filter="url(#fs)">
+                <circle cx="200" cy="338" r="44" fill="rgba(15,24,40,0.88)"
+                  stroke="rgba(23,158,150,0.20)" stroke-width="1.5"/>
+                <circle cx="200" cy="338" r="44" fill="none"
+                  stroke="rgba(23,158,150,0.40)" stroke-width="2"/>
+                <g transform="translate(200,338)" fill="none" stroke="#179E96" stroke-width="1.8"
+                  stroke-linecap="round">
+                  <circle cx="0" cy="0" r="7"/>
+                  <path d="M0,-15 L0,-10 M10.6,-10.6 L7.1,-7.1 M15,0 L10,0 M10.6,10.6 L7.1,7.1 M0,15 L0,10 M-10.6,10.6 L-7.1,7.1 M-15,0 L-10,0 M-10.6,-10.6 L-7.1,-7.1"/>
+                </g>
+              </g>
+              <text x="200" y="263" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="9" font-weight="300"
+                fill="#8aa0c0">Zircônia · Cerâmica</text>
+              <text x="200" y="278" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="12" font-weight="600"
+                fill="#dce6f4">Fresagem CNC</text>
+              <text x="200" y="290" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="7" font-weight="700"
+                fill="#6a85a8" letter-spacing="2.5">03</text>
+            </g>
 
-          <div class="flow-connector"><span class="flow-line-dot"></span></div>
+            <!-- ══ NÓ 04 — ESQUERDA ══ -->
+            <g class="flow-node flow-node-4">
+              <g filter="url(#fs)">
+                <circle cx="62" cy="200" r="44" fill="rgba(15,24,40,0.88)"
+                  stroke="rgba(76,139,201,0.20)" stroke-width="1.5"/>
+                <circle cx="62" cy="200" r="44" fill="none"
+                  stroke="rgba(23,158,150,0.50)" stroke-width="2.5"/>
+                <g transform="translate(62,200)" fill="none" stroke="#179E96" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M-12,0 L-4,10 L14,-12"/>
+                </g>
+              </g>
+              <!-- Badge PRONTO -->
+              <g class="flow-badge">
+                <rect x="28" y="144" width="68" height="18" rx="9"
+                  fill="rgba(23,158,150,0.15)" stroke="rgba(23,158,150,0.40)" stroke-width="0.8"/>
+                <path d="M36,153 L40,157 L48,148" fill="none" stroke="#179E96"
+                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="71" y="157" text-anchor="middle"
+                  font-family="'DM Sans',sans-serif" font-size="8" font-weight="600"
+                  fill="#22C5BB" letter-spacing="0.8">PRONTO</text>
+              </g>
+              <text x="62" y="263" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="7" font-weight="700"
+                fill="#6a85a8" letter-spacing="2.5">04</text>
+              <text x="62" y="278" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="12" font-weight="600"
+                fill="#dce6f4">Entrega em SP</text>
+              <text x="62" y="292" text-anchor="middle"
+                font-family="'DM Sans',sans-serif" font-size="9" font-weight="300"
+                fill="#8aa0c0">Até 5 dias úteis</text>
+            </g>
 
-          <!-- Passo 4 -->
-          <div class="flow-step flow-step--last">
-            <div class="flow-photo-slot flow-photo-slot--done">
-              <!-- SUBSTITUA src="" pela foto do passo 4 -->
-              <img src="" alt="Entrega" class="flow-img" onerror="this.style.display='none'"/>
-              <div class="flow-photo-empty">
-                <svg viewBox="0 0 24 24" fill="none" width="20"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.4"/><path d="M9 5l1-2h4l1 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-                <span>foto</span>
-              </div>
-            </div>
-            <div class="flow-step-body">
-              <span class="flow-step-num">04</span>
-              <p class="flow-step-label">Entrega em SP</p>
-              <p class="flow-step-sub">Retirada ou entrega em até 5 dias</p>
-            </div>
-            <span class="flow-done-badge">
-              <svg viewBox="0 0 16 16" fill="none" width="10"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Pronto
-            </span>
-          </div>
-
-        </div><!-- /flow-steps -->
+          </svg>
+        </div><!-- /flow-wheel-wrap -->
 
       </div><!-- /hero-flow -->
     </div>
@@ -501,7 +590,7 @@
           <a href="tel:+551126827735">(11) 2682-7735</a>
           <a href="tel:+551126820871">(11) 2682-0871</a>
           <a href="https://api.whatsapp.com/send?phone=5511949135700" target="_blank">(11) 94913-5700</a>
-          <a href="mailto:labddent3d@gmail.com">labddent3d@gmail.com</a>
+          <a href="/cdn-cgi/l/email-protection#573b36353333323923643317303a363e3b7934383a"><span class="__cf_email__" data-cfemail="0d616c6f69696863793e694d6a606c6461236e6260">[email&#160;protected]</span></a>
           <p class="footer-address">R. Embiruçú, 678 — Vila Beatriz<br/>São Paulo — SP</p>
         </div>
       </div>
@@ -520,7 +609,8 @@
   </a>
   
 
-  <script src="laboratorio.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="laboratorio.js"></script>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
