@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  /* ── Header scroll ── */
+
   const header = document.getElementById('header');
   function onScroll() { header.classList.toggle('scrolled', window.scrollY > 40); }
   window.addEventListener('scroll', onScroll, { passive: true });
