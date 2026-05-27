@@ -342,16 +342,20 @@ img { max-width: 100%; display: block; }
       position: relative;
       width: 100%;
       max-width: 480px;
-      aspect-ratio: 1;
+      padding-top: 80px;
+      padding-bottom: 85px;
       margin: 0 auto;
       flex-shrink: 0;
+      overflow: visible;
     }
 
     /* SVG ocupa 100% do container */
     .flow-wheel-svg {
       width: 100%;
-      height: 100%;
+      height: auto;
+      aspect-ratio: 1;
       overflow: visible;
+      display: block;
     }
 
     /* Anel tracejado giratório */
@@ -569,6 +573,7 @@ img { max-width: 100%; display: block; }
   background: transparent;
   border: none;
   padding: 0;
+  overflow: visible;
 }
 
 .flow-header {
@@ -589,15 +594,19 @@ img { max-width: 100%; display: block; }
   position: relative;
   width: 100%;
   max-width: 480px;
-  aspect-ratio: 1;
+  padding-top: 80px;    /* espaço para texto do nó 01 acima */
+  padding-bottom: 85px; /* espaço para texto do nó 03 abaixo */
   margin: 0 auto;
   flex-shrink: 0;
+  overflow: visible;
 }
 
 .flow-wheel-svg {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1;
   overflow: visible;
+  display: block;
 }
 
 /* ═══════════════════════════════════════════
@@ -702,36 +711,22 @@ img { max-width: 100%; display: block; }
 }
 
 /* ═══════════════════════════════════════════
-   TEXTOS DOS NÓS - MELHOR ESPAÇAMENTO
+   TEXTOS DOS NÓS — sem override de y (corrigido no SVG)
 ═══════════════════════════════════════════ */
 
-/* Ajustar posição Y dos textos para melhor espaçamento */
-
-/* Nó 1 - Topo */
-.flow-node-1 text:nth-of-type(1) { y: 118; } /* 01 */
-.flow-node-1 text:nth-of-type(2) { y: 135; font-size: 13px; } /* Envio do scan */
-.flow-node-1 text:nth-of-type(3) { y: 151; } /* STL ou impressão */
-
-/* Nó 2 - Direita */
-.flow-node-2 text:nth-of-type(1) { y: 256; } /* 02 */
-.flow-node-2 text:nth-of-type(2) { y: 273; font-size: 13px; } /* Design CAD/CAM */
-.flow-node-2 text:nth-of-type(3) { y: 289; } /* Modelagem em 24h */
-
-/* Nó 3 - Base */
-.flow-node-3 text:nth-of-type(1) { y: 285; } /* 03 */
-.flow-node-3 text:nth-of-type(2) { y: 302; font-size: 13px; } /* Fresagem CNC */
-.flow-node-3 text:nth-of-type(3) { y: 318; } /* Zircônia · Cerâmica */
-
-/* Nó 4 - Esquerda */
-.flow-node-4 text:nth-of-type(1) { y: 256; } /* 04 */
-.flow-node-4 text:nth-of-type(2) { y: 273; font-size: 13px; } /* Entrega em SP */
-.flow-node-4 text:nth-of-type(3) { y: 289; } /* Até 5 dias úteis */
-
-/* Adicionar background semi-transparente aos textos principais para destaque */
-.flow-node text:nth-of-type(2) {
+/* Contorno escuro em todos os textos para contraste sobre o fundo */
+.flow-node text {
   paint-order: stroke fill;
-  stroke: rgba(6, 10, 16, 0.8);
-  stroke-width: 4px;
+  stroke: rgba(6, 10, 16, 0.9);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+/* Título (font-weight 600) com sombra mais forte */
+.flow-node text[font-weight="600"] {
+  paint-order: stroke fill;
+  stroke: rgba(6, 10, 16, 0.95);
+  stroke-width: 5px;
   stroke-linejoin: round;
 }
 
